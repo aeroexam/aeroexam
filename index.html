@@ -31,7 +31,14 @@
   th, td { border-bottom:1px solid var(--border); padding:10px; text-align:left; vertical-align:top; }
   th { background:#f6f8fa; }
   code { background:#f6f8fa; padding:2px 6px; border-radius:6px; }
-</style>
+
+  /* FORCE LEFT ALIGNMENT FOR ALL EXAM OPTION TEXT */
+  #viewExam, #examQuestions, .qcard, .qtitle { text-align: left !important; }
+  .opt-row { display:flex; justify-content:flex-start !important; align-items:flex-start !important; gap:10px; margin:6px 0; }
+  .opt-row input { margin-top:3px; flex:0 0 auto; }
+  .opt-row > div { flex:1 1 auto; text-align:left !important; }
+
+\1
 </head>
 <body>
 <div class="container">
