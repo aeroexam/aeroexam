@@ -1,1843 +1,2472 @@
 {
   "DJI": [
     {
-      "question": "For 'DJI Matrice 350 RTK', which item is listed under In the Box/Inclusions?",
+      "question": "Which of the following applies to Which statement as a key feature/spec for 'DJI Mavic 3 Enterprise'?",
       "options": [
-        "DJI BS100 Intelligent Battery Station",
+        "RTK module for centimeter-level positioning",
+        "For DJI Mavic 3",
+        "200-hectare coverage in one flight",
+        "4/3 CMOS Wide Camera / 20MP"
+      ],
+      "answer": 3,
+      "difficulty": "easy"
+    },
+    {
+      "question": "Based on the information for What flight time is mentioned for 'DJI Mavic 3 Thermal Advanced Basic Combo Wide Camera Equivalent Focal Length:'?",
+      "options": [
+        "25 minutes",
+        "65 minutes",
+        "55 minutes",
+        "45 minutes"
+      ],
+      "answer": 3,
+      "difficulty": "easy"
+    },
+    {
+      "question": "According to the details of RTK/PPK is mentioned for 'DJI Mavic 3 Enterprise Series RTK Module Compatible with DJI Mavic 3'. What is the main benefit?",
+      "options": [
+        "Faster battery charging",
+        "Improved positioning accuracy for mapping/survey work",
+        "Extra illumination in low light",
+        "Improved audio communication"
+      ],
+      "answer": 1,
+      "difficulty": "easy"
+    },
+    {
+      "question": "From the specs of RTK/PPK is mentioned for 'DJI ENTERPRISE D-RTK 2 High Precision GNSS Mobile Station Padded Carrying Bags'. What is the main benefit?",
+      "options": [
+        "Faster battery charging",
+        "Extra illumination in low light",
+        "Improved positioning accuracy for mapping/survey work",
+        "Improved audio communication"
+      ],
+      "answer": 2,
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which of the following applies to What hover time is mentioned for 'DJI Mavic 3 Intelligent Flight Battery'?",
+      "options": [
+        "20 minutes",
+        "50 minutes",
+        "40 minutes",
+        "30 minutes"
+      ],
+      "answer": 2,
+      "difficulty": "easy"
+    },
+    {
+      "question": "Based on the information for Which statement as a key feature/spec for 'DJI Mavic 3 Multispectral'?",
+      "options": [
+        "200-hectare coverage in one flight",
+        "5000mAh Capacity",
+        "56\u00d7 Hybrid Zoom",
+        "Max Transmission Distance FCC: 15 km / CE: 8 km"
+      ],
+      "answer": 0,
+      "difficulty": "easy"
+    },
+    {
+      "question": "According to the details of 'DJI Mavic 3 Enterprise Series Battery Kit', which item under In the Box/Inclusions?",
+      "options": [
         "Intelligent Battery x 1 DJI Matrice 4 Series Battery",
-        "Top gimbal assembly × 1 Backup absorber ball × 4 Note: 4-5 Weeks Lead Time for Delivery",
-        "DJI Matrice 350 RTK Commercial Drone Aircraft"
+        "100 W Power Adaptor AC Cable",
+        "D-RTK2 Head & Accessories Carrying Bag",
+        "USB-C Cable DJI Mavic 3 Enterprise Series Battery Kit"
       ],
       "answer": 3,
       "difficulty": "easy"
     },
     {
-      "question": "Which statement is listed as a key feature/spec for 'DJI Matrice 350 RTK'?",
+      "question": "From the specs of RTK/PPK is mentioned for 'DJI Mavic 3 Enterprise'. What is the main benefit?",
       "options": [
-        "DJI Matrice 350 RTK DJI Matrice 350 RTK An upgraded flagship drone platform, the Matrice 350 RTK sets a new benchmark for the industry",
-        "Durable and lightweight, these propellers enhance flight safety and reliability in challenging weather conditions",
-        "Enables centimeter-level positioning with low power consumption and powerful performance",
-        "Firmware updating"
+        "Improved audio communication",
+        "Improved positioning accuracy for mapping/survey work",
+        "Extra illumination in low light",
+        "Faster battery charging"
       ],
-      "answer": 0,
-      "difficulty": "moderate"
+      "answer": 1,
+      "difficulty": "easy"
     },
     {
-      "question": "For 'DJI Matrice 350 RTK - Single H30T Payload Kit', which item is listed under In the Box/Inclusions?",
+      "question": "Which of the following applies to Which statement as a key feature/spec for 'DJI Mavic 3 Intelligent Flight Battery'?",
       "options": [
-        "Zenmuse H30 x 1 Lens Cap x 1 microSD Card (64GB) x 1 Lens Cleaning Cloth x 1 Storage Case x 1",
-        "Power cable",
-        "Mavic 3 Multispectral Aircraft",
-        "DJI Matrice 350 RTK Commercial Drone Aircraft"
+        "200-hectare coverage in one flight",
+        "Four 5MP multispectral cameras",
+        "Various use cases in agriculture and natural resource management",
+        "For DJI Mavic 3"
       ],
       "answer": 3,
       "difficulty": "easy"
     },
     {
-      "question": "Which statement is listed as a key feature/spec for 'DJI Matrice 350 RTK - Single H30T Payload Kit'?",
+      "question": "Based on the information for 'DJI Mavic 3 Enterprise', which item under In the Box/Inclusions?",
       "options": [
-        "It is fully powered to inject innovative strength into any aerial operation.",
-        "6-Sided Obstacle Avoidance",
-        "Drone training certificate for 10 pax",
-        "DJI AS1 Speaker for Matrice 4 Series The DJI AS1 Speaker offers impressive sound power and extensive range"
+        "Mavic 3 Thermal Advanced Aircraft",
+        "3 x DJI Intelligent Flight Battery for Mavic 3",
+        "Mavic 3 Enterprise RTK Module",
+        "microSD Card 64GB"
+      ],
+      "answer": 3,
+      "difficulty": "easy"
+    },
+    {
+      "question": "According to the details of RTK/PPK is mentioned for 'D-RTK 3 Multifunctional Station The new D-RTK 3 Multifunctional Station integrates high-performance'. What is the main benefit?",
+      "options": [
+        "Extra illumination in low light",
+        "Improved audio communication",
+        "Improved positioning accuracy for mapping/survey work",
+        "Faster battery charging"
+      ],
+      "answer": 2,
+      "difficulty": "easy"
+    },
+    {
+      "question": "From the specs of Thermal/IR is mentioned for 'DJI Mavic 3 Thermal Advanced Basic Combo Wide Camera Equivalent Focal Length:'. What does that mainly help with?",
+      "options": [
+        "Charging batteries",
+        "Carrying equipment",
+        "Broadcasting voice messages",
+        "Seeing heat/IR detail or improving low-light visibility"
+      ],
+      "answer": 3,
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which of the following applies to RTK/PPK is mentioned for 'DJI Mavic 3 Multispectral'. What is the main benefit?",
+      "options": [
+        "Extra illumination in low light",
+        "Faster battery charging",
+        "Improved audio communication",
+        "Improved positioning accuracy for mapping/survey work"
+      ],
+      "answer": 3,
+      "difficulty": "easy"
+    },
+    {
+      "question": "Based on the information for Thermal/IR is mentioned for 'DJI Matrice 4 Thermal Flagship Intelligent Multi-Sensor Compact Drone Introducing the DJI'. What does that mainly help with?",
+      "options": [
+        "Seeing heat/IR detail or improving low-light visibility",
+        "Broadcasting voice messages",
+        "Charging batteries",
+        "Carrying equipment"
       ],
       "answer": 0,
-      "difficulty": "moderate"
+      "difficulty": "easy"
     },
     {
-      "question": "Which statement is listed as a key feature/spec for 'Matrice 350 - TB65 Intelligent Flight Battery'?",
+      "question": "According to the details of 'DJI Mavic 3 Multispectral', which item under In the Box/Inclusions?",
       "options": [
-        "DJI Matrice 4 Series Charging Hub (100W) DJI Matrice 4 Series Charging Hub is designed for use with Matrice 4 Intelligent Flight Batteries",
-        "Highlights High aerodynamic efficiency and reliability.",
-        "Matrice 350 - TB65 Intelligent Flight Battery MATRICE 350 TB65 Intelligent Flight Battery",
-        "Additionally, the spotlights can focus on a single object or offer a wide field of view (FOV) which illuminates up larger areas"
-      ],
-      "answer": 2,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "'Matrice 350 - TB65 Intelligent Flight Battery' is listed as compatible with which option?",
-      "options": [
-        "connecting via the OSDK interface.",
-        "Matrice 350 RTK",
-        "DJI Enterprise Remote Controllers",
-        "Specifically designed for DJI M300 and M350RTK drones"
+        "Gimbal Protector 3 pairs - Mavic 3 Enterprise Series Propellers",
+        "USB-C cable",
+        "RC Plus 2 Enterprise Controller x 1 DJI RC Plus 2 Enterprise",
+        "USB-C to USB-C Cable"
       ],
       "answer": 1,
-      "difficulty": "moderate"
+      "difficulty": "easy"
     },
     {
-      "question": "Which statement is listed as a key feature/spec for 'DJI Matrice 350 - BS65 Intelligent Battery Station'?",
-      "options": [
-        "DJI Mavic 3 Enterprise Series RTK Module",
-        "It brings next-level precision, reliability, and operational reach to enterprise and government missions.",
-        "DJI Matrice 350 - BS65 Intelligent Battery Station DJI Matrice 350 BS65 Intelligent Battery Station Product",
-        "685 g •Voltage: 26.1 V •Operating Temperature: -20 to 50 °C (-4° to 122° F) Note: Needs 2 Batteries per flight."
-      ],
-      "answer": 2,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "Which statement is listed as a key feature/spec for 'DJI Zenmuse L2'?",
-      "options": [
-        "It can carry a spraying payload up to 20 kg or a spreading payload up to 25 kg",
-        "DJI AGRAS T25 redefines standards for compact agricultural drones",
-        "DJI Zenmuse L2 DJI Zenmuse L2 High-Precision Aerial LiDAR System The DJI Zenmuse L2 is an integrated geospatial data acquisition system",
-        "Work with both imagery data and LiDAR point clouds"
-      ],
-      "answer": 2,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "Which statement is listed as a key feature/spec for 'DJI Zenmuse P1'?",
-      "options": [
-        "It features a large 7-inch high-bright touchscreen with 1200 nits brightness and 1920×1200 resolution, ensuring excellent visibility even in direct sunlight",
-        "DJI Zenmuse P1 DJI Zenmuse P1 The Zenmuse P1 integrates a full-frame sensor with interchangeable fixed-focus lenses on a 3-axis stabilized gimbal",
-        "RC Plus Remote Controller Included",
-        "PIX4Dmapper (Perpetual) PIX4Dmapper (Perpetual) The most comprehensive photogrammetry software taking you from images to the 2D or 3D outputs you need"
-      ],
-      "answer": 1,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "For 'DJI Zenmuse H30T', which item is listed under In the Box/Inclusions?",
+      "question": "From the specs of 'DJI Mavic 3 Thermal Advanced Basic Combo Wide Camera Equivalent Focal Length:', which item under In the Box/Inclusions?",
       "options": [
         "MicroSD Card 64 GB",
-        "User Manual Note:",
-        "Rubber Port Cover Set",
-        "Zenmuse H30T × 1"
-      ],
-      "answer": 3,
-      "difficulty": "easy"
-    },
-    {
-      "question": "Which statement is listed as a key feature/spec for 'D-RTK 3 Multifunctional Station'?",
-      "options": [
-        "It supports multiple data transmission links and can analyze device position and orientation through its built-in high-performance inertial measurement unit",
-        "Designed for photogrammetry flight missions, it takes efficiency and accuracy to a whole new level",
-        "The radar can accurately detect subtle obstacles upward or within the horizontal 360° range to avoid them in time.",
-        "Real-Time Weighing DJI AGRAS T50 is equipped with a weighing sensor which allows you to monitor the remaining payload in real time"
-      ],
-      "answer": 0,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "Which statement is listed as a key feature/spec for 'D-RTK 3 Survey Pole and Tripod Kit'?",
-      "options": [
-        "In rover station mode, the survey pole can be used independently for control point and check point data collection",
-        "DJI WB37 Battery Charging Hub (USB-C) DJI WB37 Battery Charging Hub (USB-C) Can charge WB37 Battery and is compatible with third-party USB-C chargers",
-        "DJI Enterprise Matrice 350 RTK Accessories: 2110s Propellers DJI Enterprise Matrice 350 RTK Accessories: 2110s Propellers",
-        "We’ll require the necessary documents from the applicants to proceed with the application"
-      ],
-      "answer": 0,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "Which statement is listed as a key feature/spec for 'DJI Enterprise Matrice 350 RTK Accessories: CSM RADAR'?",
-      "options": [
-        "Brand-New Solenoid Valves Precision starting and stopping eliminates leaking.",
-        "The effective detection range can reach 30 m",
-        "Introduction to Enterprise App",
-        "Preview expected results for each mission point, ensuring flight route safety and data quality"
-      ],
-      "answer": 1,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "Which statement is listed as a key feature/spec for 'RC Plus Controller'?",
-      "options": [
-        "Flight operations are now safer, more reliable, and powered by AI, with significantly enhanced sensing capabilities",
-        "It allows safe practice of mission planning, maneuvers, and flight operations in a virtual environment, reducing risks and costs in real-world training.",
-        "Uniform Spreading DJI AGRAS T50's spiral channel spinning disk makes spreading more uniform",
-        "RC Plus Controller RC Plus Controller"
-      ],
-      "answer": 3,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "Which statement is listed as a key feature/spec for 'WB37 Intelligent Battery'?",
-      "options": [
-        "Enhanced Multi-Spectral Processing – Supports additional band alignment and reflectance calibration for M3M and future payloads",
-        "WB37 Intelligent Battery WB37 Intelligent Battery",
-        "It is fully powered to inject innovative strength into any aerial operation.",
-        "DJI Zenmuse P1 DJI Zenmuse P1 The Zenmuse P1 integrates a full-frame sensor with interchangeable fixed-focus lenses on a 3-axis stabilized gimbal"
-      ],
-      "answer": 1,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "'WB37 Intelligent Battery' is listed as compatible with which option?",
-      "options": [
-        "Matrice 350 RTK",
-        "connecting via the OSDK interface.",
-        "DJI Enterprise Remote Controllers",
-        "Specifically designed for DJI M300 and M350RTK drones"
-      ],
-      "answer": 2,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "For 'DJI Enterprise D-RTK 2 High Precision GNSS Mobile Station Padded Carrying Bags', which item is listed under In the Box/Inclusions?",
-      "options": [
-        "microSD Card 64GB",
-        "D-RTK2 Head & Accessories Carrying Bag",
-        "Mavic 3 Intelligent Flight Battery",
-        "Lens Cap and Gimbal Port Protection Cap"
-      ],
-      "answer": 1,
-      "difficulty": "easy"
-    },
-    {
-      "question": "Which statement is listed as a key feature/spec for 'DJI Enterprise D-RTK 2 High Precision GNSS Mobile Station Padded Carrying Bags'?",
-      "options": [
-        "Mavic 3 Enterprise Series: SPOTLIGHT + BLINKER GL-10",
-        "It brings next-level precision, reliability, and operational reach to enterprise and government missions.",
-        "Access all of the information you need to plan drone missions, supervise your fleet, and manage the data you create, now from a secure cloud-based environment",
-        "DJI Enterprise D-RTK 2 High Precision GNSS Mobile Station Padded Carrying Bags DJI ENTERPRISE D-RTK 2 High Precision GNSS Mobile Station Padded Carrying Bags"
-      ],
-      "answer": 3,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "Which statement is listed as a key feature/spec for 'Matrice 300 Series Dual Gimbal Connector'?",
-      "options": [
-        "Open any captured photo, video, or panorama, and it will be displayed on the 2.5D Base Map along with corresponding coordinate information",
-        "The DJI AL1 SpotLight can illuminate subjects up to 100 meters away, and features two modes, Always-On and Strobe",
-        "Full control of the light mode, intensity and even an integrated red / blue warning LED for public safety operations",
-        "Matrice 300 Series Dual Gimbal Connector Matrice 300 Series - Dual Gimbal Connector Note: 4-5 Weeks Lead Time for Delivery"
-      ],
-      "answer": 3,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "Which statement is listed as a key feature/spec for 'Matrice300 Series - Downward Gimbal Connector'?",
-      "options": [
-        "Its quick-install design supports efficient setup and takedown, giving teams enhanced mobility without compromising drone performance or safety",
-        "DJI Terra is a perfect match for DJI Enterprise drones and payloads",
-        "•Enhanced Drone Visibility: Features red and blue flashing warning lights to improve recognition and safety",
-        "Matrice300 Series - Downward Gimbal Connector Matrice300 Series - Downward Gimbal Connector"
-      ],
-      "answer": 3,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "Which statement is listed as a key feature/spec for 'Matrice 300 Series- Upward Gimbal Connector'?",
-      "options": [
-        "Up to 4K30 Video Resolution",
-        "This is a 100% increase compared with the previous generation, to meet demands of fields, orchards, and high-temperature environments",
-        "The accessories for the Matrice 4 series have also been significantly upgraded",
-        "Matrice 300 Series- Upward Gimbal Connector Matrice300 Series - Upward Gimbal Connector"
-      ],
-      "answer": 3,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "Which statement is listed as a key feature/spec for 'DJI Enterprise Matrice 350 RTK Accessories: 2110s Propellers'?",
-      "options": [
-        "DJI Enterprise Matrice 350 RTK Accessories: 2110s Propellers DJI Enterprise Matrice 350 RTK Accessories: 2110s Propellers",
-        "When using a drone, automate and optimize your flights with the free PIX4Dcapture mobile app",
-        "Facilitation for RPA Controller Certificate processing (Knowledge Test and Skill Test) for 10 pax Note:",
-        "DJI FlightHub 2 Mapping Images Recharge Package DJI FlightHub 2 Mapping Images Recharge Package"
-      ],
-      "answer": 0,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "Which statement is listed as a key feature/spec for 'Matrice 300/350 - Gimbal Damper'?",
-      "options": [
-        "Matrice 300/350 - Gimbal Damper MATRICE 300/350 - GIMBAL DAMPER",
-        "It brings next-level precision, reliability, and operational reach to enterprise and government missions.",
-        "Easy and desktop-based.",
-        "Facilitation for RPA Controller Certificate processing (Knowledge Test and Skill Test) for 10 pax Note:"
-      ],
-      "answer": 0,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "Which statement is listed as a key feature/spec for 'Matrice 350 RTK: Spotlight and Speaker (LP-35)'?",
-      "options": [
-        "Features •High-Power Searchlight: 60W power with a 13° beam angle, illuminating up to 9,870 square ft",
-        "Compact yet powerful, this adapter provides stable output to charge TB50 batteries and compatible accessories quickly and safely",
-        "DJI AGRAS T25 redefines standards for compact agricultural drones",
-        "The accessories for the Matrice 4 series have also been significantly upgraded"
-      ],
-      "answer": 0,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "'Matrice 350 RTK: Spotlight and Speaker (LP-35)' is listed as compatible with which option?",
-      "options": [
-        "Specifically designed for DJI M300 and M350RTK drones",
-        "Matrice 350 RTK",
-        "DJI Enterprise Remote Controllers",
-        "connecting via the OSDK interface."
-      ],
-      "answer": 0,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "Which statement is listed as a key feature/spec for 'M350 GL60 Plus Searchlight'?",
-      "options": [
-        "M350 GL60 Plus Searchlight M350 GL60 Plus Searchlight",
-        "Multi-GPU Acceleration – Supports parallel GPU rendering for significantly faster processing speeds",
-        "DJI AS1 Speaker for Matrice 4 Series The DJI AS1 Speaker offers impressive sound power and extensive range",
-        "It features a large 7-inch high-bright touchscreen with 1200 nits brightness and 1920×1200 resolution, ensuring excellent visibility even in direct sunlight"
-      ],
-      "answer": 0,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "Which statement is listed as a key feature/spec for 'M350 Speaker MP130 V2 (longer range)'?",
-      "options": [
-        "CAAP Registration and Insurance (Third Party Liability) CAAP Registration and Insurance (Third Party Liability)",
-        "Matrice 350 - TB65 Intelligent Flight Battery MATRICE 350 TB65 Intelligent Flight Battery",
-        "Key Features • High-bright display • IP54 protection rating • O4 Enterprise video transmission • Support for both SDR and 4G hybrid transmission",
-        "M350 Speaker MP130 V2 (longer range) M350 Speaker MP130 V2 (longer range)"
-      ],
-      "answer": 3,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "Which statement is listed as a key feature/spec for 'DJI Terra - Standard - 1Year (Online Version)'?",
-      "options": [
-        "Highlights Designed to work together seamlessly with the D-RTK 3 Multifunctional Station",
-        "It supports a range of accurate and efficient 2D and 3D reconstruction of visible light, and data processing through DJI LiDAR",
-        "It allows users to charge multiple batteries safely and efficiently, ensuring your drone is always mission-ready.",
-        "DJI Matrice 4 Series Charging Hub (100W) DJI Matrice 4 Series Charging Hub is designed for use with Matrice 4 Intelligent Flight Batteries"
-      ],
-      "answer": 1,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "Which statement is listed as a key feature/spec for 'DJI Terra - Standard - 1Year'?",
-      "options": [
-        "Real-Time Weighing DJI AGRAS T50 is equipped with a weighing sensor which allows you to monitor the remaining payload in real time",
-        "The series includes Matrice 4T, Equipped with advanced features such as smart detection and measurement with laser range finder",
-        "It supports a range of accurate and efficient 2D and 3D reconstruction of visible light, and data processing through DJI LiDAR",
-        "Supports Hot Module Replacement, saving time during critical tasks and ensuring smooth flight operations"
-      ],
-      "answer": 2,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "Which statement is listed as a key feature/spec for 'DJI Terra - Standard - Permanent (Online Version)'?",
-      "options": [
-        "It supports a range of accurate and efficient 2D and 3D reconstruction of visible light, and data processing through DJI LiDAR",
-        "Whether you're in the studio or out in the field, the 240W Power Adapter keeps your operation running smoothly",
-        "CAAP RPAS Laws and Regulations for Knowledge Test",
-        "DJI AS1 Speaker for Matrice 4 Series"
-      ],
-      "answer": 0,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "Which statement is listed as a key feature/spec for 'DJI Terra - Standard - Permanent (Offline Version)'?",
-      "options": [
-        "It supports a range of accurate and efficient 2D and 3D reconstruction of visible light, and data processing through DJI LiDAR",
-        "M350 Speaker MP130 V2 (longer range) M350 Speaker MP130 V2 (longer range)",
-        "CAAP RPAS Laws and Regulations for Knowledge Test",
-        "It is ideal for use alongside DJI Terra outputs, especially for further processing of LiDAR and photogrammetry data collected from DJI Enterprise payloads."
-      ],
-      "answer": 0,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "Which statement is listed as a key feature/spec for 'DJI Terra - Flagship - 1 Year'?",
-      "options": [
-        "Supports 65W PD fast charging",
-        "Advanced LiDAR Classification – AI-based automatic classification of point clouds (ground, vegetation, buildings, powerlines, etc.)",
-        "It brings next-level precision, reliability, and operational reach to enterprise and government missions.",
-        "Basics of Drone Flying"
-      ],
-      "answer": 1,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "Which statement is listed as a key feature/spec for 'DJI Terra - Flagship - Permanent (Online Version)'?",
-      "options": [
-        "Application normally takes 1-2 months to complete depending on CAAP's Timeline and Weather",
-        "Advanced LiDAR Classification – AI-based automatic classification of point clouds (ground, vegetation, buildings, powerlines, etc.)",
-        "You can also synchronize team positions, mission details, and map information in real time, making team collaboration easier than ever",
-        "DJI AGRAS T25 is equipped with Front and Rear Phased Array Radars, a Binocular Vision System, and a high resolution FPV gimbal camera"
-      ],
-      "answer": 1,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "Which statement is listed as a key feature/spec for 'DJI Terra - Flagship - Permanent (Offline Version)'?",
-      "options": [
-        "Advanced LiDAR Classification – AI-based automatic classification of point clouds (ground, vegetation, buildings, powerlines, etc.)",
-        "Water, Dust, Dirt & Cold/Heat Resistant",
-        "The effective detection range can reach 30 m",
-        "Built for all-weather, continuous operations, Dock 3 introduces enhanced automation, faster deployment, and wider compatibility"
-      ],
-      "answer": 0,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "Which statement is listed as a key feature/spec for 'CAAP Registration Assistance - RPA Controller Certificate for 10 Pax'?",
-      "options": [
-        "Supports 65W PD fast charging",
-        "The DJI AL1 SpotLight can illuminate subjects up to 100 meters away, and features two modes, Always-On and Strobe",
-        "Drone training certificate for 10 pax",
-        "Real-Time Weighing DJI AGRAS T50 is equipped with a weighing sensor which allows you to monitor the remaining payload in real time"
-      ],
-      "answer": 2,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "Which statement is listed as a key feature/spec for 'Training for Enterprise Drones with CAAP Registration Assistance (UAV Registration'?",
-      "options": [
-        "•Powerful Broadcasting System: Loudspeaker with 124dB sound pressure, capable of broadcasting over .5 miles",
-        "Access all of the information you need to plan drone missions, supervise your fleet, and manage the data you create, now from a secure cloud-based environment",
-        "Features of Enterprise Drones",
-        "WB37 Intelligent Battery WB37 Intelligent Battery"
-      ],
-      "answer": 2,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "Which statement is listed as a key feature/spec for 'DJI Flighthub 2 (12-Month Subscription)'?",
-      "options": [
-        "PIX4Dmapper (Perpetual) PIX4Dmapper (Perpetual) The most comprehensive photogrammetry software taking you from images to the 2D or 3D outputs you need",
-        "Max Transmission Distance FCC: 15 km / CE: 8 km",
-        "Enables centimeter-level positioning with low power consumption and powerful performance",
-        "Access all of the information you need to plan drone missions, supervise your fleet, and manage the data you create, now from a secure cloud-based environment"
-      ],
-      "answer": 3,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "Which statement is listed as a key feature/spec for 'DJI FlightHub 2 Livestream Minutes Recharge Package (10,000 minutes)'?",
-      "options": [
-        "It combines a 1535 nm long-range LiDAR module, dual 100 MP RGB mapping cameras, and a high-precision IMU/POS system on a 3-axis stabilized gimbal",
-        "Supports 65W PD fast charging",
-        "DJI AGRAS T25 supports multiple missions, from surveying to spraying and spreading and excels across a variety of terrains",
-        "DJI FlightHub 2 Livestream Minutes Recharge Package (10,000 minutes) DJI FlightHub 2 Livestream Minutes Recharge Package (10,000 minutes)"
-      ],
-      "answer": 3,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "Which statement is listed as a key feature/spec for 'DJI FlightHub 2 Mapping Images Recharge Package'?",
-      "options": [
-        "DJI FlightHub 2 Mapping Images Recharge Package DJI FlightHub 2 Mapping Images Recharge Package",
-        "Additionally, the spotlights can focus on a single object or offer a wide field of view (FOV) which illuminates up larger areas",
-        "Open any captured photo, video, or panorama, and it will be displayed on the 2.5D Base Map along with corresponding coordinate information",
-        "The radar can accurately detect subtle obstacles upward or within the horizontal 360° range to avoid them in time."
-      ],
-      "answer": 0,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "Which statement is listed as a key feature/spec for 'DJI FlightHub 2 Storage Space Upgrade Package'?",
-      "options": [
-        "4/3 CMOS Wide Camera / 20MP",
-        "Durable and lightweight, these propellers enhance flight safety and reliability in challenging weather conditions",
-        "CAAP Registration and Insurance (Third Party Liability) CAAP Registration and Insurance (Third Party Liability)",
-        "DJI FlightHub 2 Storage Space Upgrade Package DJI FlightHub 2 Storage Space Upgrade Package"
-      ],
-      "answer": 3,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "Which statement is listed as a key feature/spec for 'PIX4Dmapper (Perpetual)'?",
-      "options": [
-        "Compact and travel-friendly, the 240W Charging Hub is an essential accessory for uninterrupted shoots and field operations",
-        "Multi-GPU Acceleration – Supports parallel GPU rendering for significantly faster processing speeds",
-        "PIX4Dmapper (Perpetual) PIX4Dmapper (Perpetual) The most comprehensive photogrammetry software taking you from images to the 2D or 3D outputs you need",
-        "Up to 4K30 Video Resolution"
-      ],
-      "answer": 2,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "Which statement is listed as a key feature/spec for 'PIX4Dsurvey (Perpetual)'?",
-      "options": [
-        "When using a drone, automate and optimize your flights with the free PIX4Dcapture mobile app",
-        "Magnetic Drive Impeller Pump Dual pump flow rate of up to 24 L/min",
-        "Review operation results on the cloud",
-        "It allows users to charge multiple batteries safely and efficiently, ensuring your drone is always mission-ready."
-      ],
-      "answer": 0,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "Which statement is listed as a key feature/spec for 'PIX4Dmatic (Perpetual)'?",
-      "options": [
-        "Synchronize missions with pilots for efficient and convenient execution",
-        "4/3 CMOS Wide Camera / 20MP",
-        "Terrestrial workflow - Leverage the benefits of both photogrammetry and LiDAR technology",
-        "The accessories for the Matrice 4 series have also been significantly upgraded"
-      ],
-      "answer": 2,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "Which statement is listed as a key feature/spec for 'Globa Mapper Pro - Perpetual License'?",
-      "options": [
-        "DJI AGRAS T50 excels across multiple scenarios, from surveying to spraying and spreading, guaranteeing stable operations and steady performance",
-        "56× Hybrid Zoom",
-        "Brand-New Solenoid Valves Precision starting and stopping eliminates leaking.",
-        "It is ideal for use alongside DJI Terra outputs, especially for further processing of LiDAR and photogrammetry data collected from DJI Enterprise payloads."
-      ],
-      "answer": 3,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "Which statement is listed as a key feature/spec for 'Agisoft Metashape Professional,'?",
-      "options": [
-        "Features •High-Power Searchlight: 60W power with a 13° beam angle, illuminating up to 9,870 square ft",
-        "It allows safe practice of mission planning, maneuvers, and flight operations in a virtual environment, reducing risks and costs in real-world training.",
-        "DB800 Intelligent Flight Battery DB800 Intelligent Flight Battery • Capacity increased to 15.5 Ah • Warranty covers 1,500 charging cycles",
-        "Water, Dust, Dirt & Cold/Heat Resistant"
-      ],
-      "answer": 1,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "For 'DJI Matrice 400', which item is listed under In the Box/Inclusions?",
-      "options": [
-        "DJI SkyPort V3 Coaxial Cable Kit",
-        "Tripod & Pole Carrying Bag Note: 1 Week Lead Time for Delivery",
-        "Limited 6-Month Manufacturer Warranty (Upward/Downward Gimbal Connectors) Battery & Battery Station not included in package.",
-        "DJI Matrice 400 Commercial Drone Aircraft"
-      ],
-      "answer": 3,
-      "difficulty": "easy"
-    },
-    {
-      "question": "Which statement is listed as a key feature/spec for 'DJI Matrice 400'?",
-      "options": [
-        "Process LiDAR and RGB image outputs from PIX4Dcatch for a full terrestrial workflow",
-        "It is fully capable of executing high-stakes operations with precision and confidence.",
-        "•Enhanced Drone Visibility: Features red and blue flashing warning lights to improve recognition and safety",
-        "The battery charging hub supports both Standard Mode and Ready-to-Fly Mode"
-      ],
-      "answer": 1,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "For 'DJI BS100 Intelligent Battery Station', which item is listed under In the Box/Inclusions?",
-      "options": [
-        "Carrying Case",
-        "CW Propeller × 1 CCW Propeller × 1 Screw × 6 Specifications Propeller Disc Diameter: 40.6 cm (16 inches) Propeller Pitch: 18 cm (7.1 inches)",
-        "DJI BS100 Intelligent Battery Station",
-        "USB-C to USB-C Cable and Protector Case DJI Mavic 3 Enterprise"
-      ],
-      "answer": 2,
-      "difficulty": "easy"
-    },
-    {
-      "question": "Which statement is listed as a key feature/spec for 'DJI BS100 Intelligent Battery Station'?",
-      "options": [
-        "It allows users to charge multiple batteries safely and efficiently, ensuring your drone is always mission-ready.",
-        "Easy and desktop-based.",
-        "Preview expected results for each mission point, ensuring flight route safety and data quality",
-        "RC Plus Controller RC Plus Controller"
-      ],
-      "answer": 0,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "For 'DJI TB100 Intelligent Flight Battery (Set of 3 pcs.)', which item is listed under In the Box/Inclusions?",
-      "options": [
-        "DJI BS100 Intelligent Battery Station",
-        "microSD Card (64GB) × 1",
-        "DJI TB100 Intelligent Flight Battery Note:",
-        "1 unit. - Aircraft Body"
-      ],
-      "answer": 2,
-      "difficulty": "easy"
-    },
-    {
-      "question": "For 'DJI TB100C Tethered Battery (Set of 2 pcs.)', which item is listed under In the Box/Inclusions?",
-      "options": [
-        "DJI E-Port V2 Coaxial Cable Kit",
-        "DJI TB100 Intelligent Flight Battery Note:",
-        "microSD Card 64GB",
-        "Mounting Accessories"
-      ],
-      "answer": 1,
-      "difficulty": "easy"
-    },
-    {
-      "question": "Which statement is listed as a key feature/spec for 'DJI Zenmuse L3'?",
-      "options": [
-        "Additionally, the spotlights can focus on a single object or offer a wide field of view (FOV) which illuminates up larger areas",
-        "CAAP Registration and Insurance (Third Party Liability) CAAP Registration and Insurance (Third Party Liability)",
-        "For 12 month subscription, the livestreaming time limit is 2000 mins/month.",
-        "It combines a 1535 nm long-range LiDAR module, dual 100 MP RGB mapping cameras, and a high-precision IMU/POS system on a 3-axis stabilized gimbal"
-      ],
-      "answer": 3,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "For 'DJI Matrice 400 Gimbal Damper', which item is listed under In the Box/Inclusions?",
-      "options": [
-        "DJI Matrice 400 Gimbal Damper Assembly Note:",
-        "Screws & Tools",
-        "Lens Cleaning Cloth × 1",
-        "Top gimbal assembly × 1 Backup absorber ball × 4 Note: 4-5 Weeks Lead Time for Delivery"
-      ],
-      "answer": 0,
-      "difficulty": "easy"
-    },
-    {
-      "question": "For 'DJI Matrice 400 2510F Propeller', which item is listed under In the Box/Inclusions?",
-      "options": [
-        "1 pair - DJI Matrice 400 2510F Propeller (CW + CCW) Note:",
-        "Coaxial Cables and Connectors",
-        "Mounting Hardware and Installation Kit Note:",
-        "Compatible only with Matrice 400 Series TB100 Intelligent Flight Batteries"
-      ],
-      "answer": 0,
-      "difficulty": "easy"
-    },
-    {
-      "question": "For 'DJI Matrice 400 Third Gimbal Connector', which item is listed under In the Box/Inclusions?",
-      "options": [
-        "Mavic 3 Intelligent Flight Battery",
-        "DJI Matrice 400 Third Gimbal Connector",
-        "USB-C Cable DJI Mavic 3 Enterprise Series Battery Kit",
-        "For use with supported DJI enterprise drone platforms (e.g., Matrice 350/400 RTK)"
-      ],
-      "answer": 1,
-      "difficulty": "easy"
-    },
-    {
-      "question": "For 'DJI Matrice 4 Dual Gimbal Connector', which item is listed under In the Box/Inclusions?",
-      "options": [
-        "Limited 6-Month Manufacturer Warranty",
-        "DJI Matrice 4 Dual Gimbal Connector",
-        "Gimbal Protector",
-        "Mounting Accessories"
-      ],
-      "answer": 1,
-      "difficulty": "easy"
-    },
-    {
-      "question": "For 'DJI SkyPort V3 Coaxial Cable Kit', which item is listed under In the Box/Inclusions?",
-      "options": [
-        "Manuals Note:",
-        "DJI SkyPort V3 Coaxial Cable Kit",
-        "DJI E-Port V2 Adapter Board",
-        "DJI TB100 Intelligent Flight Battery Note:"
-      ],
-      "answer": 1,
-      "difficulty": "easy"
-    },
-    {
-      "question": "For 'DJI SkyPort V3 Adapter Set', which item is listed under In the Box/Inclusions?",
-      "options": [
-        "Power Cable (AC)",
-        "DJI SkyPort V3 Adapter Mount",
         "Battery Charging Hub x 1 DJI Matrice 4 Series Charging Hub",
-        "Hard carry case"
-      ],
-      "answer": 1,
-      "difficulty": "easy"
-    },
-    {
-      "question": "For 'DJI E-Port V2 Coaxial Cable Kit', which item is listed under In the Box/Inclusions?",
-      "options": [
-        "Recommended for use with official DJI payloads",
-        "DJI E-Port V2 Coaxial Cable Kit",
-        "Gimbal Protector",
-        "Storage Case"
-      ],
-      "answer": 1,
-      "difficulty": "easy"
-    },
-    {
-      "question": "For 'DJI E-Port V2 Development Kit', which item is listed under In the Box/Inclusions?",
-      "options": [
-        "Recommended for use with official DJI payloads",
-        "DJI Matrice 400 Commercial Drone Aircraft",
-        "DJI SkyPort V3 Coaxial Cable Kit",
-        "DJI E-Port V2 Adapter Board"
-      ],
-      "answer": 3,
-      "difficulty": "easy"
-    },
-    {
-      "question": "For 'DJI Zenmuse V1', which item is listed under In the Box/Inclusions?",
-      "options": [
-        "User Manual Note:",
-        "Zenmuse V1 × 1",
-        "Cleaning Tools",
-        "microSD Card (64GB) × 1"
-      ],
-      "answer": 1,
-      "difficulty": "easy"
-    },
-    {
-      "question": "For 'DJI Zenmuse S1', which item is listed under In the Box/Inclusions?",
-      "options": [
-        "Hard carry case",
-        "Requires compatible payloads and gimbal ports",
-        "Rubber Port Cover Set",
-        "Zenmuse S1 × 1"
-      ],
-      "answer": 3,
-      "difficulty": "easy"
-    },
-    {
-      "question": "Which statement is listed as a key feature/spec for 'DJI Matrice 30'?",
-      "options": [
-        "Mavic 3 Enterprise Series: SPOTLIGHT + BLINKER GL-10",
-        "Preview expected results for each mission point, ensuring flight route safety and data quality",
-        "Designed for photogrammetry flight missions, it takes efficiency and accuracy to a whole new level",
-        "Wide-Angle & Zoom Cameras"
-      ],
-      "answer": 3,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "For 'DJI Matrice 30T (Thermal)', which item is listed under In the Box/Inclusions?",
-      "options": [
-        "Power cable",
-        "Includes Coaxial Cables, Connectors, and Mounting Accessories Note:",
-        "Mounting Hardware and Installation Kit Note:",
-        "1 unit. - Aircraft Body"
-      ],
-      "answer": 3,
-      "difficulty": "easy"
-    },
-    {
-      "question": "Which statement is listed as a key feature/spec for 'DJI Matrice 30T (Thermal)'?",
-      "options": [
-        "Matrice 30 Series 1671 Propellers Matrice 30 Series 1671 Propellers Overview Standard original propeller for M30 series aircraft",
-        "It is fully powered to inject innovative strength into any aerial operation.",
-        "It can charge up to four Intelligent Flight Batteries in sequence from high to low power level",
-        "DJI Matrice 30T (Thermal) DJI Matrice 30T (Thermal)"
-      ],
-      "answer": 3,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "Which statement is listed as a key feature/spec for 'DJI TB30 Intelligent Flight Battery'?",
-      "options": [
-        "DJI Mavic 3 Enterprise Series Battery Kit",
-        "Compact and travel-friendly, the 240W Charging Hub is an essential accessory for uninterrupted shoots and field operations",
-        "*Note: Required for processing LIDAR data from L1 & L2 payload",
-        "Supports Hot Module Replacement, saving time during critical tasks and ensuring smooth flight operations"
-      ],
-      "answer": 3,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "Which statement is listed as a key feature/spec for 'BS30 Intelligent Battery Station'?",
-      "options": [
-        "The charging station also supports Standby and Storage modes.",
-        "4/3 CMOS Wide Camera / 20MP",
-        "AI-Assisted Reconstruction – Improves feature detection and 3D mesh accuracy using intelligent surface modeling",
-        "The DJI AL1 SpotLight can illuminate subjects up to 100 meters away, and features two modes, Always-On and Strobe"
+        "Screwdriver x1 DJI Mavic 3 Multispectral",
+        "Power cable"
       ],
       "answer": 0,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "What charging time is mentioned for 'BS30 Intelligent Battery Station'?",
-      "options": [
-        "15 minutes",
-        "5 minutes",
-        "30 minutes",
-        "60 minutes"
-      ],
-      "answer": 2,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "Which statement is listed as a key feature/spec for 'Matrice 30 Series 1671 Propellers'?",
-      "options": [
-        "In-The-Box: • 1 Pair of Low-Noise Anti-Ice Propellers (1 CW + 1 CCW) • Propeller Screws",
-        "Facilitation for RPA Controller Certificate processing (Knowledge Test and Skill Test) for 10 pax Note:",
-        "Advanced LiDAR Classification – AI-based automatic classification of point clouds (ground, vegetation, buildings, powerlines, etc.)",
-        "Matrice 30 Series 1671 Propellers Matrice 30 Series 1671 Propellers Overview Standard original propeller for M30 series aircraft"
-      ],
-      "answer": 3,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "Which statement is listed as a key feature/spec for 'DJI Matrice 4 Enterprise'?",
-      "options": [
-        "You can pair it up with your own USB-A cable to charge the battery and remote controller simultaneously",
-        "The series includes Matrice 4E, equipped with advanced features such as smart detection and measurement with laser range finder",
-        "Compact and travel-friendly, the 240W Charging Hub is an essential accessory for uninterrupted shoots and field operations",
-        "Up to 9.3-Mile Transmission Range"
-      ],
-      "answer": 1,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "Which statement is listed as a key feature/spec for 'DJI Matrice 4 Thermal'?",
-      "options": [
-        "DJI Mavic 3 Enterprise Series Battery Kit",
-        "The series includes Matrice 4T, Equipped with advanced features such as smart detection and measurement with laser range finder",
-        "M350 GL60 Plus Searchlight M350 GL60 Plus Searchlight",
-        "This is a 100% increase compared with the previous generation, to meet demands of fields, orchards, and high-temperature environments"
-      ],
-      "answer": 1,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "Which statement is listed as a key feature/spec for 'DJI RC Plus 2 Enterprise'?",
-      "options": [
-        "Standard Mode charges each battery to 100% sequentially",
-        "It combines frame LiDAR technology, a high-accuracy IMU system, and a 4/3 CMOS RGB mapping camera",
-        "•Powerful Broadcasting System: Loudspeaker with 124dB sound pressure, capable of broadcasting over .5 miles",
-        "DJI RC Plus 2 Enterprise DJI RC Plus 2 Enterprise is equiped with a new high-bright display, ensuring clear visibility even under strong sunlight"
-      ],
-      "answer": 3,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "What flight time is mentioned for 'DJI Matrice 4 Series Battery'?",
-      "options": [
-        "32 minutes",
-        "62 minutes",
-        "42 minutes",
-        "52 minutes"
-      ],
-      "answer": 2,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "Which statement is listed as a key feature/spec for 'DJI Matrice 4 Series Charging Hub (100W)'?",
-      "options": [
-        "The DJI AL1 SpotLight can illuminate subjects up to 100 meters away, and features two modes, Always-On and Strobe",
-        "DJI Terra is a perfect match for DJI Enterprise drones and payloads",
-        "DJI Matrice 4 Series Charging Hub (100W) DJI Matrice 4 Series Charging Hub is designed for use with Matrice 4 Intelligent Flight Batteries",
-        "It is fully powered to inject innovative strength into any aerial operation."
-      ],
-      "answer": 2,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "Which statement is listed as a key feature/spec for 'DJI Matrice 4 Series Propellers'?",
-      "options": [
-        "DJI Matrice 4 Series Propellers DJI Matrice 4 Series Propellers",
-        "Compatible With: • DJI Matrice 4D • DJI Matrice 4TD • DJI Matrice 3D • DJI Matrice 3TD • DJI Dock 3",
-        "Supports Hot Module Replacement, saving time during critical tasks and ensuring smooth flight operations",
-        "Low Rate Spreading You can also switch to small hopper gates to improve spreading accuracy with a low flow rate"
-      ],
-      "answer": 0,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "Which statement is listed as a key feature/spec for 'DJI AS1 Speaker for Matrice 4 Series'?",
-      "options": [
-        "685 g •Voltage: 26.1 V •Operating Temperature: -20 to 50 °C (-4° to 122° F) Note: Needs 2 Batteries per flight.",
-        "CAAP Registration and Insurance (Third Party Liability) CAAP Registration and Insurance (Third Party Liability)",
-        "DJI AS1 Speaker for Matrice 4 Series The DJI AS1 Speaker offers impressive sound power and extensive range",
-        "Mavic 3 Enterprise Series: SPOTLIGHT + BLINKER GL-10"
-      ],
-      "answer": 2,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "Which statement is listed as a key feature/spec for 'DJI AL1 Spotlight for Matrice 4 Series.'?",
-      "options": [
-        "It is ideal for use alongside DJI Terra outputs, especially for further processing of LiDAR and photogrammetry data collected from DJI Enterprise payloads.",
-        "DJI AL1 Spotlight for Matrice 4 Series",
-        "FPV Camera & Laser Rangefinder",
-        "Built for endurance, it supports longer missions, fast charging, and reliable power delivery in extreme operational environments."
-      ],
-      "answer": 1,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "For '(For Mapping / Surveying / Volumetrics)', which item is listed under In the Box/Inclusions?",
-      "options": [
-        "Limited 6-Month Manufacturer Warranty (Upward/Downward Gimbal Connectors) Battery & Battery Station not included in package.",
-        "Mavic 3E Aircraft",
-        "Limited 1-Year Warranty (with Less than 200 Charge Cycles)",
-        "Zenmuse S1 × 1"
-      ],
-      "answer": 1,
       "difficulty": "easy"
     },
     {
-      "question": "Which statement is listed as a key feature/spec for '(For Mapping / Surveying / Volumetrics)'?",
+      "question": "Which of the following applies to What flight time is mentioned for 'DJI Mavic 3 Intelligent Flight Battery'?",
       "options": [
-        "Centimeter-level Positioning with RTK",
-        "DJI Matrice 350 RTK DJI Matrice 350 RTK An upgraded flagship drone platform, the Matrice 350 RTK sets a new benchmark for the industry",
-        "Standard Mode charges each battery to 100% sequentially",
-        "The Matrice 4E is designed for geospatial applications such as surveying and mapping, construction, and mining"
-      ],
-      "answer": 0,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "For 'DJI Mavic 3 Thermal Advanced Basic Combo', which item is listed under In the Box/Inclusions?",
-      "options": [
-        "User Manual Note:",
-        "Lens Cleaning Cloth × 1",
-        "Compatible only with Matrice 400 Series TB100 Intelligent Flight Batteries",
-        "Mavic 3 Thermal Advanced Aircraft"
-      ],
-      "answer": 3,
-      "difficulty": "easy"
-    },
-    {
-      "question": "For '(For Mapping / Agriculture / Volumetrics)', which item is listed under In the Box/Inclusions?",
-      "options": [
-        "Mavic 3 Enterprise Series Propellers (Pair)",
-        "Power Cable (AC)",
-        "Storage Case × 1",
-        "Mavic 3 Multispectral Aircraft"
-      ],
-      "answer": 3,
-      "difficulty": "easy"
-    },
-    {
-      "question": "Which statement is listed as a key feature/spec for '(For Mapping / Agriculture / Volumetrics)'?",
-      "options": [
-        "Flying Sessions (Manual Controls)",
-        "(For Mapping / Agriculture / Volumetrics) DJI Mavic 3 Multispectral",
-        "It can carry a spraying payload up to 20 kg or a spreading payload up to 25 kg",
-        "AGRAS T50 Aircraft (Oversea V2) AGRAS T50 Aircraft (Oversea V2) DJI AGRAS T50 elevates drone agricultural operations to new heights"
-      ],
-      "answer": 1,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "Which statement is listed as a key feature/spec for 'DJI Mavic 3 Enterprise Series RTK Module'?",
-      "options": [
-        "Matrice 300 Series- Upward Gimbal Connector Matrice300 Series - Upward Gimbal Connector",
-        "DJI Mavic 3 Intelligent Flight Battery",
-        "Its quick-install design supports efficient setup and takedown, giving teams enhanced mobility without compromising drone performance or safety",
-        "DJI Mavic 3 Enterprise Series RTK Module Compatible with DJI Mavic 3 Enterprise Series aircraft"
-      ],
-      "answer": 3,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "Which statement is listed as a key feature/spec for 'DJI Mavic 3 Intelligent Flight Battery'?",
-      "options": [
-        "(For Mapping / Agriculture / Volumetrics) DJI Mavic 3 Multispectral",
-        "DJI Mavic 3 Intelligent Flight Battery",
-        "Whether you're in the studio or out in the field, the 240W Power Adapter keeps your operation running smoothly",
-        "Low Rate Spreading You can also switch to small hopper gates to improve spreading accuracy with a low flow rate"
-      ],
-      "answer": 1,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "What flight time is mentioned for 'DJI Mavic 3 Intelligent Flight Battery'?",
-      "options": [
-        "36 minutes",
         "26 minutes",
+        "46 minutes",
         "56 minutes",
-        "46 minutes"
+        "66 minutes"
       ],
-      "answer": 3,
-      "difficulty": "moderate"
+      "answer": 1,
+      "difficulty": "easy"
     },
     {
-      "question": "What hover time is mentioned for 'DJI Mavic 3 Intelligent Flight Battery'?",
+      "question": "Based on the information for What hover time is mentioned for 'DJI Matrice 4 Series Battery The 99Wh high-capacity battery provides up to'?",
       "options": [
-        "40 minutes",
-        "30 minutes",
-        "50 minutes",
-        "20 minutes"
+        "52 minutes",
+        "42 minutes",
+        "32 minutes",
+        "22 minutes"
       ],
-      "answer": 0,
-      "difficulty": "moderate"
+      "answer": 1,
+      "difficulty": "easy"
     },
     {
-      "question": "For 'DJI Mavic 3 Enterprise Series Battery Kit', which item is listed under In the Box/Inclusions?",
+      "question": "According to the details of What flight time is mentioned for 'DJI Matrice 4 Series Battery The 99Wh high-capacity battery provides up to'?",
       "options": [
-        "3 x DJI Intelligent Flight Battery for Mavic 3",
-        "Carrying Case × 1",
-        "Quick‑Start Guide / Documentation",
-        "CW Propeller × 1 CCW Propeller × 1 Screw × 6 Specifications Propeller Disc Diameter: 40.6 cm (16 inches) Propeller Pitch: 18 cm (7.1 inches)"
+        "49 minutes",
+        "39 minutes",
+        "59 minutes",
+        "69 minutes"
       ],
       "answer": 0,
       "difficulty": "easy"
     },
     {
-      "question": "Which statement is listed as a key feature/spec for 'DJI Mavic 3 Enterprise Series Battery Kit'?",
+      "question": "From the specs of RTK/PPK is mentioned for 'D-RTK 3 Survey Pole and Tripod Kit Overview The new D-RTK 3'. What is the main benefit?",
       "options": [
-        "The radar can accurately detect subtle obstacles upward or within the horizontal 360° range to avoid them in time.",
-        "DJI AGRAS T25 is equipped with Front and Rear Phased Array Radars, a Binocular Vision System, and a high resolution FPV gimbal camera",
-        "DJI Mavic 3 Enterprise Series Battery Kit",
-        "DJI FlightHub 2 Mapping Images Recharge Package DJI FlightHub 2 Mapping Images Recharge Package"
+        "Faster battery charging",
+        "Improved audio communication",
+        "Improved positioning accuracy for mapping/survey work",
+        "Extra illumination in low light"
       ],
       "answer": 2,
-      "difficulty": "moderate"
+      "difficulty": "easy"
     },
     {
-      "question": "Which statement is listed as a key feature/spec for 'Mavic 3 Enterprise Series: SPOTLIGHT + BLINKER GL-10'?",
+      "question": "Which of the following applies to Which statement as a key feature/spec for 'DJI Mavic 3 Enterprise'?",
       "options": [
-        "Dual Atomizing Centrifugal Sprinklers Droplet size can be adjusted between 50-500 μm, depending on the chemicals used",
-        "6-Sided Obstacle Avoidance",
-        "It combines frame LiDAR technology, a high-accuracy IMU system, and a 4/3 CMOS RGB mapping camera",
-        "Full control of the light mode, intensity and even an integrated red / blue warning LED for public safety operations"
+        "RTK module for centimeter-level positioning",
+        "For DJI Mavic 3",
+        "200-hectare coverage in one flight",
+        "4/3 CMOS Wide Camera / 20MP"
       ],
       "answer": 3,
-      "difficulty": "moderate"
+      "difficulty": "easy"
     },
     {
-      "question": "Which statement is listed as a key feature/spec for 'Mavic 3 Enterprise Series: Propellers'?",
+      "question": "Based on the information for What flight time is mentioned for 'DJI Mavic 3 Thermal Advanced Basic Combo Wide Camera Equivalent Focal Length:'?",
       "options": [
-        "DJI Spotlight (AG T50/T25) DJI Spotlight (AG T50/T25)",
-        "You can also synchronize team positions, mission details, and map information in real time, making team collaboration easier than ever",
-        "This is a 100% increase compared with the previous generation, to meet demands of fields, orchards, and high-temperature environments",
-        "The new safety design causes less damage to people or other objects in the event of an accident."
+        "25 minutes",
+        "65 minutes",
+        "55 minutes",
+        "45 minutes"
       ],
       "answer": 3,
-      "difficulty": "moderate"
+      "difficulty": "easy"
     },
     {
-      "question": "Which statement is listed as a key feature/spec for 'AGRAS T50 Aircraft (Oversea V2)'?",
+      "question": "According to the details of RTK/PPK is mentioned for 'DJI Mavic 3 Enterprise Series RTK Module Compatible with DJI Mavic 3'. What is the main benefit?",
       "options": [
-        "Full control of the light mode, intensity and even an integrated red / blue warning LED for public safety operations",
-        "AGRAS T50 Aircraft (Oversea V2) AGRAS T50 Aircraft (Oversea V2) DJI AGRAS T50 elevates drone agricultural operations to new heights",
-        "Low Rate Spreading You can also switch to small hopper gates to improve spreading accuracy with a low flow rate",
-        "Open any captured photo, video, or panorama, and it will be displayed on the 2.5D Base Map along with corresponding coordinate information"
+        "Faster battery charging",
+        "Improved positioning accuracy for mapping/survey work",
+        "Extra illumination in low light",
+        "Improved audio communication"
       ],
       "answer": 1,
-      "difficulty": "moderate"
+      "difficulty": "easy"
     },
     {
-      "question": "Which statement is listed as a key feature/spec for 'DB1560 Intelligent Flight Battery (Oversea)'?",
+      "question": "From the specs of RTK/PPK is mentioned for 'DJI ENTERPRISE D-RTK 2 High Precision GNSS Mobile Station Padded Carrying Bags'. What is the main benefit?",
       "options": [
-        "DJI AGRAS T25 supports multiple missions, from surveying to spraying and spreading and excels across a variety of terrains",
-        "It is fully powered to inject innovative strength into any aerial operation.",
-        "Terrestrial workflow - Leverage the benefits of both photogrammetry and LiDAR technology",
-        "DB1560 Intelligent Flight Battery (Oversea) DB1560 Intelligent Flight Battery (Oversea) • Capacity increased to 30 Ah • Up to 1,500 charging cycles"
-      ],
-      "answer": 3,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "Which statement is listed as a key feature/spec for 'T50 Spreading System (Global)'?",
-      "options": [
-        "Wide-Angle & Zoom Cameras",
-        "Magnetic Drive Impeller Pump Dual pump flow rate of up to 24 L/min",
-        "Smooth Spreading The torque of the spreader is doubled and the discharge hatch is enlarged to enable a flow rate up to 108 kg/mi",
-        "It brings next-level precision, reliability, and operational reach to enterprise and government missions."
+        "Faster battery charging",
+        "Extra illumination in low light",
+        "Improved positioning accuracy for mapping/survey work",
+        "Improved audio communication"
       ],
       "answer": 2,
-      "difficulty": "moderate"
+      "difficulty": "easy"
     },
     {
-      "question": "Which statement is listed as a key feature/spec for 'T50 Atomized Sprinkler Package (Global)'?",
+      "question": "Which of the following applies to What hover time is mentioned for 'DJI Mavic 3 Intelligent Flight Battery'?",
       "options": [
-        "In-The-Box: • DJI 240W Power Adapter • AC Power Cable",
-        "It supports multiple data transmission links and can analyze device position and orientation through its built-in high-performance inertial measurement unit",
-        "This is a 100% increase compared with the previous generation, to meet demands of fields, orchards, and high-temperature environments",
-        "5-16x Optical | Up to 200x Hybrid Zoom"
+        "20 minutes",
+        "50 minutes",
+        "40 minutes",
+        "30 minutes"
       ],
       "answer": 2,
-      "difficulty": "moderate"
+      "difficulty": "easy"
     },
     {
-      "question": "Which statement is listed as a key feature/spec for 'AGRAS T25 Aircraft (Oversea V2)'?",
+      "question": "Based on the information for Which statement as a key feature/spec for 'DJI Mavic 3 Multispectral'?",
       "options": [
-        "AGRAS T25 Aircraft (Oversea V2) AGRAS T25 Aircraft (Oversea V2) A little smaller",
-        "Multi-GPU Acceleration – Supports parallel GPU rendering for significantly faster processing speeds",
-        "It enhances the standard Matrice 4D platform with a powerful thermal imaging camera, night operation capabilities, and seamless compatibility with DJI Dock 3",
-        "6-Sided Obstacle Avoidance"
+        "200-hectare coverage in one flight",
+        "5000mAh Capacity",
+        "56\u00d7 Hybrid Zoom",
+        "Max Transmission Distance FCC: 15 km / CE: 8 km"
       ],
       "answer": 0,
-      "difficulty": "moderate"
+      "difficulty": "easy"
     },
     {
-      "question": "Which statement is listed as a key feature/spec for 'DB800 Intelligent Flight Battery'?",
+      "question": "According to the details of 'DJI Mavic 3 Enterprise Series Battery Kit', which item under In the Box/Inclusions?",
       "options": [
-        "DB800 Intelligent Flight Battery DB800 Intelligent Flight Battery • Capacity increased to 15.5 Ah • Warranty covers 1,500 charging cycles",
-        "•Versatile Functions: Supports live broadcasting, TTS, and more, with easy operation",
-        "M350 Speaker MP130 V2 (longer range) M350 Speaker MP130 V2 (longer range)",
-        "DJI AGRAS T50 excels across multiple scenarios, from surveying to spraying and spreading, guaranteeing stable operations and steady performance"
-      ],
-      "answer": 0,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "Which statement is listed as a key feature/spec for 'D6000i Multifunctional Inverter Generator (EU)'?",
-      "options": [
-        "It can connect with the gimbal, enabling it to follow the camera's movements to ensure the illuminated area aligns with the camera's view",
-        "Light and nimble, DJI AGRAS T25 can easily be handled by one person",
-        "D6000i Multifunctional Inverter Generator (EU) D6000i Multifunctional Inverter Generator (EU) • 1,500 W AC output • 9-min ultra-fast charging",
-        "CAAP Registration and Insurance (Third Party Liability) CAAP Registration and Insurance (Third Party Liability)"
-      ],
-      "answer": 2,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "Which statement is listed as a key feature/spec for 'T25 Spreading System'?",
-      "options": [
-        "Magnetic Drive Impeller Pump Dual pump flow rate of up to 24 L/min",
-        "Drone Care (Storage and Preparation)",
-        "Real-Time Weighing DJI AGRAS T50 is equipped with a weighing sensor which allows you to monitor the remaining payload in real time",
-        "Smooth Spreading The torque of the spreader is doubled and the discharge hatch is enlarged to enable a flow rate up to 108 kg/mi"
-      ],
-      "answer": 0,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "Which statement is listed as a key feature/spec for 'T25 Atomized Sprinkler Package (Global)'?",
-      "options": [
-        "Flight operations are now safer, more reliable, and powered by AI, with significantly enhanced sensing capabilities",
-        "Magnetic Drive Impeller Pump Dual pump flow rate of up to 24 L/min",
-        "CAD & BIM Integration – Exports compatible data formats for Autodesk, Bentley, and other professional design platforms",
-        "Enhanced Multi-Spectral Processing – Supports additional band alignment and reflectance calibration for M3M and future payloads"
-      ],
-      "answer": 1,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "Which statement is listed as a key feature/spec for 'DJI Spotlight (AG T50/T25)'?",
-      "options": [
-        "The radar can accurately detect subtle obstacles upward or within the horizontal 360° range to avoid them in time.",
-        "D6000i Multifunctional Inverter Generator (EU) D6000i Multifunctional Inverter Generator (EU) • 1,500 W AC output • 9-min ultra-fast charging",
-        "DJI Spotlight (AG T50/T25) DJI Spotlight (AG T50/T25)",
-        "DJI Mavic 3 Intelligent Flight Battery"
-      ],
-      "answer": 2,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "Which statement is listed as a key feature/spec for 'DJI 65W Portable Charger (NA)'?",
-      "options": [
-        "For 12 month subscription, the livestreaming time limit is 2000 mins/month.",
-        "DJI Zenmuse L2 DJI Zenmuse L2 High-Precision Aerial LiDAR System The DJI Zenmuse L2 is an integrated geospatial data acquisition system",
-        "The charging station also supports Standby and Storage modes.",
-        "It comes with a fixed USB-C cable and a USB-A output port"
+        "Intelligent Battery x 1 DJI Matrice 4 Series Battery",
+        "100 W Power Adaptor AC Cable",
+        "D-RTK2 Head & Accessories Carrying Bag",
+        "USB-C Cable DJI Mavic 3 Enterprise Series Battery Kit"
       ],
       "answer": 3,
-      "difficulty": "moderate"
+      "difficulty": "easy"
     },
     {
-      "question": "Which statement is listed as a key feature/spec for 'DJI WB37 Battery Charging Hub (USB-C)'?",
+      "question": "From the specs of RTK/PPK is mentioned for 'DJI Mavic 3 Enterprise'. What is the main benefit?",
       "options": [
-        "DJI FlightHub 2 Livestream Minutes Recharge Package (10,000 minutes) DJI FlightHub 2 Livestream Minutes Recharge Package (10,000 minutes)",
-        "DJI WB37 Battery Charging Hub (USB-C) DJI WB37 Battery Charging Hub (USB-C) Can charge WB37 Battery and is compatible with third-party USB-C chargers",
-        "Full control of the light mode, intensity and even an integrated red / blue warning LED for public safety operations",
-        "DJI AS1 Speaker for Matrice 4 Series"
+        "Improved audio communication",
+        "Improved positioning accuracy for mapping/survey work",
+        "Extra illumination in low light",
+        "Faster battery charging"
       ],
       "answer": 1,
-      "difficulty": "moderate"
+      "difficulty": "easy"
     },
     {
-      "question": "Which statement is listed as a key feature/spec for 'CAAP Registration and Insurance (Third Party Liability)'?",
+      "question": "Which of the following applies to Which statement as a key feature/spec for 'DJI Mavic 3 Intelligent Flight Battery'?",
       "options": [
-        "Dual Atomizing Centrifugal Sprinklers Droplet size can be adjusted between 50-500 μm, depending on the chemicals used",
-        "It is fully powered to inject innovative strength into any aerial operation.",
-        "CAAP Registration and Insurance (Third Party Liability) CAAP Registration and Insurance (Third Party Liability)",
-        "The radar can accurately detect subtle obstacles upward or within the horizontal 360° range to avoid them in time."
+        "200-hectare coverage in one flight",
+        "Four 5MP multispectral cameras",
+        "Various use cases in agriculture and natural resource management",
+        "For DJI Mavic 3"
+      ],
+      "answer": 3,
+      "difficulty": "easy"
+    },
+    {
+      "question": "Based on the information for 'DJI Mavic 3 Enterprise', which item under In the Box/Inclusions?",
+      "options": [
+        "Mavic 3 Thermal Advanced Aircraft",
+        "3 x DJI Intelligent Flight Battery for Mavic 3",
+        "Mavic 3 Enterprise RTK Module",
+        "microSD Card 64GB"
+      ],
+      "answer": 3,
+      "difficulty": "easy"
+    },
+    {
+      "question": "According to the details of RTK/PPK is mentioned for 'D-RTK 3 Multifunctional Station The new D-RTK 3 Multifunctional Station integrates high-performance'. What is the main benefit?",
+      "options": [
+        "Extra illumination in low light",
+        "Improved audio communication",
+        "Improved positioning accuracy for mapping/survey work",
+        "Faster battery charging"
       ],
       "answer": 2,
-      "difficulty": "moderate"
+      "difficulty": "easy"
     },
     {
-      "question": "Which statement is listed as a key feature/spec for 'DJI Dock 3'?",
+      "question": "From the specs of Thermal/IR is mentioned for 'DJI Mavic 3 Thermal Advanced Basic Combo Wide Camera Equivalent Focal Length:'. What does that mainly help with?",
       "options": [
-        "Built for all-weather, continuous operations, Dock 3 introduces enhanced automation, faster deployment, and wider compatibility",
-        "The series includes Matrice 4E, equipped with advanced features such as smart detection and measurement with laser range finder",
-        "WB37 Intelligent Battery WB37 Intelligent Battery",
-        "The controller has an IP54 protection rating and operates in temperatures from -20°C to 50°C (-4°F to 122°F)"
+        "Charging batteries",
+        "Carrying equipment",
+        "Broadcasting voice messages",
+        "Seeing heat/IR detail or improving low-light visibility"
+      ],
+      "answer": 3,
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which of the following applies to RTK/PPK is mentioned for 'DJI Mavic 3 Multispectral'. What is the main benefit?",
+      "options": [
+        "Extra illumination in low light",
+        "Faster battery charging",
+        "Improved audio communication",
+        "Improved positioning accuracy for mapping/survey work"
+      ],
+      "answer": 3,
+      "difficulty": "easy"
+    },
+    {
+      "question": "Based on the information for Thermal/IR is mentioned for 'DJI Matrice 4 Thermal Flagship Intelligent Multi-Sensor Compact Drone Introducing the DJI'. What does that mainly help with?",
+      "options": [
+        "Seeing heat/IR detail or improving low-light visibility",
+        "Broadcasting voice messages",
+        "Charging batteries",
+        "Carrying equipment"
       ],
       "answer": 0,
-      "difficulty": "moderate"
+      "difficulty": "easy"
     },
     {
-      "question": "Which statement is listed as a key feature/spec for 'DJI Matrice 4D'?",
+      "question": "According to the details of 'DJI Mavic 3 Multispectral', which item under In the Box/Inclusions?",
       "options": [
-        "Smooth Spreading The torque of the spreader is doubled and the discharge hatch is enlarged to enable a flow rate up to 108 kg/mi",
-        "It integrates a powerful multi-sensor camera system, long-range O4 transmission, RTK accuracy, and rugged environmental durability",
-        "DJI FlightHub 2 Livestream Minutes Recharge Package (10,000 minutes) DJI FlightHub 2 Livestream Minutes Recharge Package (10,000 minutes)",
-        "Up to 4K30 Video Resolution"
+        "Gimbal Protector 3 pairs - Mavic 3 Enterprise Series Propellers",
+        "USB-C cable",
+        "RC Plus 2 Enterprise Controller x 1 DJI RC Plus 2 Enterprise",
+        "USB-C to USB-C Cable"
       ],
       "answer": 1,
-      "difficulty": "moderate"
+      "difficulty": "easy"
     },
     {
-      "question": "Which statement is listed as a key feature/spec for 'DJI Matrice 4TD'?",
+      "question": "From the specs of 'DJI Mavic 3 Thermal Advanced Basic Combo Wide Camera Equivalent Focal Length:', which item under In the Box/Inclusions?",
       "options": [
-        "The battery charging hub supports both Standard Mode and Ready-to-Fly Mode",
-        "Low Rate Spreading You can also switch to small hopper gates to improve spreading accuracy with a low flow rate",
-        "DB800 Intelligent Flight Battery DB800 Intelligent Flight Battery • Capacity increased to 15.5 Ah • Warranty covers 1,500 charging cycles",
-        "DJI Matrice 4TD DJI Matrice 4TD The DJI Matrice 4TD is a next-generation drone built for high-precision, all-weather industrial missions"
+        "MicroSD Card 64 GB",
+        "Battery Charging Hub x 1 DJI Matrice 4 Series Charging Hub",
+        "Screwdriver x1 DJI Mavic 3 Multispectral",
+        "Power cable"
       ],
-      "answer": 3,
-      "difficulty": "moderate"
+      "answer": 0,
+      "difficulty": "easy"
     },
     {
-      "question": "Which statement is listed as a key feature/spec for 'DJI Matrice 4D Series: Intelligent Flight Battery'?",
+      "question": "Which of the following applies to What flight time is mentioned for 'DJI Mavic 3 Intelligent Flight Battery'?",
       "options": [
-        "The Matrice 4E is designed for geospatial applications such as surveying and mapping, construction, and mining",
-        "The radar can accurately detect subtle obstacles upward or within the horizontal 360° range to avoid them in time.",
-        "Create a variety of flight missions directly from your computer using the 2.5D Base Map",
-        "Built for endurance, it supports longer missions, fast charging, and reliable power delivery in extreme operational environments."
-      ],
-      "answer": 3,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "Which statement is listed as a key feature/spec for 'DJI Matrice 4D Series: 240W Charging Hub'?",
-      "options": [
-        "DJI FlightHub 2 Livestream Minutes Recharge Package (10,000 minutes) DJI FlightHub 2 Livestream Minutes Recharge Package (10,000 minutes)",
-        "Enhanced Multi-Spectral Processing – Supports additional band alignment and reflectance calibration for M3M and future payloads",
-        "Compact and travel-friendly, the 240W Charging Hub is an essential accessory for uninterrupted shoots and field operations",
-        "DJI AGRAS T25 supports multiple missions, from surveying to spraying and spreading and excels across a variety of terrains"
-      ],
-      "answer": 2,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "Which statement is listed as a key feature/spec for 'DJI Matrice 4D Series: 240W Power Adapter'?",
-      "options": [
-        "DJI WB37 Battery Charging Hub (USB-C) DJI WB37 Battery Charging Hub (USB-C) Can charge WB37 Battery and is compatible with third-party USB-C chargers",
-        "Compact yet powerful, this adapter provides stable output to charge TB50 batteries and compatible accessories quickly and safely",
-        "Compact and travel-friendly, the 240W Charging Hub is an essential accessory for uninterrupted shoots and field operations",
-        "In-The-Box: • 1 Pair of Low-Noise Anti-Ice Propellers (1 CW + 1 CCW) • Propeller Screws"
+        "26 minutes",
+        "46 minutes",
+        "56 minutes",
+        "66 minutes"
       ],
       "answer": 1,
-      "difficulty": "moderate"
+      "difficulty": "easy"
     },
     {
-      "question": "Which statement is listed as a key feature/spec for 'DJI Matrice 4D Series: Low-Noise Anti-Ice Propellers'?",
+      "question": "Based on the information for What hover time is mentioned for 'DJI Matrice 4 Series Battery The 99Wh high-capacity battery provides up to'?",
       "options": [
-        "DJI FlightHub 2 Storage Space Upgrade Package DJI FlightHub 2 Storage Space Upgrade Package",
-        "Application normally takes 1-2 months to complete depending on CAAP's Timeline and Weather",
-        "Durable and lightweight, these propellers enhance flight safety and reliability in challenging weather conditions",
-        "Enhanced Multi-Spectral Processing – Supports additional band alignment and reflectance calibration for M3M and future payloads"
+        "52 minutes",
+        "42 minutes",
+        "32 minutes",
+        "22 minutes"
       ],
-      "answer": 2,
-      "difficulty": "moderate"
+      "answer": 1,
+      "difficulty": "easy"
     },
     {
-      "question": "Which statement is listed as a key feature/spec for 'DJI Dock 3: Vehicle-Mounted Gimbal Mount'?",
+      "question": "According to the details of What flight time is mentioned for 'DJI Matrice 4 Series Battery The 99Wh high-capacity battery provides up to'?",
       "options": [
-        "Light and nimble, DJI AGRAS T25 can easily be handled by one person",
-        "Matrice 300 Series- Upward Gimbal Connector Matrice300 Series - Upward Gimbal Connector",
-        "Engineered with shock-absorbing materials and a locking mechanism, the mount minimizes vibration and ensures gimbal stability even in rugged terrain",
-        "RC Plus Remote Controller Included"
+        "49 minutes",
+        "39 minutes",
+        "59 minutes",
+        "69 minutes"
+      ],
+      "answer": 0,
+      "difficulty": "easy"
+    },
+    {
+      "question": "From the specs of RTK/PPK is mentioned for 'D-RTK 3 Survey Pole and Tripod Kit Overview The new D-RTK 3'. What is the main benefit?",
+      "options": [
+        "Faster battery charging",
+        "Improved audio communication",
+        "Improved positioning accuracy for mapping/survey work",
+        "Extra illumination in low light"
       ],
       "answer": 2,
-      "difficulty": "moderate"
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which of the following applies to Which statement as a key feature/spec for 'DJI Mavic 3 Enterprise'?",
+      "options": [
+        "RTK module for centimeter-level positioning",
+        "For DJI Mavic 3",
+        "200-hectare coverage in one flight",
+        "4/3 CMOS Wide Camera / 20MP"
+      ],
+      "answer": 3,
+      "difficulty": "easy"
+    },
+    {
+      "question": "Based on the information for What flight time is mentioned for 'DJI Mavic 3 Thermal Advanced Basic Combo Wide Camera Equivalent Focal Length:'?",
+      "options": [
+        "25 minutes",
+        "65 minutes",
+        "55 minutes",
+        "45 minutes"
+      ],
+      "answer": 3,
+      "difficulty": "easy"
+    },
+    {
+      "question": "According to the details of RTK/PPK is mentioned for 'DJI Mavic 3 Enterprise Series RTK Module Compatible with DJI Mavic 3'. What is the main benefit?",
+      "options": [
+        "Faster battery charging",
+        "Improved positioning accuracy for mapping/survey work",
+        "Extra illumination in low light",
+        "Improved audio communication"
+      ],
+      "answer": 1,
+      "difficulty": "easy"
+    },
+    {
+      "question": "From the specs of RTK/PPK is mentioned for 'DJI ENTERPRISE D-RTK 2 High Precision GNSS Mobile Station Padded Carrying Bags'. What is the main benefit?",
+      "options": [
+        "Faster battery charging",
+        "Extra illumination in low light",
+        "Improved positioning accuracy for mapping/survey work",
+        "Improved audio communication"
+      ],
+      "answer": 2,
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which of the following applies to What hover time is mentioned for 'DJI Mavic 3 Intelligent Flight Battery'?",
+      "options": [
+        "20 minutes",
+        "50 minutes",
+        "40 minutes",
+        "30 minutes"
+      ],
+      "answer": 2,
+      "difficulty": "easy"
+    },
+    {
+      "question": "Based on the information for Which statement as a key feature/spec for 'DJI Mavic 3 Multispectral'?",
+      "options": [
+        "200-hectare coverage in one flight",
+        "5000mAh Capacity",
+        "56\u00d7 Hybrid Zoom",
+        "Max Transmission Distance FCC: 15 km / CE: 8 km"
+      ],
+      "answer": 0,
+      "difficulty": "easy"
+    },
+    {
+      "question": "According to the details of 'DJI Mavic 3 Enterprise Series Battery Kit', which item under In the Box/Inclusions?",
+      "options": [
+        "Intelligent Battery x 1 DJI Matrice 4 Series Battery",
+        "100 W Power Adaptor AC Cable",
+        "D-RTK2 Head & Accessories Carrying Bag",
+        "USB-C Cable DJI Mavic 3 Enterprise Series Battery Kit"
+      ],
+      "answer": 3,
+      "difficulty": "easy"
+    },
+    {
+      "question": "From the specs of RTK/PPK is mentioned for 'DJI Mavic 3 Enterprise'. What is the main benefit?",
+      "options": [
+        "Improved audio communication",
+        "Improved positioning accuracy for mapping/survey work",
+        "Extra illumination in low light",
+        "Faster battery charging"
+      ],
+      "answer": 1,
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which of the following applies to Which statement as a key feature/spec for 'DJI Mavic 3 Intelligent Flight Battery'?",
+      "options": [
+        "200-hectare coverage in one flight",
+        "Four 5MP multispectral cameras",
+        "Various use cases in agriculture and natural resource management",
+        "For DJI Mavic 3"
+      ],
+      "answer": 3,
+      "difficulty": "easy"
+    },
+    {
+      "question": "Based on the information for 'DJI Mavic 3 Enterprise', which item under In the Box/Inclusions?",
+      "options": [
+        "Mavic 3 Thermal Advanced Aircraft",
+        "3 x DJI Intelligent Flight Battery for Mavic 3",
+        "Mavic 3 Enterprise RTK Module",
+        "microSD Card 64GB"
+      ],
+      "answer": 3,
+      "difficulty": "easy"
+    },
+    {
+      "question": "According to the details of RTK/PPK is mentioned for 'D-RTK 3 Multifunctional Station The new D-RTK 3 Multifunctional Station integrates high-performance'. What is the main benefit?",
+      "options": [
+        "Extra illumination in low light",
+        "Improved audio communication",
+        "Improved positioning accuracy for mapping/survey work",
+        "Faster battery charging"
+      ],
+      "answer": 2,
+      "difficulty": "easy"
+    },
+    {
+      "question": "From the specs of Thermal/IR is mentioned for 'DJI Mavic 3 Thermal Advanced Basic Combo Wide Camera Equivalent Focal Length:'. What does that mainly help with?",
+      "options": [
+        "Charging batteries",
+        "Carrying equipment",
+        "Broadcasting voice messages",
+        "Seeing heat/IR detail or improving low-light visibility"
+      ],
+      "answer": 3,
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which of the following applies to RTK/PPK is mentioned for 'DJI Mavic 3 Multispectral'. What is the main benefit?",
+      "options": [
+        "Extra illumination in low light",
+        "Faster battery charging",
+        "Improved audio communication",
+        "Improved positioning accuracy for mapping/survey work"
+      ],
+      "answer": 3,
+      "difficulty": "easy"
+    },
+    {
+      "question": "Based on the information for Thermal/IR is mentioned for 'DJI Matrice 4 Thermal Flagship Intelligent Multi-Sensor Compact Drone Introducing the DJI'. What does that mainly help with?",
+      "options": [
+        "Seeing heat/IR detail or improving low-light visibility",
+        "Broadcasting voice messages",
+        "Charging batteries",
+        "Carrying equipment"
+      ],
+      "answer": 0,
+      "difficulty": "easy"
+    },
+    {
+      "question": "According to the details of 'DJI Mavic 3 Multispectral', which item under In the Box/Inclusions?",
+      "options": [
+        "Gimbal Protector 3 pairs - Mavic 3 Enterprise Series Propellers",
+        "USB-C cable",
+        "RC Plus 2 Enterprise Controller x 1 DJI RC Plus 2 Enterprise",
+        "USB-C to USB-C Cable"
+      ],
+      "answer": 1,
+      "difficulty": "easy"
+    },
+    {
+      "question": "From the specs of 'DJI Mavic 3 Thermal Advanced Basic Combo Wide Camera Equivalent Focal Length:', which item under In the Box/Inclusions?",
+      "options": [
+        "MicroSD Card 64 GB",
+        "Battery Charging Hub x 1 DJI Matrice 4 Series Charging Hub",
+        "Screwdriver x1 DJI Mavic 3 Multispectral",
+        "Power cable"
+      ],
+      "answer": 0,
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which of the following applies to What flight time is mentioned for 'DJI Mavic 3 Intelligent Flight Battery'?",
+      "options": [
+        "26 minutes",
+        "46 minutes",
+        "56 minutes",
+        "66 minutes"
+      ],
+      "answer": 1,
+      "difficulty": "easy"
+    },
+    {
+      "question": "Based on the information for What hover time is mentioned for 'DJI Matrice 4 Series Battery The 99Wh high-capacity battery provides up to'?",
+      "options": [
+        "52 minutes",
+        "42 minutes",
+        "32 minutes",
+        "22 minutes"
+      ],
+      "answer": 1,
+      "difficulty": "easy"
+    },
+    {
+      "question": "According to the details of What flight time is mentioned for 'DJI Matrice 4 Series Battery The 99Wh high-capacity battery provides up to'?",
+      "options": [
+        "49 minutes",
+        "39 minutes",
+        "59 minutes",
+        "69 minutes"
+      ],
+      "answer": 0,
+      "difficulty": "easy"
+    },
+    {
+      "question": "From the specs of RTK/PPK is mentioned for 'D-RTK 3 Survey Pole and Tripod Kit Overview The new D-RTK 3'. What is the main benefit?",
+      "options": [
+        "Faster battery charging",
+        "Improved audio communication",
+        "Improved positioning accuracy for mapping/survey work",
+        "Extra illumination in low light"
+      ],
+      "answer": 2,
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which of the following applies to Which statement as a key feature/spec for 'DJI Mavic 3 Enterprise'?",
+      "options": [
+        "RTK module for centimeter-level positioning",
+        "For DJI Mavic 3",
+        "200-hectare coverage in one flight",
+        "4/3 CMOS Wide Camera / 20MP"
+      ],
+      "answer": 3,
+      "difficulty": "easy"
+    },
+    {
+      "question": "Based on the information for What flight time is mentioned for 'DJI Mavic 3 Thermal Advanced Basic Combo Wide Camera Equivalent Focal Length:'?",
+      "options": [
+        "25 minutes",
+        "65 minutes",
+        "55 minutes",
+        "45 minutes"
+      ],
+      "answer": 3,
+      "difficulty": "easy"
+    },
+    {
+      "question": "According to the details of RTK/PPK is mentioned for 'DJI Mavic 3 Enterprise Series RTK Module Compatible with DJI Mavic 3'. What is the main benefit?",
+      "options": [
+        "Faster battery charging",
+        "Improved positioning accuracy for mapping/survey work",
+        "Extra illumination in low light",
+        "Improved audio communication"
+      ],
+      "answer": 1,
+      "difficulty": "easy"
+    },
+    {
+      "question": "From the specs of RTK/PPK is mentioned for 'DJI ENTERPRISE D-RTK 2 High Precision GNSS Mobile Station Padded Carrying Bags'. What is the main benefit?",
+      "options": [
+        "Faster battery charging",
+        "Extra illumination in low light",
+        "Improved positioning accuracy for mapping/survey work",
+        "Improved audio communication"
+      ],
+      "answer": 2,
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which of the following applies to What hover time is mentioned for 'DJI Mavic 3 Intelligent Flight Battery'?",
+      "options": [
+        "20 minutes",
+        "50 minutes",
+        "40 minutes",
+        "30 minutes"
+      ],
+      "answer": 2,
+      "difficulty": "easy"
+    },
+    {
+      "question": "Based on the information for Which statement as a key feature/spec for 'DJI Mavic 3 Multispectral'?",
+      "options": [
+        "200-hectare coverage in one flight",
+        "5000mAh Capacity",
+        "56\u00d7 Hybrid Zoom",
+        "Max Transmission Distance FCC: 15 km / CE: 8 km"
+      ],
+      "answer": 0,
+      "difficulty": "easy"
+    },
+    {
+      "question": "According to the details of 'DJI Mavic 3 Enterprise Series Battery Kit', which item under In the Box/Inclusions?",
+      "options": [
+        "Intelligent Battery x 1 DJI Matrice 4 Series Battery",
+        "100 W Power Adaptor AC Cable",
+        "D-RTK2 Head & Accessories Carrying Bag",
+        "USB-C Cable DJI Mavic 3 Enterprise Series Battery Kit"
+      ],
+      "answer": 3,
+      "difficulty": "easy"
+    },
+    {
+      "question": "From the specs of RTK/PPK is mentioned for 'DJI Mavic 3 Enterprise'. What is the main benefit?",
+      "options": [
+        "Improved audio communication",
+        "Improved positioning accuracy for mapping/survey work",
+        "Extra illumination in low light",
+        "Faster battery charging"
+      ],
+      "answer": 1,
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which of the following applies to Which statement as a key feature/spec for 'DJI Mavic 3 Intelligent Flight Battery'?",
+      "options": [
+        "200-hectare coverage in one flight",
+        "Four 5MP multispectral cameras",
+        "Various use cases in agriculture and natural resource management",
+        "For DJI Mavic 3"
+      ],
+      "answer": 3,
+      "difficulty": "easy"
+    },
+    {
+      "question": "Based on the information for 'DJI Mavic 3 Enterprise', which item under In the Box/Inclusions?",
+      "options": [
+        "Mavic 3 Thermal Advanced Aircraft",
+        "3 x DJI Intelligent Flight Battery for Mavic 3",
+        "Mavic 3 Enterprise RTK Module",
+        "microSD Card 64GB"
+      ],
+      "answer": 3,
+      "difficulty": "easy"
+    },
+    {
+      "question": "According to the details of RTK/PPK is mentioned for 'D-RTK 3 Multifunctional Station The new D-RTK 3 Multifunctional Station integrates high-performance'. What is the main benefit?",
+      "options": [
+        "Extra illumination in low light",
+        "Improved audio communication",
+        "Improved positioning accuracy for mapping/survey work",
+        "Faster battery charging"
+      ],
+      "answer": 2,
+      "difficulty": "easy"
+    },
+    {
+      "question": "From the specs of Thermal/IR is mentioned for 'DJI Mavic 3 Thermal Advanced Basic Combo Wide Camera Equivalent Focal Length:'. What does that mainly help with?",
+      "options": [
+        "Charging batteries",
+        "Carrying equipment",
+        "Broadcasting voice messages",
+        "Seeing heat/IR detail or improving low-light visibility"
+      ],
+      "answer": 3,
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which of the following applies to RTK/PPK is mentioned for 'DJI Mavic 3 Multispectral'. What is the main benefit?",
+      "options": [
+        "Extra illumination in low light",
+        "Faster battery charging",
+        "Improved audio communication",
+        "Improved positioning accuracy for mapping/survey work"
+      ],
+      "answer": 3,
+      "difficulty": "easy"
+    },
+    {
+      "question": "Based on the information for Thermal/IR is mentioned for 'DJI Matrice 4 Thermal Flagship Intelligent Multi-Sensor Compact Drone Introducing the DJI'. What does that mainly help with?",
+      "options": [
+        "Seeing heat/IR detail or improving low-light visibility",
+        "Broadcasting voice messages",
+        "Charging batteries",
+        "Carrying equipment"
+      ],
+      "answer": 0,
+      "difficulty": "easy"
+    },
+    {
+      "question": "According to the details of 'DJI Mavic 3 Multispectral', which item under In the Box/Inclusions?",
+      "options": [
+        "Gimbal Protector 3 pairs - Mavic 3 Enterprise Series Propellers",
+        "USB-C cable",
+        "RC Plus 2 Enterprise Controller x 1 DJI RC Plus 2 Enterprise",
+        "USB-C to USB-C Cable"
+      ],
+      "answer": 1,
+      "difficulty": "easy"
     }
   ],
   "Skydio": [
     {
-      "question": "For '(For Defense-Grade Mapping / Inspection / Public Safety)', which item is listed under In the Box/Inclusions?",
+      "question": "Which statement as a key feature/spec for 'Skydio VT300-L Sensor Package'?",
       "options": [
-        "Skydio V100-L Sensor Package Kit",
-        "VT300-L Sensor Package",
-        "Dual Charger for Skydio X10 Skydio Dual Charger for X10",
-        "Skydio X10D Multi-Band Vehicle"
-      ],
-      "answer": 3,
-      "difficulty": "easy"
-    },
-    {
-      "question": "Which statement is listed as a key feature/spec for '(For Defense-Grade Mapping / Inspection / Public Safety)'?",
-      "options": [
-        "Includes the VT300-L Sensor Package, optimized for high-resolution mapping, photogrammetry, and general inspection workflows",
-        "Defense-optimized platform with multi-band radio for resilient communications in contested or GPS-denied environments",
-        "Includes the V100-L Sensor Package, optimized for versatile ISR missions and general inspection workflows",
-        "Subscription-based software enabling Skydio X10 drones to automatically upload flight media to Skydio Fleet Manager for storage"
-      ],
-      "answer": 1,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "'(For Defense-Grade Mapping / Inspection / Public Safety)' is listed as compatible with which option?",
-      "options": [
-        "Fully compatible with Skydio X10D platform",
-        "Fully compatible with both Skydio X10 and Skydio X10D platforms and accessories",
-        "Fully compatible with Skydio X10 platform",
-        "sensor packages are upgradeable/interchangeable with VT300 series and other modules"
-      ],
-      "answer": 0,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "For '(For Enterprise Mapping / Inspection / Public Safety)', which item is listed under In the Box/Inclusions?",
-      "options": [
-        "Skydio X10 2.4/5 GHz with Cellular Vehicle",
-        "VT300-L sensor package (64MP narrow + FLIR Boson+ thermal + 1\" wide sensor + flashlight)",
-        "Skydio VT300-L Sensor Package Kit",
-        "Dual Charger for Skydio X10 Skydio Dual Charger for X10"
-      ],
-      "answer": 0,
-      "difficulty": "easy"
-    },
-    {
-      "question": "Which statement is listed as a key feature/spec for '(For Enterprise Mapping / Inspection / Public Safety)'?",
-      "options": [
-        "Includes: Unlimited 3D capture photos per year Unlimited 2D capture photos (orthomosaic) Software maintenance and customer support (3-year term)",
-        "Safety attachment for the Skydio X10, designed to deploy in emergency situations to reduce risk of vehicle damage and protect surroundings",
-        "Term license for Skydio Scout, enabling autonomous tracking of GPS positions over extremely long ranges",
-        "Equipped with VT300-Z Sensor Package (64MP Narrow + FLIR Boson+ Radiometric Thermal + Telephoto sensor)"
-      ],
-      "answer": 3,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "'(For Enterprise Mapping / Inspection / Public Safety)' is listed as compatible with which option?",
-      "options": [
-        "Fully compatible with Skydio X10 platform",
-        "supports modular sensor packages and standard power rails across the X10 series.",
-        "Fully compatible with both Skydio X10 and Skydio X10D platforms",
-        "sensor packages are upgradeable/interchangeable with VT300-Z and other modules"
-      ],
-      "answer": 0,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "For '(For Inspection / Real-Time ISR / Public Safety Operations)', which item is listed under In the Box/Inclusions?",
-      "options": [
-        "Skydio VT300-Z Sensor Package Kit",
-        "AVSS Parachute Attachment for Skydio X10 Skydio Parachute for X10",
-        "Skydio X10 Vehicle Only (2.4/5 GHz, 5G/LTE Ready: T-Mobile, IR) NA",
-        "Power Cord Skydio Dual Charger for X10 with 230W Wall Adapter Assembly, NA"
-      ],
-      "answer": 2,
-      "difficulty": "easy"
-    },
-    {
-      "question": "Which statement is listed as a key feature/spec for '(For Inspection / Real-Time ISR / Public Safety Operations)'?",
-      "options": [
-        "IR-capable vehicle designed for public safety, utility inspection, and real-time situational awareness",
-        "Designed for fast mission readiness, bypassing the need for a full drone deployment sequence in critical situations",
+        "High-intensity LED spotlight with brightness up to 2,400 lumens",
+        "Compact pouch designed to securely carry a Skydio X10 controller",
         "Integrated camera system optimized for surveying, spatial analysis, and 3D modeling",
-        "Includes: Unlimited 3D capture photos per year Unlimited 2D capture photos (orthomosaic) Software maintenance and customer support (3-year term)"
+        "Supports geospatial mapping, detailed inspection, and public safety operations"
       ],
-      "answer": 0,
-      "difficulty": "moderate"
+      "answer": 2,
+      "difficulty": "easy"
     },
     {
-      "question": "'(For Inspection / Real-Time ISR / Public Safety Operations)' is listed as compatible with which option?",
+      "question": "'Skydio X10 Starter Kit (2.4/5 GHz, 5G/LTE Ready: T-Mobile, IR) NA + VT300-L' as compatible with which option?",
       "options": [
+        "Fully compatible with the Skydio X10 platform",
         "Fully compatible with both Skydio X10 and Skydio X10D platforms and accessories",
         "Fully compatible with both Skydio X10 and Skydio X10D platforms",
-        "Fully compatible with Skydio X10 and Skydio X10D platforms",
-        "Fully compatible with the Skydio X10 platform"
-      ],
-      "answer": 3,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "Which statement is listed as a key feature/spec for '(For Tactical ISR / Inspection / Public Safety Deployments)'?",
-      "options": [
-        "Subscription-based cloud storage for Skydio X10 operations, providing secure and centralized data management",
-        "IR-capable aircraft designed for public safety response, infrastructure inspection, and real-time situational awareness",
-        "Provides organized storage for the full X10 starter kit contents",
-        "Ruggedized protective case designed to securely store and transport Skydio X10 sensor packages"
-      ],
-      "answer": 1,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "'(For Tactical ISR / Inspection / Public Safety Deployments)' is listed as compatible with which option?",
-      "options": [
-        "Fully compatible with Skydio X10 platform",
-        "sensor packages are upgradeable/interchangeable with VT300-Z and other modules",
-        "Fully compatible with the Skydio X10 platform",
-        "Fully compatible with both Skydio X10 and Skydio X10D platforms"
-      ],
-      "answer": 2,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "For '(For Tactical ISR / Inspection / Public Safety)', which item is listed under In the Box/Inclusions?",
-      "options": [
-        "Skydio X10 Vehicle Only (2.4/5 GHz, 5G/LTE Ready: T-Mobile, IR) NA",
-        "Additional Batteries",
-        "2.4/5 GHz Cellular Enterprise Controller",
-        "Wall Adapters"
+        "Fully compatible with Skydio X10 platform"
       ],
       "answer": 0,
       "difficulty": "easy"
     },
     {
-      "question": "Which statement is listed as a key feature/spec for '(For Tactical ISR / Inspection / Public Safety)'?",
+      "question": "Which statement as a key feature/spec for 'Skydio Dual Charger for X10 with 230W Wall Adapter Assembly, NA'?",
       "options": [
-        "Ideal for reducing impact and vibration during transport or field operations",
-        "IR-capable vehicle designed for tactical ISR, infrastructure inspection, and real-time public safety missions",
-        "Includes: Unlimited 3D capture photos per year Unlimited 2D capture photos (orthomosaic) Software maintenance and customer support (3-year term)",
-        "Ideal for field operations, inspections, or mission-ready portability"
+        "Preconfigured starter solution for immediate deployment with complete accessory suite",
+        "Complete assembly includes one dual charger, one 230W wall adapter, and one power cord",
+        "Complete starter kit with essential accessories for immediate deployment in field operations",
+        "Supports 5G/LTE connectivity for expanded operational scenarios"
       ],
       "answer": 1,
-      "difficulty": "moderate"
+      "difficulty": "easy"
     },
     {
-      "question": "'(For Tactical ISR / Inspection / Public Safety)' is listed as compatible with which option?",
+      "question": "'Skydio X10/X10D MOLLE Pouch Set' as compatible with which option?",
       "options": [
-        "Fully compatible with Skydio X10 and Skydio X10D platforms",
-        "Fully compatible with the Skydio X10 platform",
         "supports modular sensor packages and standard power rails across the X10 series.",
-        "Fully compatible with both Skydio X10 and Skydio X10D platforms"
+        "sensor packages are upgradeable/interchangeable with VT300 series and other modules",
+        "Fully compatible with both Skydio X10 and Skydio X10D platforms and accessories",
+        "Fully compatible with Skydio X10 and Skydio X10D platforms"
       ],
-      "answer": 1,
-      "difficulty": "moderate"
+      "answer": 2,
+      "difficulty": "easy"
     },
     {
-      "question": "For '(For Long-Range Visual Inspection / Asset Monitoring)', which item is listed under In the Box/Inclusions?",
+      "question": "Which statement as a key feature/spec for 'Skydio X10 Controller Only (2.4/5 GHz, 5G/LTE Ready: T-Mobile) NA'?",
       "options": [
-        "Skydio V100-L Sensor Package Kit",
-        "Skydio X10 Controller Molle Pouch Skydio X10 Controller Molle Pouch,",
-        "Skydio X10 Battery Molle Pouch Skydio X10 Battery Molle Pouch, Black",
-        "VT300-Z sensor package (64MP narrow + FLIR Boson+ thermal + Telephoto sensor)"
+        "Web-based cockpit experience allowing pilots to operate Skydio X10 drones remotely from anywhere",
+        "FLIR Boson+ radiometric thermal sensor for thermal mapping",
+        "Ideal for crowd control, public announcements, emergency response, and search and rescue missions",
+        "Ideal for ISR, inspection, mapping, and public safety operations"
       ],
       "answer": 3,
       "difficulty": "easy"
     },
     {
-      "question": "Which statement is listed as a key feature/spec for '(For Long-Range Visual Inspection / Asset Monitoring)'?",
+      "question": "Thermal/IR is mentioned for 'Skydio VT300-L Sensor Package'. What does that mainly help with?",
       "options": [
-        "Defense-optimized UAS equipped with Skydio SL (Super Low-Light) vehicle for enhanced night-time and low-visibility operations",
-        "Includes US power cord only; charger not included",
-        "IR-capable vehicle designed for infrastructure inspection, mapping, and public safety missions",
-        "Integrated multi-sensor payload designed for long-range and detailed inspections"
+        "Charging batteries",
+        "Seeing heat/IR detail or improving low-light visibility",
+        "Carrying equipment",
+        "Broadcasting voice messages"
       ],
-      "answer": 3,
-      "difficulty": "moderate"
+      "answer": 1,
+      "difficulty": "easy"
     },
     {
-      "question": "Which statement is listed as a key feature/spec for 'Skydio X10 Intelligent Flight Battery'?",
+      "question": "Which statement as a key feature/spec for 'Skydio Dual Charger for X10'?",
       "options": [
-        "Does not include the Ready Case",
-        "Requires active subscriptions to Skydio Media Sync and Skydio Fleet Manager",
-        "Can be used in tandem with other payload modules such as thermal or zoom sensors",
-        "Recommended to carry 3–4 batteries for uninterrupted, extended missions"
+        "Dual battery charger designed for the Skydio X10, allowing simultaneous charging of two flight batteries",
+        "Equipped with VT300-Z Sensor Package (64MP Narrow + FLIR Boson+ Radiometric Thermal + Telephoto sensor)",
+        "IR-capable vehicle designed for public safety, utility inspection, and real-time situational awareness",
+        "Provides up to 40 minutes of flight time, depending on payload and environmental conditions"
       ],
-      "answer": 3,
-      "difficulty": "moderate"
+      "answer": 0,
+      "difficulty": "easy"
     },
     {
-      "question": "'Skydio X10 Intelligent Flight Battery' is listed as compatible with which option?",
+      "question": "For 'Skydio X10D Starter Solution (SL, IR) NA + VT300-L', which item under In the Box/Inclusions?",
       "options": [
-        "Fully compatible with Skydio X10 platform",
-        "sensor packages are upgradeable/interchangeable with other VT300 modules",
-        "Fully compatible with Skydio X10 and Skydio X10D platforms",
-        "Fully compatible with both Skydio X10 and Skydio X10D platforms and accessories"
+        "Sensor Package",
+        "Torque tool for installation",
+        "Maintenance and Support",
+        "Skydio X10 Controller Molle Pouch Skydio X10 Controller Molle Pouch"
       ],
       "answer": 2,
-      "difficulty": "moderate"
+      "difficulty": "easy"
     },
     {
-      "question": "Which statement is listed as a key feature/spec for 'Skydio X10/X10D Speaker & Microphone Attachment'?",
+      "question": "For 'Skydio X10 Vehicle with Sensor Package (2.4/5 GHz, 5G/LTE Ready: T-Mobile, IR)', which item under In the Box/Inclusions?",
       "options": [
-        "Ideal for routine maintenance, emergency swaps, or extending operational readiness in the field",
-        "Lightweight, easy-to-install, and fully compatible with the X10 platform",
-        "Ideal for ISR, inspection, mapping, and public safety operations",
+        "Battery MOLLE Pouches",
+        "Encryption Key",
+        "Skydio X10 Vehicle Only (2.4/5 GHz, 5G/LTE Ready: T-Mobile, IR) NA",
+        "Flex Pockets for Attachments, Cables, or Other Small Equipment Skydio Ready Case"
+      ],
+      "answer": 2,
+      "difficulty": "easy"
+    },
+    {
+      "question": "Thermal/IR is mentioned for 'Skydio X10 Starter Kit (2.4/5 GHz, 5G/LTE Ready: T-Mobile, IR) NA + V100-L'. What does that mainly help with?",
+      "options": [
+        "Seeing heat/IR detail or improving low-light visibility",
+        "Charging batteries",
+        "Carrying equipment",
+        "Broadcasting voice messages"
+      ],
+      "answer": 0,
+      "difficulty": "easy"
+    },
+    {
+      "question": "Thermal/IR is mentioned for 'Skydio X10 Vehicle with Sensor Package (2.4/5 GHz, 5G/LTE Ready: T-Mobile, IR)'. What does that mainly help with?",
+      "options": [
+        "Broadcasting voice messages",
+        "Charging batteries",
+        "Carrying equipment",
+        "Seeing heat/IR detail or improving low-light visibility"
+      ],
+      "answer": 3,
+      "difficulty": "easy"
+    },
+    {
+      "question": "'Skydio X10/X10D Spotlight Module' as compatible with which option?",
+      "options": [
+        "sensor packages are upgradeable/interchangeable with other VT300 modules",
+        "sensor packages are upgradeable/interchangeable with VT300-Z and other modules",
+        "Fully compatible with Skydio X10D platform",
+        "Fully compatible with both Skydio X10 and Skydio X10D platforms"
+      ],
+      "answer": 3,
+      "difficulty": "easy"
+    },
+    {
+      "question": "What flight time is mentioned for 'Skydio X10 Intelligent Flight Battery'?",
+      "options": [
+        "50 minutes",
+        "40 minutes",
+        "30 minutes",
+        "20 minutes"
+      ],
+      "answer": 1,
+      "difficulty": "easy"
+    },
+    {
+      "question": "Thermal/IR is mentioned for 'Skydio VT300-Z Sensor Package'. What does that mainly help with?",
+      "options": [
+        "Seeing heat/IR detail or improving low-light visibility",
+        "Charging batteries",
+        "Carrying equipment",
+        "Broadcasting voice messages"
+      ],
+      "answer": 0,
+      "difficulty": "easy"
+    },
+    {
+      "question": "NightSense is mentioned for 'Skydio X10/X10D NightSense Infrared Module'. What does it help with?",
+      "options": [
+        "Faster battery charging",
+        "Higher speaker loudness",
+        "Improved operation in darkness or low visibility",
+        "Extra storage protection"
+      ],
+      "answer": 2,
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which statement as a key feature/spec for 'Skydio X10/X10D MOLLE Pouch Set'?",
+      "options": [
+        "MOLLE-compatible system for integration with tactical vests, belts, or field packs",
+        "Integrated flashlight for low-light and night operations",
+        "Provides improved georeferencing for photogrammetry, LiDAR, and inspection datasets",
+        "Compact pouch designed to securely carry a Skydio X10 battery or dual charger"
+      ],
+      "answer": 0,
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which statement as a key feature/spec for 'Skydio X10 (Vehicle Only)'?",
+      "options": [
+        "1\" wide sensor for large-area coverage and photogrammetry",
+        "Telephoto sensor (190mm eq., 48MP) for precision zoom and detailed asset inspections",
+        "Capable of military-grade applications but optimized for enterprise & civilian use",
+        "Enhances portability and organization for public safety, defense, and enterprise operations"
+      ],
+      "answer": 2,
+      "difficulty": "easy"
+    },
+    {
+      "question": "For 'Skydio VT300-Z Sensor Package', which item under In the Box/Inclusions?",
+      "options": [
+        "Torque tool for installation",
+        "Skydio Intelligent Flight Batteries",
+        "Skydio X10 Controller Only (2.4/5 GHz, 5G/LTE Ready: T-Mobile) NA",
+        "Skydio 100W Wall Adapter, NA"
+      ],
+      "answer": 0,
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which statement as a key feature/spec for 'Skydio VT300-Z Sensor Package'?",
+      "options": [
+        "Works seamlessly with Skydio\u2019s AI navigation system, enabling fully autonomous flight even in total darkness",
+        "FLIR Boson+ radiometric thermal sensor for thermal imaging",
+        "Provides resilient communications and precise control for extended-range missions",
+        "Complete assembly includes one dual charger, one 230W wall adapter, and one power cord"
+      ],
+      "answer": 1,
+      "difficulty": "easy"
+    },
+    {
+      "question": "For 'Skydio X10 Starter Kit (2.4/5 GHz, 5G/LTE Ready: T-Mobile, IR) NA + V100-L', which item under In the Box/Inclusions?",
+      "options": [
+        "1 subscription \u2013 Skydio Remote Flight Deck for X10 Skydio Remote Flight Deck for X10",
+        "Batteries",
+        "Skydio Battery (150W) for X10",
+        "Encryption Key"
+      ],
+      "answer": 2,
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which statement as a key feature/spec for 'Skydio X10 Vehicle with Sensor Package (2.4/5 GHz, 5G/LTE Ready: T-Mobile, IR)'?",
+      "options": [
+        "Wall adapter (100W) designed to charge Skydio X10 controllers or batteries via the single or dual charger",
+        "Smart intelligent discharge protects health during long-term storage",
+        "IR-capable vehicle designed for infrastructure inspection, mapping, and public safety missions",
         "Ideal for crowd control, public announcements, emergency response, and search and rescue missions"
       ],
+      "answer": 2,
+      "difficulty": "easy"
+    },
+    {
+      "question": "Thermal/IR is mentioned for 'Skydio X10/X10D Spotlight Module'. What does that mainly help with?",
+      "options": [
+        "Charging batteries",
+        "Carrying equipment",
+        "Seeing heat/IR detail or improving low-light visibility",
+        "Broadcasting voice messages"
+      ],
+      "answer": 2,
+      "difficulty": "easy"
+    },
+    {
+      "question": "Thermal/IR is mentioned for 'Skydio X10/X10D NightSense Infrared Module'. What does that mainly help with?",
+      "options": [
+        "Carrying equipment",
+        "Charging batteries",
+        "Seeing heat/IR detail or improving low-light visibility",
+        "Broadcasting voice messages"
+      ],
+      "answer": 2,
+      "difficulty": "easy"
+    },
+    {
+      "question": "For 'Skydio X10 Starter Kit (2.4/5 GHz, 5G/LTE Ready: T-Mobile, IR) + VT300-Z', which item under In the Box/Inclusions?",
+      "options": [
+        "Skydio Autonomy Drone Software (Perpetual, non-transferable) Skydio X10 Starter Kit (2.4/5 GHz, 5G/LTE Ready: T-Mobile, IR) NA + VT300-L",
+        "Skydio 230W Wall Adapter, NA",
+        "230W Wall Adapter (NA)",
+        "Pro Case"
+      ],
+      "answer": 3,
+      "difficulty": "easy"
+    },
+    {
+      "question": "Thermal/IR is mentioned for 'Skydio X10D Starter Solution (SL, IR) NA + VT300-L'. What does that mainly help with?",
+      "options": [
+        "Broadcasting voice messages",
+        "Carrying equipment",
+        "Seeing heat/IR detail or improving low-light visibility",
+        "Charging batteries"
+      ],
+      "answer": 2,
+      "difficulty": "easy"
+    },
+    {
+      "question": "'Skydio X10 Starter Kit (2.4/5 GHz, 5G/LTE Ready: T-Mobile, IR) + VT300-Z' as compatible with which option?",
+      "options": [
+        "Fully compatible with Skydio X10D platform",
+        "Fully compatible with Skydio X10 and Skydio X10D platforms",
+        "supports modular sensor packages and standard power rails across the X10 series.",
+        "Fully compatible with Skydio X10 platform"
+      ],
       "answer": 3,
       "difficulty": "moderate"
     },
     {
-      "question": "'Skydio X10/X10D Speaker & Microphone Attachment' is listed as compatible with which option?",
+      "question": "For 'Skydio Dual Charger for X10 with 230W Wall Adapter Assembly, NA', which item under In the Box/Inclusions?",
+      "options": [
+        "Dual Charger for Skydio X10",
+        "VT300-Z sensor package (64MP narrow + FLIR Boson+ thermal + Telephoto sensor)",
+        "Multi-Band Enterprise Controller",
+        "Skydio Autonomy Software (perpetual, non-transferable)"
+      ],
+      "answer": 0,
+      "difficulty": "moderate"
+    },
+    {
+      "question": "Which statement as a key feature/spec for 'Skydio X10 Starter Kit (2.4/5 GHz, 5G/LTE Ready: T-Mobile, IR) + VT300-Z'?",
+      "options": [
+        "Supports geospatial mapping, detailed inspection, and public safety operations",
+        "High-intensity LED spotlight with brightness up to 2,400 lumens",
+        "Ideal for field operations, inspections, or mission-critical deployments where durability and protection are required",
+        "Includes: Unlimited 3D capture photos per year Unlimited 2D capture photos (orthomosaic) Software maintenance and customer support (1-year term)"
+      ],
+      "answer": 0,
+      "difficulty": "moderate"
+    },
+    {
+      "question": "Which statement as a key feature/spec for 'Skydio Ready Case'?",
+      "options": [
+        "Enables pilots to communicate directly with people on the ground during aerial operations",
+        "Provides up to 40 minutes of flight time, depending on payload and environmental conditions",
+        "Ideal for public safety, emergency response, inspection, or field operations requiring immediate deployment",
+        "Ideal for long-range inspections, search and rescue, or tactical operations where remote tracking is required"
+      ],
+      "answer": 2,
+      "difficulty": "moderate"
+    },
+    {
+      "question": "RTK/PPK is mentioned for 'Skydio X10/X10D RTK/PPK Module'. What is the main benefit?",
+      "options": [
+        "Faster battery charging",
+        "Improved positioning accuracy for mapping/survey work",
+        "Improved audio communication",
+        "Extra illumination in low light"
+      ],
+      "answer": 1,
+      "difficulty": "moderate"
+    },
+    {
+      "question": "'Skydio X10 Vehicle with Sensor Package (2.4/5 GHz, 5G/LTE Ready: T-Mobile, IR)' as compatible with which option?",
       "options": [
         "sensor packages are upgradeable/interchangeable with VT300 series and other modules",
         "Fully compatible with the Skydio X10 platform",
+        "Fully compatible with both Skydio X10 and Skydio X10D platforms and accessories",
+        "Fully compatible with Skydio X10D platform"
+      ],
+      "answer": 1,
+      "difficulty": "moderate"
+    },
+    {
+      "question": "Thermal/IR is mentioned for 'Skydio VT300-Z Sensor Package'. What does that mainly help with?",
+      "options": [
+        "Charging batteries",
+        "Seeing heat/IR detail or improving low-light visibility",
+        "Carrying equipment",
+        "Broadcasting voice messages"
+      ],
+      "answer": 1,
+      "difficulty": "moderate"
+    },
+    {
+      "question": "'Skydio X10D Starter Solution (Multi-Band, IR) + VT300-Z' as compatible with which option?",
+      "options": [
         "Fully compatible with both Skydio X10 and Skydio X10D platforms",
-        "supports modular sensor packages and standard power rails across the X10 series."
+        "Fully compatible with both Skydio X10 and Skydio X10D platforms and accessories",
+        "Fully compatible with Skydio X10D platform",
+        "sensor packages are upgradeable/interchangeable with other VT300 modules"
       ],
       "answer": 2,
       "difficulty": "moderate"
     },
     {
-      "question": "Which statement is listed as a key feature/spec for '(For Low-Light Operations / Search & Rescue / Inspections)'?",
+      "question": "Which statement as a key feature/spec for 'Skydio X10 Vehicle with Sensor Package (2.4/5 GHz, 5G/LTE Ready: T-Mobile, IR)'?",
       "options": [
-        "Integrated flashlight for low-light and night operations",
-        "Resolution: 640 × 512 px (Radiometric Thermal)",
-        "High-intensity LED spotlight with brightness up to 2,400 lumens",
-        "Allows users to follow a target or position without requiring visual line-of-sight"
+        "Streamlined bundle for organizations requiring a fully-equipped sensor vehicle without the full accessory kit",
+        "Lightweight, easy-to-install, and fully compatible with the X10 platform",
+        "Essential for topographic surveys, volumetric measurements, infrastructure mapping, and engineering-grade deliverables",
+        "Ideal for enterprise operations requiring rapid battery turnaround and extended mission readiness"
       ],
-      "answer": 2,
+      "answer": 0,
       "difficulty": "moderate"
     },
     {
-      "question": "'(For Low-Light Operations / Search & Rescue / Inspections)' is listed as compatible with which option?",
+      "question": "'Skydio X10/X10D Speaker & Microphone Attachment' as compatible with which option?",
       "options": [
-        "sensor packages are upgradeable/interchangeable with VT300-Z and other modules",
         "Fully compatible with the Skydio X10 platform",
-        "Fully compatible with Skydio X10 and Skydio X10D platforms",
+        "sensor packages are upgradeable/interchangeable with VT300-Z and other modules",
+        "Fully compatible with both Skydio X10 and Skydio X10D platforms",
+        "Fully compatible with Skydio X10D platform"
+      ],
+      "answer": 2,
+      "difficulty": "moderate"
+    },
+    {
+      "question": "'Skydio X10 Starter Kit (2.4/5 GHz, 5G/LTE Ready: T-Mobile, IR) NA + V100-L' as compatible with which option?",
+      "options": [
+        "Fully compatible with both Skydio X10 and Skydio X10D platforms",
+        "sensor packages are upgradeable/interchangeable with other VT300 modules",
+        "sensor packages are upgradeable/interchangeable with VT300-L and other modules",
+        "sensor packages are upgradeable/interchangeable with VT300 series and other modules"
+      ],
+      "answer": 3,
+      "difficulty": "moderate"
+    },
+    {
+      "question": "Which statement as a key feature/spec for 'Skydio X10/X10D NightSense Infrared Module'?",
+      "options": [
+        "Enhances obstacle detection and situational awareness in darkness, smoke, or visually degraded environments",
+        "High-intensity LED spotlight with brightness up to 2,400 lumens",
+        "Equipped with VT300-Z Sensor Package (64MP Narrow + FLIR Boson+ Radiometric Thermal + Telephoto sensor)",
+        "Provides up to 40 minutes of flight time, depending on payload and environmental conditions"
+      ],
+      "answer": 0,
+      "difficulty": "moderate"
+    },
+    {
+      "question": "For 'Skydio X10/X10D MOLLE Pouch Set', which item under In the Box/Inclusions?",
+      "options": [
+        "X10 Vehicle MOLLE Pouch",
+        "Sensor Package",
+        "Skydio 100W Wall Adapter, NA",
+        "Skydio X10 Controller Molle Pouch Skydio X10 Controller Molle Pouch,"
+      ],
+      "answer": 0,
+      "difficulty": "moderate"
+    },
+    {
+      "question": "Which statement as a key feature/spec for 'Skydio X10/X10D Speaker & Microphone Attachment'?",
+      "options": [
+        "Provides up to 40 minutes of flight time, depending on payload and environmental conditions",
+        "Audible range of 300\u2013500 meters, depending on ambient noise conditions",
+        "Replacement vibration isolators designed to protect Skydio sensor packages from in-flight vibration",
+        "Broader application capabilities compared to the X10D"
+      ],
+      "answer": 1,
+      "difficulty": "moderate"
+    },
+    {
+      "question": "Which statement as a key feature/spec for 'Skydio X10 Intelligent Flight Battery'?",
+      "options": [
+        "Smart intelligent discharge protects health during long-term storage",
+        "Ideal for field operations, inspections, or any mission requiring safe transport of high-value sensors",
+        "1\" wide sensor for large-area coverage and photogrammetry",
+        "Includes infrared and multi-band connectivity, ideal for tactical ISR, public safety, and enterprise-grade inspections"
+      ],
+      "answer": 0,
+      "difficulty": "moderate"
+    },
+    {
+      "question": "Which statement as a key feature/spec for 'Skydio 100W Wall Adapter, NA'?",
+      "options": [
+        "Wall adapter (100W) designed to charge Skydio X10 controllers or batteries via the single or dual charger",
+        "Ideal for enterprise operations needing reliable storage, access, and organization of drone-captured media",
+        "Resolution: 640 \u00d7 512 px (Radiometric Thermal)",
+        "Streamlined bundle for organizations requiring a fully-equipped sensor vehicle without the full accessory kit"
+      ],
+      "answer": 0,
+      "difficulty": "moderate"
+    },
+    {
+      "question": "'Skydio X10/X10D NightSense Infrared Module' as compatible with which option?",
+      "options": [
+        "Fully compatible with both Skydio X10 and Skydio X10D platforms and accessories",
+        "sensor packages are upgradeable/interchangeable with VT300-Z and other modules",
+        "supports modular sensor packages and standard power rails across the X10 series.",
         "Fully compatible with both Skydio X10 and Skydio X10D platforms"
       ],
       "answer": 3,
       "difficulty": "moderate"
     },
     {
-      "question": "Which statement is listed as a key feature/spec for '(For Surveying / Mapping / Precision Geospatial Applications)'?",
+      "question": "Which statement as a key feature/spec for 'Skydio VT300-Z Sensor Package'?",
       "options": [
-        "Enables centimeter-level positioning accuracy for high-precision mapping and surveying workflows",
-        "Custom foam insert designed to fit inside the Skydio Ready Case, providing secure storage and protection for the X10 drone and accessories",
-        "Advanced digital scan software for inspecting complex structures using the Skydio X10 platform",
-        "FLIR Boson+ radiometric thermal sensor for thermal imaging"
+        "FLIR Boson+ radiometric thermal sensor for thermal imaging",
+        "Includes VT300-L Sensor Package designed for precision mapping and inspection (Wide-Angle, High-Resolution, and Low-Light Imaging)",
+        "Does not include the Ready Case",
+        "Ideal for enterprise operations requiring centralized fleet oversight, usage monitoring, and model review"
       ],
       "answer": 0,
       "difficulty": "moderate"
     },
     {
-      "question": "'(For Surveying / Mapping / Precision Geospatial Applications)' is listed as compatible with which option?",
+      "question": "'Skydio X10 Vehicle with Sensor Package (2.4/5 GHz, 5G/LTE Ready: T-Mobile, IR) NA + V100-L' as compatible with which option?",
       "options": [
-        "supports modular sensor packages and standard power rails across the X10 series.",
         "Fully compatible with both Skydio X10 and Skydio X10D platforms",
-        "sensor packages are upgradeable/interchangeable with other VT300 modules",
-        "Fully compatible with Skydio X10 and Skydio X10D platforms"
-      ],
-      "answer": 1,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "Which statement is listed as a key feature/spec for '(For Night Operations / Low-Light Navigation / Emergency Response)'?",
-      "options": [
-        "Ideal for geospatial mapping, inspection, and public safety operations",
-        "Streamlined bundle for organizations needing a fully-equipped sensor vehicle without the full accessory kit",
-        "Purpose-built thermal infrared camera module for night and low-light missions",
-        "Capable of military-grade applications but optimized for enterprise & civilian use"
-      ],
-      "answer": 2,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "'(For Night Operations / Low-Light Navigation / Emergency Response)' is listed as compatible with which option?",
-      "options": [
-        "sensor packages are upgradeable/interchangeable with other VT300 modules",
-        "Fully compatible with both Skydio X10 and Skydio X10D platforms",
-        "Fully compatible with both Skydio X10 and Skydio X10D platforms and accessories",
-        "Fully compatible with the Skydio X10 platform"
-      ],
-      "answer": 1,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "For '(For Field Deployment / Tactical Storage / Mobility)', which item is listed under In the Box/Inclusions?",
-      "options": [
-        "Additional Propellers",
-        "Skydio X10/X10D Spotlight Module",
-        "Batteries",
-        "X10 Vehicle MOLLE Pouch"
-      ],
-      "answer": 3,
-      "difficulty": "easy"
-    },
-    {
-      "question": "Which statement is listed as a key feature/spec for '(For Field Deployment / Tactical Storage / Mobility)'?",
-      "options": [
-        "Advanced digital scan software for inspecting complex structures using the Skydio X10 platform",
-        "Wall adapter (100W) designed to charge Skydio X10 controllers or batteries via the single or dual charger",
-        "Compact pouch designed to securely carry a Skydio X10 battery or dual charger",
-        "Modular storage solution built with rugged, tactical-grade materials"
-      ],
-      "answer": 3,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "'(For Field Deployment / Tactical Storage / Mobility)' is listed as compatible with which option?",
-      "options": [
-        "sensor packages are upgradeable/interchangeable with VT300-L and other modules",
+        "sensor packages are upgradeable/interchangeable with VT300 series and other modules",
         "Fully compatible with Skydio X10D platform",
-        "Fully compatible with the Skydio X10 platform",
+        "sensor packages are upgradeable/interchangeable with VT300-L and other modules"
+      ],
+      "answer": 1,
+      "difficulty": "moderate"
+    },
+    {
+      "question": "For 'Skydio VT300-Z Sensor Package', which item under In the Box/Inclusions?",
+      "options": [
+        "Torque tool for installation",
+        "Skydio X10 Vehicle",
+        "Additional Propellers",
+        "Skydio X10/X10D Spotlight Module"
+      ],
+      "answer": 0,
+      "difficulty": "moderate"
+    },
+    {
+      "question": "'Skydio X10D Starter Solution (SL, IR) NA + VT300-L' as compatible with which option?",
+      "options": [
+        "sensor packages are upgradeable/interchangeable with VT300-Z and other modules",
+        "sensor packages are upgradeable/interchangeable with other VT300 modules",
+        "sensor packages are upgradeable/interchangeable with VT300 series and other modules",
         "Fully compatible with both Skydio X10 and Skydio X10D platforms and accessories"
       ],
+      "answer": 0,
+      "difficulty": "moderate"
+    },
+    {
+      "question": "For 'Skydio X10D Starter Solution (Multi-Band, IR) + VT300-Z', which item under In the Box/Inclusions?",
+      "options": [
+        "Skydio X10/X10D NightSense Infrared Module",
+        "Additional Propellers",
+        "Skydio Autonomy Drone Software (Perpetual, non-transferable) Skydio X10 Starter Kit (2.4/5 GHz, 5G/LTE Ready: T-Mobile, IR) NA + V100-L",
+        "Replacement Sensor Package Isolators (compatible with VT300-L and VT300-Z) Vibration Isolator Kit for Sensor Packages"
+      ],
+      "answer": 1,
+      "difficulty": "moderate"
+    },
+    {
+      "question": "Which statement as a key feature/spec for 'Skydio 230W Wall Adapter, NA'?",
+      "options": [
+        "Ideal for long-range inspections, search and rescue, or tactical operations where remote tracking is required",
+        "High-power wall adapter (230W) designed to charge Skydio X10 batteries via the dual charger",
+        "Includes a high-power 230W wall adapter to support rapid charging and extended operational readiness",
+        "Complete assembly includes one dual charger, one 230W wall adapter, and one power cord"
+      ],
+      "answer": 1,
+      "difficulty": "moderate"
+    },
+    {
+      "question": "What flight time is mentioned for 'Skydio X10 Intelligent Flight Battery'?",
+      "options": [
+        "40 minutes",
+        "20 minutes",
+        "30 minutes",
+        "60 minutes"
+      ],
+      "answer": 0,
+      "difficulty": "moderate"
+    },
+    {
+      "question": "Which statement as a key feature/spec for 'Skydio X10 Starter Kit (2.4/5 GHz, 5G/LTE Ready: T-Mobile, IR) NA + V100-L'?",
+      "options": [
+        "Enhances obstacle detection and situational awareness in darkness, smoke, or visually degraded environments",
+        "Recommended to carry 3\u20134 batteries for uninterrupted, extended missions",
+        "Flexible and strategic choice for enterprise needs",
+        "Complete starter kit with essential accessories for rapid field deployment"
+      ],
       "answer": 3,
       "difficulty": "moderate"
     },
     {
-      "question": "Which statement is listed as a key feature/spec for '(For Geospatial Mapping / Inspection / Public Safety)'?",
+      "question": "Thermal/IR is mentioned for 'Skydio X10D Starter Solution (Multi-Band, IR) + VT300-Z'. What does that mainly help with?",
       "options": [
-        "Broader application capabilities compared to the X10D",
+        "Seeing heat/IR detail or improving low-light visibility",
+        "Charging batteries",
+        "Carrying equipment",
+        "Broadcasting voice messages"
+      ],
+      "answer": 0,
+      "difficulty": "difficult"
+    },
+    {
+      "question": "Thermal/IR is mentioned for 'Skydio X10 Vehicle with Sensor Package (2.4/5 GHz, 5G/LTE Ready: T-Mobile, IR) NA + V100-L'. What does that mainly help with?",
+      "options": [
+        "Broadcasting voice messages",
+        "Carrying equipment",
+        "Seeing heat/IR detail or improving low-light visibility",
+        "Charging batteries"
+      ],
+      "answer": 2,
+      "difficulty": "difficult"
+    },
+    {
+      "question": "Thermal/IR is mentioned for 'Skydio X10 Vehicle with Sensor Package (2.4/5 GHz, 5G/LTE Ready: T-Mobile, IR)'. What does that mainly help with?",
+      "options": [
+        "Carrying equipment",
+        "Charging batteries",
+        "Seeing heat/IR detail or improving low-light visibility",
+        "Broadcasting voice messages"
+      ],
+      "answer": 2,
+      "difficulty": "difficult"
+    },
+    {
+      "question": "'Skydio X10 Vehicle with Sensor Package (2.4/5 GHz, 5G/LTE Ready: T-Mobile, IR)' as compatible with which option?",
+      "options": [
+        "supports modular sensor packages and standard power rails across the X10 series.",
+        "sensor packages are upgradeable/interchangeable with other VT300 modules",
+        "sensor packages are upgradeable/interchangeable with VT300 series and other modules",
+        "Fully compatible with both Skydio X10 and Skydio X10D platforms and accessories"
+      ],
+      "answer": 1,
+      "difficulty": "difficult"
+    },
+    {
+      "question": "'Skydio X10 Intelligent Flight Battery' as compatible with which option?",
+      "options": [
+        "sensor packages are upgradeable/interchangeable with VT300 series and other modules",
+        "supports modular sensor packages and standard power rails across the X10 series.",
+        "sensor packages are upgradeable/interchangeable with VT300-Z and other modules",
+        "sensor packages are upgradeable/interchangeable with VT300-L and other modules"
+      ],
+      "answer": 1,
+      "difficulty": "difficult"
+    },
+    {
+      "question": "For 'Skydio X10 Starter Kit (2.4/5 GHz, 5G/LTE Ready: T-Mobile, IR) NA + VT300-L', which item under In the Box/Inclusions?",
+      "options": [
+        "Additional Batteries",
+        "1 subscription \u2013 Skydio Media Sync for X10 Skydio Media Sync for X10",
+        "2.4/5 GHz Cellular Enterprise Controller",
+        "Skydio VT300-L Sensor Package Kit"
+      ],
+      "answer": 3,
+      "difficulty": "difficult"
+    },
+    {
+      "question": "'Skydio X10 Intelligent Flight Battery' as compatible with which option?",
+      "options": [
+        "supports modular sensor packages and standard power rails across the X10 series.",
+        "sensor packages are upgradeable/interchangeable with VT300 series and other modules",
+        "sensor packages are upgradeable/interchangeable with VT300-Z and other modules",
+        "Fully compatible with both Skydio X10 and Skydio X10D platforms and accessories"
+      ],
+      "answer": 0,
+      "difficulty": "difficult"
+    },
+    {
+      "question": "Which statement as a key feature/spec for 'Skydio X10 Vehicle with Sensor Package (2.4/5 GHz, 5G/LTE Ready: T-Mobile, IR) NA + V100-L'?",
+      "options": [
         "IR-capable platform suited for inspection, nighttime operations, public safety, and precision data capture",
-        "Ideal for reducing impact and vibration during transport or field operations",
+        "Ideal for field operations, inspections, or mission-critical deployments where durability and protection are required",
+        "Broader application capabilities compared to the X10D",
+        "IR-capable aircraft designed for public safety response, infrastructure inspection, and real-time situational awareness"
+      ],
+      "answer": 3,
+      "difficulty": "difficult"
+    },
+    {
+      "question": "For 'Skydio Ready Case', which item under In the Box/Inclusions?",
+      "options": [
+        "Enterprise Controller",
+        "Skydio X10 Intelligent Flight Battery",
+        "Skydio X10 Drone with Sensor Package (one battery included, optional attachments)",
+        "Skydio X10 Battery Molle Pouch Skydio X10 Battery Molle Pouch, Black"
+      ],
+      "answer": 2,
+      "difficulty": "difficult"
+    },
+    {
+      "question": "Which statement as a key feature/spec for 'Skydio X10D Starter Solution (Multi-Band, IR) + VT300-Z'?",
+      "options": [
+        "Enhances portability and organization for public safety, defense, and enterprise operations",
+        "Includes infrared and multi-band connectivity, ideal for tactical ISR, public safety, and enterprise-grade inspections",
+        "Provides resilient communications and precise control for extended-range missions",
+        "Digital scan software for the Skydio X10 and X10D, optimized for inspecting complex structures"
+      ],
+      "answer": 1,
+      "difficulty": "difficult"
+    },
+    {
+      "question": "Thermal/IR is mentioned for 'Skydio X10 Starter Kit (2.4/5 GHz, 5G/LTE Ready: T-Mobile, IR) NA + VT300-L'. What does that mainly help with?",
+      "options": [
+        "Carrying equipment",
+        "Seeing heat/IR detail or improving low-light visibility",
+        "Charging batteries",
+        "Broadcasting voice messages"
+      ],
+      "answer": 1,
+      "difficulty": "difficult"
+    },
+    {
+      "question": "Which statement as a key feature/spec for 'Skydio Parachute for X10'?",
+      "options": [
+        "Lightweight, easy-to-install, and fully compatible with the X10 platform",
+        "Preconfigured starter solution for immediate deployment with complete accessory suite",
+        "IR-capable vehicle designed for public safety, utility inspection, and real-time situational awareness",
+        "Supports geospatial mapping, detailed inspection, and public safety operations"
+      ],
+      "answer": 0,
+      "difficulty": "difficult"
+    },
+    {
+      "question": "Which statement as a key feature/spec for 'Skydio X10D Starter Solution (SL, IR) NA + VT300-L'?",
+      "options": [
+        "Integrates with pre-loaded DTED (Digital Terrain Elevation Data) maps for accurate geolocation",
+        "Preconfigured starter solution for immediate deployment with complete accessory suite",
+        "Provides effective illumination up to 100 meters",
+        "Enhances obstacle detection and situational awareness in darkness, smoke, or visually degraded environments"
+      ],
+      "answer": 1,
+      "difficulty": "difficult"
+    },
+    {
+      "question": "Which statement as a key feature/spec for 'Skydio Spare Propellers for X10'?",
+      "options": [
+        "Includes both clockwise (CW) and counterclockwise (CCW) propellers for complete set replacement",
+        "Equipped with Molle straps for integration with standard tactical or packing systems",
+        "Built-in self-heating technology enables reliable flight in cold environments (down to \u221220 \u00b0C / \u22124 \u00b0F) and supports automatic pre-warming when below 0 \u00b0C / 32 \u00b0F",
+        "Ideal for enterprise and public safety operations requiring remote piloting capabilities"
+      ],
+      "answer": 0,
+      "difficulty": "difficult"
+    },
+    {
+      "question": "'Skydio X10/X10D RTK/PPK Module' as compatible with which option?",
+      "options": [
+        "Fully compatible with Skydio X10 platform",
+        "sensor packages are upgradeable/interchangeable with VT300-Z and other modules",
+        "Fully compatible with Skydio X10 and Skydio X10D platforms",
+        "Fully compatible with both Skydio X10 and Skydio X10D platforms"
+      ],
+      "answer": 3,
+      "difficulty": "difficult"
+    },
+    {
+      "question": "Thermal/IR is mentioned for 'Skydio X10 Starter Kit (2.4/5 GHz, 5G/LTE Ready: T-Mobile, IR) + VT300-Z'. What does that mainly help with?",
+      "options": [
+        "Charging batteries",
+        "Seeing heat/IR detail or improving low-light visibility",
+        "Broadcasting voice messages",
+        "Carrying equipment"
+      ],
+      "answer": 1,
+      "difficulty": "difficult"
+    },
+    {
+      "question": "Which statement as a key feature/spec for 'Skydio X10 Intelligent Flight Battery'?",
+      "options": [
+        "Smart intelligent discharge protects health during long-term storage",
+        "Subscription-based cloud storage for Skydio X10 operations, providing secure and centralized data management",
+        "Ideal for enterprise and public safety operations requiring remote piloting capabilities",
+        "Ideal for geospatial mapping, inspection, and public safety operations"
+      ],
+      "answer": 0,
+      "difficulty": "difficult"
+    },
+    {
+      "question": "Which statement as a key feature/spec for 'Vibration Isolator Kit for Sensor Packages'?",
+      "options": [
+        "Safety attachment for the Skydio X10, designed to deploy in emergency situations to reduce risk of vehicle damage and protect surroundings",
+        "Quantity must match fleet size",
+        "Ideal for maintaining image quality, sensor accuracy, and overall flight performance during demanding operations",
+        "IR-capable platform suited for inspection, nighttime operations, public safety, and precision data capture"
+      ],
+      "answer": 2,
+      "difficulty": "difficult"
+    },
+    {
+      "question": "For 'Skydio VT300-L Sensor Package', which item under In the Box/Inclusions?",
+      "options": [
+        "Skydio X10 2.4/5 GHz with Cellular Vehicle",
+        "USB-C Flash Drive",
+        "Ruggedized protective case for the VT300-Z",
+        "Torque tool for installation"
+      ],
+      "answer": 3,
+      "difficulty": "difficult"
+    },
+    {
+      "question": "Which statement as a key feature/spec for 'Skydio X10 Starter Kit (2.4/5 GHz, 5G/LTE Ready: T-Mobile, IR) NA + VT300-L'?",
+      "options": [
+        "Includes the V100-L Sensor Package, optimized for versatile ISR missions and general inspection workflows",
+        "Ruggedized protective case designed to securely store and transport Skydio X10 sensor packages",
+        "Complete starter kit with essential accessories for immediate deployment in field operations",
+        "Streamlined bundle for organizations needing a fully-equipped sensor vehicle without the full accessory kit"
+      ],
+      "answer": 2,
+      "difficulty": "difficult"
+    },
+    {
+      "question": "RTK/PPK is mentioned for 'Skydio X10/X10D NightSense Infrared Module'. What is the main benefit?",
+      "options": [
+        "Extra illumination in low light",
+        "Improved positioning accuracy for mapping/survey work",
+        "Faster battery charging",
+        "Improved audio communication"
+      ],
+      "answer": 1,
+      "difficulty": "difficult"
+    },
+    {
+      "question": "Which statement as a key feature/spec for 'Skydio X10/X10D Spotlight Module'?",
+      "options": [
+        "Ideal for public safety, emergency response, industrial inspections, and tactical missions",
+        "Ideal for enterprise operations needing reliable storage, access, and organization of drone-captured media",
+        "Supports pre-recorded messages for repetitive safety instructions or alerts",
+        "Designed for low-light operations, night inspections, search and rescue, and emergency response"
+      ],
+      "answer": 3,
+      "difficulty": "difficult"
+    },
+    {
+      "question": "For 'Skydio X10 Vehicle with Sensor Package (2.4/5 GHz, 5G/LTE Ready: T-Mobile, IR)', which item under In the Box/Inclusions?",
+      "options": [
+        "Skydio Autonomy Drone Software (perpetual, non-transferable)",
+        "Skydio X10 Vehicle Only (2.4/5 GHz, 5G/LTE Ready: T-Mobile, IR) NA",
+        "Skydio X10 Controller",
+        "2-Up Charger"
+      ],
+      "answer": 1,
+      "difficulty": "difficult"
+    },
+    {
+      "question": "Which statement as a key feature/spec for 'Ready Case Foam Insert'?",
+      "options": [
+        "Custom foam insert designed to fit inside the Skydio Ready Case, providing secure storage and protection for the X10 drone and accessories",
+        "Equipped with Molle straps for integration with standard tactical or packing systems",
+        "Ideal for enterprise operations needing reliable storage, access, and organization of drone-captured media",
         "Includes VT300-L Sensor Package designed for precision mapping and inspection (Wide-Angle, High-Resolution, and Low-Light Imaging)"
       ],
       "answer": 0,
-      "difficulty": "moderate"
+      "difficulty": "difficult"
     },
     {
-      "question": "Which statement is listed as a key feature/spec for '(For Enterprise Flight Control / Mission Operations)'?",
+      "question": "Which statement as a key feature/spec for 'Skydio X10/X10D RTK/PPK Module'?",
       "options": [
-        "Compact pouch designed to securely carry a Skydio X10 battery or dual charger",
-        "Streamlined bundle for organizations needing a fully-equipped sensor vehicle without the full accessory kit",
-        "Recommended to carry 3–4 batteries for uninterrupted, extended missions",
-        "Provides resilient communications and precise control for extended-range missions"
-      ],
-      "answer": 3,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "For '(For Surveying / Spatial Analysis / 3D Modeling)', which item is listed under In the Box/Inclusions?",
-      "options": [
-        "Skydio Battery (150W) for X10",
-        "VT300-L sensor package (64MP narrow + FLIR Boson+ thermal + 1\" wide sensor + flashlight)",
-        "Cross-Body Strap Skydio X10 Molle Pouch",
-        "100W Wall Adapter (NA) Skydio 100W Wall Adapter, NA"
-      ],
-      "answer": 1,
-      "difficulty": "easy"
-    },
-    {
-      "question": "Which statement is listed as a key feature/spec for '(For Surveying / Spatial Analysis / 3D Modeling)'?",
-      "options": [
-        "Requires active subscriptions to Skydio Media Sync and Skydio Fleet Manager",
-        "Allows users to follow a target or position without requiring visual line-of-sight",
-        "Integrated camera system optimized for surveying, spatial analysis, and 3D modeling",
-        "Resolution: 640 × 512 px (Radiometric Thermal)"
-      ],
-      "answer": 2,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "Which statement is listed as a key feature/spec for '(For Emergency Safety / UAV Risk Mitigation)'?",
-      "options": [
-        "Requires active subscriptions to Skydio Media Sync and Skydio Fleet Manager",
-        "Can be used in tandem with other payload modules such as thermal or zoom sensors",
-        "Ideal for public safety, emergency response, inspection, or field operations requiring immediate deployment",
-        "Safety attachment for the Skydio X10, designed to deploy in emergency situations to reduce risk of vehicle damage and protect surroundings"
-      ],
-      "answer": 3,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "Which statement is listed as a key feature/spec for '(For Flight Maintenance / Replacement Parts)'?",
-      "options": [
-        "Does not include wall adapter; compatible with standard Skydio power adapters",
-        "IR-capable vehicle designed for infrastructure inspection, mapping, and public safety missions",
-        "Equipped with VT300-Z Sensor Package (64MP Narrow + FLIR Boson+ Radiometric Thermal + Telephoto sensor)",
-        "Replacement propellers designed for the Skydio X10 to maintain optimal flight performance and safety"
-      ],
-      "answer": 3,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "Which statement is listed as a key feature/spec for '(For Battery Management / Efficient Charging)'?",
-      "options": [
-        "Dual battery charger designed for the Skydio X10, allowing simultaneous charging of two flight batteries",
-        "Includes both clockwise (CW) and counterclockwise (CCW) propellers for complete set replacement",
-        "Integrated flashlight for low-light and night operations",
-        "Modular storage solution built with rugged, tactical-grade materials"
-      ],
-      "answer": 0,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "Which statement is listed as a key feature/spec for '(For Power Supply / Battery & Controller Charging)'?",
-      "options": [
-        "Narrow 64MP sensor for high-resolution capture",
-        "Wall adapter (100W) designed to charge Skydio X10 controllers or batteries via the single or dual charger",
-        "Preconfigured starter solution for immediate deployment with full accessory suite",
-        "Ideal for infrastructure inspections, construction monitoring, and detailed mapping operations"
-      ],
-      "answer": 1,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "Which statement is listed as a key feature/spec for '(For High-Power Battery Charging / Enterprise Operations)'?",
-      "options": [
-        "Ideal for field operations, inspections, or mission-ready portability",
-        "FLIR Boson+ radiometric thermal sensor for thermal imaging",
-        "Ideal for maintaining image quality, sensor accuracy, and overall flight performance during demanding operations",
-        "High-power wall adapter (230W) designed to charge Skydio X10 batteries via the dual charger"
-      ],
-      "answer": 3,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "For '(For Efficient Battery Charging / Enterprise Operations)', which item is listed under In the Box/Inclusions?",
-      "options": [
-        "Dual Charger for Skydio X10",
-        "Controller MOLLE Pouch",
-        "Skydio X10D SL Vehicle",
-        "Skydio 100W Wall Adapter, NA"
-      ],
-      "answer": 0,
-      "difficulty": "easy"
-    },
-    {
-      "question": "Which statement is listed as a key feature/spec for '(For Efficient Battery Charging / Enterprise Operations)'?",
-      "options": [
-        "FLIR Boson+ radiometric thermal sensor for thermal mapping",
-        "Ideal for enterprise operations requiring centralized fleet oversight, usage monitoring, and model review",
-        "Ideal for field operations, inspections, or mission-ready portability",
-        "Dual battery charger for the Skydio X10, capable of charging two batteries simultaneously"
-      ],
-      "answer": 3,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "Which statement is listed as a key feature/spec for '(For Sensor Protection / Flight Stability)'?",
-      "options": [
-        "Replacement vibration isolators designed to protect Skydio sensor packages from in-flight vibration",
-        "Designed to securely hold Skydio drone components for quick and efficient field deployment",
-        "Allows users to follow a target or position without requiring visual line-of-sight",
-        "Ideal for ISR, inspection, mapping, and public safety operations"
-      ],
-      "answer": 0,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "For '(For Rapid Deployment / Mission-Ready Operations)', which item is listed under In the Box/Inclusions?",
-      "options": [
-        "Skydio X10 Drone with Sensor Package (one battery included, optional attachments)",
-        "Skydio 230W Wall Adapter, NA",
-        "Skydio Autonomy Drone Software (perpetual, non-transferable)",
-        "Skydio X10 Controller Molle Pouch Skydio X10 Controller Molle Pouch,"
-      ],
-      "answer": 0,
-      "difficulty": "easy"
-    },
-    {
-      "question": "Which statement is listed as a key feature/spec for '(For Rapid Deployment / Mission-Ready Operations)'?",
-      "options": [
-        "Provides full flight control via a browser interface, enabling safe and efficient remote operations",
-        "Includes US power cord only; charger not included",
-        "Ideal for high-value missions, complex environments, and enterprise operations where operational safety is critical",
-        "Designed for fast mission readiness, bypassing the need for a full drone deployment sequence in critical situations"
-      ],
-      "answer": 3,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "Which statement is listed as a key feature/spec for '(For Drone Protection / Custom Fit Storage)'?",
-      "options": [
-        "IR-capable vehicle designed for infrastructure inspection, mapping, and public safety missions",
-        "Custom foam insert designed to fit inside the Skydio Ready Case, providing secure storage and protection for the X10 drone and accessories",
-        "Compatible with VT300-Z and VT300-L sensor packages",
-        "Integrated flashlight for low-light and night operations"
-      ],
-      "answer": 1,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "For '(For Rugged Transport / Field Deployment)', which item is listed under In the Box/Inclusions?",
-      "options": [
-        "Skydio X10 Vehicle",
-        "Battery MOLLE Pouches",
-        "VT300-L Sensor Package",
-        "Skydio Intelligent Flight Batteries"
-      ],
-      "answer": 0,
-      "difficulty": "easy"
-    },
-    {
-      "question": "Which statement is listed as a key feature/spec for '(For Rugged Transport / Field Deployment)'?",
-      "options": [
-        "Does not include wall adapter; compatible with standard Skydio power adapters",
-        "Ruggedized hard-shell case designed to securely transport the Skydio X10 and its essential accessories",
-        "Recommended to carry 3–4 batteries for uninterrupted, extended missions",
-        "Integrated flashlight for low-light and night operations"
-      ],
-      "answer": 1,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "Which statement is listed as a key feature/spec for '(For Sensor Protection / Field Transport)'?",
-      "options": [
-        "IR-capable aircraft designed for public safety response, infrastructure inspection, and real-time situational awareness",
-        "Ideal for enterprise operations requiring centralized fleet oversight, usage monitoring, and model review",
-        "Ruggedized protective case designed to securely store and transport Skydio X10 sensor packages",
-        "Safety attachment for the Skydio X10, designed to deploy in emergency situations to reduce risk of vehicle damage and protect surroundings"
-      ],
-      "answer": 2,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "For '(For Portable Carry / Field Operations)', which item is listed under In the Box/Inclusions?",
-      "options": [
-        "Skydio 230W Wall Adapter, NA",
-        "Skydio X10 Molle Pouch",
-        "Foam Insert for Skydio Ready Case Ready Case Foam Insert",
-        "Skydio 100W Wall Adapter, NA"
-      ],
-      "answer": 1,
-      "difficulty": "easy"
-    },
-    {
-      "question": "Which statement is listed as a key feature/spec for '(For Portable Carry / Field Operations)'?",
-      "options": [
-        "Compact and rugged pouch designed to carry one Skydio X10 vehicle with attached battery",
-        "IR-capable vehicle designed for infrastructure inspection, mapping, and public safety missions",
-        "Ideal for crowd control, public announcements, emergency response, and search and rescue missions",
-        "Purpose-built thermal infrared camera module for night and low-light missions"
-      ],
-      "answer": 0,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "Which statement is listed as a key feature/spec for '(For 3D Mapping / Structural Inspections)'?",
-      "options": [
-        "Securely holds a fully unfolded Skydio X10 drone with sensor package (including one battery and optional attachments) along with all essential accessories",
-        "Provides resilient communications and precise control for extended-range missions",
-        "Advanced digital scan software for inspecting complex structures using the Skydio X10 platform",
-        "Ruggedized hard-shell case designed to securely transport the Skydio X10 and its essential accessories"
-      ],
-      "answer": 2,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "Which statement is listed as a key feature/spec for '(For Long-Range Tracking / Autonomous Flight)'?",
-      "options": [
-        "Replacement propellers designed for the Skydio X10 to maintain optimal flight performance and safety",
-        "Designed for low-light operations, night inspections, search and rescue, and emergency response",
-        "Term license for Skydio Scout, enabling autonomous tracking of GPS positions over extremely long ranges",
-        "Subscription-based software enabling Skydio X10 drones to automatically upload flight media to Skydio Fleet Manager for storage"
-      ],
-      "answer": 2,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "Which statement is listed as a key feature/spec for '(For Geolocation / Precision Mapping)'?",
-      "options": [
-        "Term license enabling operators to determine the exact location of an object currently observed through the Skydio X10’s camera",
-        "Includes both clockwise (CW) and counterclockwise (CCW) propellers for complete set replacement",
-        "Replacement propellers designed for the Skydio X10 to maintain optimal flight performance and safety",
-        "Includes the VT300-Z Sensor Package, featuring narrow, telephoto, and radiometric thermal sensors for high-precision data capture in contested or GPS-denied environments"
-      ],
-      "answer": 0,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "Which statement is listed as a key feature/spec for '(For Cloud Storage / Enterprise Data Management)'?",
-      "options": [
-        "Subscription-based cloud storage for Skydio X10 operations, providing secure and centralized data management",
-        "Camo color for tactical or outdoor use",
-        "Complete starter kit with essential accessories for immediate deployment in field operations",
-        "Includes a high-power 230W wall adapter to support rapid charging and extended operational readiness"
-      ],
-      "answer": 0,
-      "difficulty": "moderate"
-    },
-    {
-      "question": "Which statement is listed as a key feature/spec for '(For Fleet Management / Enterprise Operations)'?",
-      "options": [
-        "Provides up to 40 minutes of flight time, depending on payload and environmental conditions",
-        "Includes VT300-L Sensor Package designed for precision mapping and inspection (Wide-Angle, High-Resolution, and Low-Light Imaging)",
-        "Subscription-based software for tracking and managing Skydio X10 fleet usage",
+        "Enables centimeter-level positioning accuracy for high-precision mapping and surveying workflows",
+        "Ideal for infrastructure inspections, construction monitoring, and detailed mapping operations",
+        "Flexible and strategic choice for enterprise needs",
         "IR-capable vehicle designed for public safety, utility inspection, and real-time situational awareness"
       ],
-      "answer": 2,
-      "difficulty": "moderate"
-    },
+      "answer": 0,
+      "difficulty": "difficult"
+    }
+  ],
+  "Processing": [
     {
-      "question": "Which statement is listed as a key feature/spec for '(For Media Upload / Enterprise Data Management)'?",
+      "question": "which step is described as a fundamental prerequisite for any metric reconstruction from images?",
       "options": [
-        "Ideal for field operations, inspections, or any mission requiring safe transport of high-value sensors",
-        "Subscription-based software enabling Skydio X10 drones to automatically upload flight media to Skydio Fleet Manager for storage",
-        "Narrow 64MP sensor for high-resolution capture",
-        "Subscription-based cloud storage for Skydio X10 operations, providing secure and centralized data management"
+        "Camera calibration and image orientation",
+        "Mesh generation",
+        "Orthophoto generation",
+        "Surface reconstruction"
       ],
-      "answer": 1,
-      "difficulty": "moderate"
+      "answer": 0,
+      "difficulty": "easy"
     },
     {
-      "question": "Which statement is listed as a key feature/spec for '(For Remote Flight Operations / Enterprise Control)'?",
+      "question": "After camera calibration and image orientation are determined, which technique is used to reconstruct a 3D structure from a series of 2D images?",
       "options": [
-        "Web-based cockpit experience allowing pilots to operate Skydio X10 drones remotely from anywhere",
-        "Supports geospatial mapping, detailed inspection, and public safety operations",
-        "Wall adapter (100W) designed to charge Skydio X10 controllers or batteries via the single or dual charger",
-        "Defense-optimized platform with multi-band radio for resilient communications in contested or GPS-denied environments"
+        "Structure-from-Motion (SfM)",
+        "Radiometric calibration",
+        "Seven-parameter transformation",
+        "Volumetric measurement"
+      ],
+      "answer": 0,
+      "difficulty": "easy"
+    },
+    {
+      "question": "Why is capturing as many images as possible recommended for SfM-based reconstruction?",
+      "options": [
+        "It improves the ability to reconstruct 3D structure from 2D images",
+        "It reduces RAM requirements during processing",
+        "It eliminates the need for GCPs",
+        "It automatically produces NDVI maps"
       ],
       "answer": 0,
       "difficulty": "moderate"
+    },
+    {
+      "question": "Which data type, if available, can help automated tie point extraction and allow direct georeferencing of captured images?",
+      "options": [
+        "Collected GNSS data",
+        "Thermal radiance values",
+        "Battery cycle count logs",
+        "Obstacle avoidance logs"
+      ],
+      "answer": 0,
+      "difficulty": "easy"
+    },
+    {
+      "question": "Once a set of images has been oriented, what is used to digitally reconstruct the scene and extract dense point clouds?",
+      "options": [
+        "Dense image matching techniques",
+        "Color balancing filters",
+        "Manual digitizing tools",
+        "Waypoint optimization"
+      ],
+      "answer": 0,
+      "difficulty": "easy"
+    },
+    {
+      "question": "what happens to derived dense point clouds before photo-realistic visualization?",
+      "options": [
+        "They are structured, interpolated (maybe simplified), and textured",
+        "They are converted directly into NDRE maps",
+        "They are only used for GCP marking",
+        "They are discarded after orthophoto export"
+      ],
+      "answer": 0,
+      "difficulty": "moderate"
+    },
+    {
+      "question": "For creating an orthophoto with precise orthorectification and complete removal of terrain distortions, what is stated as mandatory?",
+      "options": [
+        "A dense point cloud",
+        "A thermal camera payload",
+        "A fixed-wing UAV",
+        "A 10 km base-to-rover distance"
+      ],
+      "answer": 0,
+      "difficulty": "easy"
+    },
+    {
+      "question": "DJI Terra is presented as providing an interface with tools to process data and output results effectively and accurately. Which is one of the tools?",
+      "options": [
+        "Image POS modification",
+        "Automatic propeller balancing",
+        "Real-time LTE video streaming",
+        "Automatic battery cell repair"
+      ],
+      "answer": 0,
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which DJI Terra capability is for handling datasets from more than one mission?",
+      "options": [
+        "Process data from multiple flights",
+        "Merge RC logs into a single report",
+        "Stitch only video frames",
+        "Convert thermal videos into NDVI"
+      ],
+      "answer": 0,
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which DJI Terra management feature is for survey control points?",
+      "options": [
+        "GCP and checkpoint management",
+        "Battery and charger management",
+        "Pilot roster management",
+        "Airspace waiver management"
+      ],
+      "answer": 0,
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which DJI Terra feature is for coordinate system changes on export?",
+      "options": [
+        "Output coordination transformation",
+        "Obstacle map transformation",
+        "Controller IMU transformation",
+        "Propeller thrust transformation"
+      ],
+      "answer": 0,
+      "difficulty": "moderate"
+    },
+    {
+      "question": "Which transformation type is as a DJI Terra feature?",
+      "options": [
+        "Seven-parameter transformation",
+        "Three-parameter transformation",
+        "Two-parameter transformation",
+        "Nine-parameter transformation"
+      ],
+      "answer": 0,
+      "difficulty": "moderate"
+    },
+    {
+      "question": "Which DJI Terra feature is for limiting processing to a user-defined area?",
+      "options": [
+        "Custom region of interest selection for processing",
+        "Automatic no-fly-zone masking",
+        "Automatic terrain following",
+        "Live mission replay"
+      ],
+      "answer": 0,
+      "difficulty": "moderate"
+    },
+    {
+      "question": "According to the scalability , with a 64GB RAM configuration, DJI Terra can process about how many images per project?",
+      "options": [
+        "25,000 images",
+        "12,800 images",
+        "51,200 images",
+        "400,000 images"
+      ],
+      "answer": 0,
+      "difficulty": "moderate"
+    },
+    {
+      "question": "According to the scalability , the DJI Terra cluster version can process up to about how many images per project?",
+      "options": [
+        "400,000 images",
+        "25,000 images",
+        "192,000 images",
+        "768,000 images"
+      ],
+      "answer": 0,
+      "difficulty": "moderate"
+    },
+    {
+      "question": "what is the photo count limit (non-cluster) for 32GB RAM?",
+      "options": [
+        "12,800",
+        "19,200",
+        "25,600",
+        "51,200"
+      ],
+      "answer": 0,
+      "difficulty": "hard"
+    },
+    {
+      "question": "what is the photo count limit (non-cluster) for 48GB RAM?",
+      "options": [
+        "19,200",
+        "12,800",
+        "25,600",
+        "51,200"
+      ],
+      "answer": 0,
+      "difficulty": "hard"
+    },
+    {
+      "question": "what is the photo count limit (non-cluster) for 128GB RAM?",
+      "options": [
+        "51,200",
+        "25,600",
+        "384,000",
+        "768,000"
+      ],
+      "answer": 0,
+      "difficulty": "hard"
+    },
+    {
+      "question": "what is the cluster photo count limit for 32GB RAM?",
+      "options": [
+        "192,000",
+        "288,000",
+        "384,000",
+        "768,000"
+      ],
+      "answer": 0,
+      "difficulty": "hard"
+    },
+    {
+      "question": "what is the cluster photo count limit for 64GB RAM?",
+      "options": [
+        "384,000",
+        "192,000",
+        "288,000",
+        "768,000"
+      ],
+      "answer": 0,
+      "difficulty": "hard"
+    },
+    {
+      "question": "what LiDAR raw data size limit for 64GB RAM?",
+      "options": [
+        "16GB",
+        "8GB",
+        "12GB",
+        "32GB"
+      ],
+      "answer": 0,
+      "difficulty": "hard"
+    },
+    {
+      "question": "what LiDAR raw data size limit for 128GB RAM?",
+      "options": [
+        "32GB",
+        "16GB",
+        "12GB",
+        "8GB"
+      ],
+      "answer": 0,
+      "difficulty": "hard"
+    },
+    {
+      "question": "The scalability states users can expand project scale primarily by increasing what resource?",
+      "options": [
+        "System memory (RAM)",
+        "Controller antenna gain",
+        "Battery capacity",
+        "Propeller diameter"
+      ],
+      "answer": 0,
+      "difficulty": "easy"
+    },
+    {
+      "question": "DJI Terra multispectral processing can generate what kind of maps for remote sensing research and more?",
+      "options": [
+        "Radiometrically calibrated reflectance maps",
+        "Obstacle density maps",
+        "Battery degradation maps",
+        "Pilot skill maps"
+      ],
+      "answer": 0,
+      "difficulty": "easy"
+    },
+    {
+      "question": "DJI Terra can generate radiometrically calibrated reflectance maps from which type of captured data?",
+      "options": [
+        "Thermal data only",
+        "Multispectral data (e.g., Mavic 3 Multispectral / P4 Multispectral)",
+        "Standard RGB photos only",
+        "LiDAR point cloud data only"
+      ],
+      "answer": 1,
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which vegetation index is mentioned as an output option in DJI Terra's multispectral processing materials?",
+      "options": [
+        "EVI",
+        "NDRE",
+        "VARI",
+        "SAVI"
+      ],
+      "answer": 1,
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which set contains ONLY vegetation indices mentioned as DJI Terra vegetation index map outputs in the materials?",
+      "options": [
+        "NDVI, NDRE, LCI, GNDVI",
+        "NDVI, EVI, SAVI, ARVI",
+        "NDRE, PRI, MSAVI2, GCI",
+        "OSAVI, EVI2, NDWI, SIPI"
+      ],
+      "answer": 0,
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which vegetation index is mentioned as available in DJI Terra's vegetation index map outputs and is designed to be more robust over areas with visible soil background?",
+      "options": [
+        "OSAVI",
+        "NDWI",
+        "NBR",
+        "MSI"
+      ],
+      "answer": 0,
+      "difficulty": "medium"
+    },
+    {
+      "question": "The multispectral mentions which DJI aircraft models as examples of multispectral data sources?",
+      "options": [
+        "Mavic 3 Multispectral and P4 Multispectral",
+        "Matrice 350 RTK and Inspire 3",
+        "Mini 4 Pro and Air 3",
+        "Agras T30 and Avata"
+      ],
+      "answer": 0,
+      "difficulty": "moderate"
+    },
+    {
+      "question": "For LiDAR data processing, DJI Terra is described as processing point cloud data captured by which payload?",
+      "options": [
+        "Zenmuse L1",
+        "Zenmuse P1",
+        "Zenmuse H20T",
+        "Zenmuse L2 only"
+      ],
+      "answer": 0,
+      "difficulty": "easy"
+    },
+    {
+      "question": "what is one of the first actions Terra can do with LiDAR data?",
+      "options": [
+        "Import raw data",
+        "Generate NDVI map",
+        "Auto-label building footprints",
+        "Upload to cloud storage"
+      ],
+      "answer": 0,
+      "difficulty": "easy"
+    },
+    {
+      "question": "After importing raw LiDAR data, DJI Terra is described as being able to calculate what data?",
+      "options": [
+        "POS data",
+        "Battery state-of-health",
+        "Obstacle avoidance map",
+        "RTK radio channel"
+      ],
+      "answer": 0,
+      "difficulty": "moderate"
+    },
+    {
+      "question": "DJI Terra LiDAR processing mentions fusing point cloud data with what other data type?",
+      "options": [
+        "Visible light data",
+        "Thermal-only frames",
+        "Audio logs",
+        "Magnetometer drift logs"
+      ],
+      "answer": 0,
+      "difficulty": "easy"
+    },
+    {
+      "question": "After LiDAR processing, DJI Terra is described as exporting point clouds in what way?",
+      "options": [
+        "Standardized formats",
+        "Only proprietary formats",
+        "Only JPEG images",
+        "Only PDF reports"
+      ],
+      "answer": 0,
+      "difficulty": "easy"
+    },
+    {
+      "question": "DJI Terra's measurement tools are described as enabling what type of measurements?",
+      "options": [
+        "Coordinate, linear, area, and volumetric measurements",
+        "Only battery cycle measurements",
+        "Only speed and altitude measurements",
+        "Only compass heading measurements"
+      ],
+      "answer": 0,
+      "difficulty": "easy"
+    },
+    {
+      "question": "what is the stated purpose of the annotation feature?",
+      "options": [
+        "Enable label editing for measurements to support reporting and communication",
+        "Automatically create flight plans",
+        "Calibrate camera focal length",
+        "Compute GNSS corrections"
+      ],
+      "answer": 0,
+      "difficulty": "moderate"
+    },
+    {
+      "question": "which software as an example of photogrammetric software that can process UAV images?",
+      "options": [
+        "DJI Terra",
+        "DJI Fly",
+        "DJI Pilot 2",
+        "DJI Go 4"
+      ],
+      "answer": 0,
+      "difficulty": "easy"
+    },
+    {
+      "question": "Besides DJI Terra, which software as an example in the same Data Processing ?",
+      "options": [
+        "Pix4D",
+        "AutoCAD",
+        "Google Earth",
+        "ArcGIS Collector"
+      ],
+      "answer": 0,
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which software as an example together with DJI Terra and Pix4D?",
+      "options": [
+        "Agisoft Metashape",
+        "Adobe Photoshop",
+        "QGIS only",
+        "SketchUp"
+      ],
+      "answer": 0,
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which main feature for Agisoft PhotoScan Professional?",
+      "options": [
+        "Simple interface",
+        "Requires only video frames",
+        "Cloud-only processing",
+        "No support for point clouds"
+      ],
+      "answer": 0,
+      "difficulty": "easy"
+    },
+    {
+      "question": "Agisoft PhotoScan Professional is described as having an excellent mathematical model of processing. Which capability is included in that statement?",
+      "options": [
+        "It can work with any camera",
+        "It only works with DJI cameras",
+        "It requires RTK for every project",
+        "It cannot process imagery without GPS"
+      ],
+      "answer": 0,
+      "difficulty": "moderate"
+    },
+    {
+      "question": "Agisoft PhotoScan can work even with imagery that was not correctly shot and with photos that have what missing information?",
+      "options": [
+        "Coordinates",
+        "Color channels",
+        "Time stamps",
+        "File names"
+      ],
+      "answer": 0,
+      "difficulty": "moderate"
+    },
+    {
+      "question": "photogrammetry reconstruction is described as reconstructing a scenario to get sharp and realistic representations of environments. Which use case is ?",
+      "options": [
+        "Urban scene reconstruction",
+        "Underwater sonar mapping",
+        "Indoor Wi\u2011Fi heat mapping",
+        "Real-time traffic control"
+      ],
+      "answer": 0,
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which of the following is as a photogrammetry reconstruction use case in the Terra ?",
+      "options": [
+        "Site mapping",
+        "Crop spraying",
+        "Marine navigation",
+        "Pipeline pigging"
+      ],
+      "answer": 0,
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which photogrammetry reconstruction use case focuses on inspecting vertical structures?",
+      "options": [
+        "Tower inspection",
+        "Mine blasting control",
+        "Roadside towing",
+        "Warehouse inventory scanning"
+      ],
+      "answer": 0,
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which photogrammetry reconstruction use case is about creating a preview of a scene before execution?",
+      "options": [
+        "Previsualization",
+        "Real-time RTK correction broadcasting",
+        "Live obstacle avoidance training",
+        "Battery endurance testing"
+      ],
+      "answer": 0,
+      "difficulty": "moderate"
+    },
+    {
+      "question": "Which photogrammetry reconstruction use case relates to analyzing crash scenes?",
+      "options": [
+        "Accident reconstruction",
+        "Fish population counting",
+        "ATM security scanning",
+        "Underground tunnel ventilation"
+      ],
+      "answer": 0,
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which statement best matches the described role of collected GNSS data in processing?",
+      "options": [
+        "It can assist automated tie point extraction and enable direct georeferencing",
+        "It replaces the need for camera calibration",
+        "It guarantees perfect texture quality",
+        "It automatically computes NDVI without multispectral data"
+      ],
+      "answer": 0,
+      "difficulty": "moderate"
+    },
+    {
+      "question": "dense image matching algorithms are described as being able to extract what?",
+      "options": [
+        "Dense point clouds",
+        "Flight paths",
+        "Battery profiles",
+        "Radio channel tables"
+      ],
+      "answer": 0,
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the stated purpose of structuring/interpolating/texturing the dense point cloud?",
+      "options": [
+        "Photo-realistic visualization",
+        "Reducing GNSS multipath errors",
+        "Increasing flight time",
+        "Improving propeller efficiency"
+      ],
+      "answer": 0,
+      "difficulty": "moderate"
+    },
+    {
+      "question": "Orthorectification is mentioned in the workflow description in relation to which product?",
+      "options": [
+        "Orthophoto creation",
+        "Battery report generation",
+        "NDVI creation",
+        "Controller firmware update"
+      ],
+      "answer": 0,
+      "difficulty": "easy"
+    },
+    {
+      "question": "orthorectification is linked to complete removal of what?",
+      "options": [
+        "Terrain distortions",
+        "Cloud cover",
+        "Lens flares",
+        "RTK corrections"
+      ],
+      "answer": 0,
+      "difficulty": "moderate"
+    },
+    {
+      "question": "which items are under the Data Processing step?",
+      "options": [
+        "DEM (DSM/DTM), orthophotos, and 3D models",
+        "Waypoints, gimbal angles, and battery logs",
+        "Airspace permits, checklists, and waivers",
+        "Propellers, batteries, and chargers"
+      ],
+      "answer": 0,
+      "difficulty": "easy"
+    },
+    {
+      "question": "DEM is specified as which types?",
+      "options": [
+        "DSM/DTM",
+        "RGB/TIR",
+        "RTK/PPK",
+        "JPEG/RAW"
+      ],
+      "answer": 0,
+      "difficulty": "easy"
+    },
+    {
+      "question": "which RAM configuration corresponds to a non-cluster photo count limit of 25,600?",
+      "options": [
+        "64GB",
+        "32GB",
+        "48GB",
+        "128GB"
+      ],
+      "answer": 0,
+      "difficulty": "hard"
+    },
+    {
+      "question": "which RAM configuration corresponds to a cluster photo count limit of 288,000?",
+      "options": [
+        "48GB",
+        "32GB",
+        "64GB",
+        "128GB"
+      ],
+      "answer": 0,
+      "difficulty": "hard"
+    },
+    {
+      "question": "which RAM configuration corresponds to a LiDAR raw data size limit of 12GB?",
+      "options": [
+        "48GB",
+        "32GB",
+        "64GB",
+        "128GB"
+      ],
+      "answer": 0,
+      "difficulty": "hard"
+    },
+    {
+      "question": "which RAM configuration corresponds to a cluster photo count limit of 768,000?",
+      "options": [
+        "128GB",
+        "64GB",
+        "48GB",
+        "32GB"
+      ],
+      "answer": 0,
+      "difficulty": "hard"
+    },
+    {
+      "question": "which RAM configuration corresponds to a non-cluster photo count limit of 51,200?",
+      "options": [
+        "128GB",
+        "64GB",
+        "48GB",
+        "32GB"
+      ],
+      "answer": 0,
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which statement best matches how the workflow text describes 'camera calibration and image orientation'?",
+      "options": [
+        "They are fundamental prerequisites for metric reconstruction",
+        "They are optional steps used only for NDVI",
+        "They are done after mesh generation",
+        "They are only used for LiDAR"
+      ],
+      "answer": 0,
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which statement best reflects the workflow text about dense image matching after image orientation?",
+      "options": [
+        "It can digitally reconstruct the scene and extract dense point clouds",
+        "It only adjusts radiometric brightness",
+        "It replaces the need for SfM",
+        "It is only for exporting LAS files"
+      ],
+      "answer": 0,
+      "difficulty": "moderate"
+    },
+    {
+      "question": "Which measurement type is in DJI Terra's measurement tools?",
+      "options": [
+        "Volumetric measurements",
+        "Magnetic declination measurements",
+        "Signal-to-noise measurements",
+        "Battery capacity measurements"
+      ],
+      "answer": 0,
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which measurement type is alongside linear measurements in the DJI Terra ?",
+      "options": [
+        "Area measurements",
+        "Wing loading measurements",
+        "RF range measurements",
+        "Wind shear measurements"
+      ],
+      "answer": 0,
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which measurement type is that relates to coordinate values?",
+      "options": [
+        "Coordination (coordinate) measurements",
+        "Pixel intensity measurements",
+        "Propeller pitch measurements",
+        "Network latency measurements"
+      ],
+      "answer": 0,
+      "difficulty": "moderate"
+    },
+    {
+      "question": "In DJI Terra's LiDAR workflow description, which sequence is mentioned?",
+      "options": [
+        "Import raw data \u2192 calculate POS data \u2192 fuse point cloud and visible light data \u2192 export standardized point clouds",
+        "Capture NDVI \u2192 calibrate thermal \u2192 export JPEG \u2192 upload logs",
+        "Plan mission \u2192 set RTH \u2192 update firmware \u2192 export KML",
+        "Connect base station \u2192 stream video \u2192 auto land \u2192 generate report"
+      ],
+      "answer": 0,
+      "difficulty": "hard"
+    },
+    {
+      "question": "In photogrammetry processing, what does 'Camera Calibration and Image Orientation' primarily determine before dense reconstruction?",
+      "options": [
+        "The vegetation index to compute",
+        "Camera parameters and camera positions/poses",
+        "The final contour interval",
+        "The ground classification of the point cloud"
+      ],
+      "answer": 1,
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the main output produced immediately after the 'Structure from Motion' stage in a typical drone image processing pipeline?",
+      "options": [
+        "Orthophoto mosaic",
+        "Dense point cloud",
+        "Sparse point cloud and estimated camera poses",
+        "Textured mesh"
+      ],
+      "answer": 2,
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the purpose of the 'Point Cloud Densification' step in drone photogrammetry processing?",
+      "options": [
+        "Reduce the number of images to speed up processing",
+        "Increase point density by generating more 3D points from image matches",
+        "Convert ellipsoidal heights to orthometric heights",
+        "Compute vegetation indices from multispectral bands"
+      ],
+      "answer": 1,
+      "difficulty": "easy"
+    },
+    {
+      "question": "In drone photogrammetry processing, what is typically generated during 'Mesh Generation'?",
+      "options": [
+        "A triangulated surface model built from the point cloud",
+        "A reflectance map calibrated to radiance",
+        "A GNSS base station observation file",
+        "A flight plan for the next mission"
+      ],
+      "answer": 0,
+      "difficulty": "easy"
+    },
+    {
+      "question": "Why are Ground Control Points (GCPs) used in photogrammetry processing?",
+      "options": [
+        "To increase battery life during flight",
+        "To improve absolute accuracy and georeferencing of outputs",
+        "To change the camera focal length in post",
+        "To automatically classify vegetation types"
+      ],
+      "answer": 1,
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which output is most directly associated with 'Orthophoto Generation' in a drone image processing workflow?",
+      "options": [
+        "A georeferenced, distortion-corrected mosaic image",
+        "A raw camera JPEG folder",
+        "A list of GNSS satellites used",
+        "A point classification report only"
+      ],
+      "answer": 0,
+      "difficulty": "easy"
+    },
+    {
+      "question": "In LiDAR data processing, what is a primary reason to classify points into 'ground' and 'non-ground'?",
+      "options": [
+        "To compute camera lens distortion",
+        "To derive terrain models like DTM/DEM from ground returns",
+        "To turn RGB images into reflectance maps",
+        "To increase the number of tie points"
+      ],
+      "answer": 1,
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which product is typically derived from ground-classified elevation data rather than including buildings and vegetation?",
+      "options": [
+        "DSM (Digital Surface Model)",
+        "DTM/DEM (bare-earth terrain model)",
+        "Orthophoto (RGB)",
+        "Textured mesh model"
+      ],
+      "answer": 1,
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which of the following vegetation indices is mentioned as available in DJI Terra's vegetation index map outputs (along with NDVI and NDRE)?",
+      "options": [
+        "GNDVI",
+        "EVI",
+        "ARVI",
+        "NDWI"
+      ],
+      "answer": 0,
+      "difficulty": "easy"
     }
   ]
 }
