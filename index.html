@@ -242,6 +242,23 @@ function ensureAdminCreds(){
 }
 ensureAdminCreds();
 
+
+// Enable Enter-to-login on Admin Login inputs
+function setupAdminLoginEnter(){
+  const u = document.getElementById("adminUser");
+  const p = document.getElementById("adminPass");
+  if(!u || !p) return;
+  const handler = (ev)=>{
+    if(ev.key === "Enter"){
+      ev.preventDefault();
+      adminLogin();
+    }
+  };
+  u.addEventListener("keydown", handler);
+  p.addEventListener("keydown", handler);
+}
+
+
 /* NAV */
 function nav(view){
   hideAllViews();
@@ -255,6 +272,7 @@ function nav(view){
     // Clear login fields (avoid exposing saved/autofilled creds)
     document.getElementById("adminUser").value = "";
     document.getElementById("adminPass").value = "";
+    setupAdminLoginEnter();
 
   }
   if(view==="admin") document.getElementById("viewAdmin").classList.remove("hidden");
