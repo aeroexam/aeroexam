@@ -36,8 +36,6 @@
 <body>
 <div class="container">
   <h1>Aero Exam Modules</h1>
-  <p class="muted">DJI and Skydio (X10/X10D) randomized exam modules. Admin edits and results are saved per device/browser (LocalStorage).</p>
-
   <!-- HOME -->
   <div id="viewHome" class="card">
     <h2>Home</h2>
@@ -80,18 +78,17 @@
     <div class="grid" style="margin-top:12px;">
       <div>
         <label class="muted">Username</label>
-        <input id="adminUser" placeholder="admin"/>
+        <input id="adminUser" placeholder="Username" autocomplete="off" value=""/>
       </div>
       <div>
         <label class="muted">Password</label>
-        <input id="adminPass" type="password" placeholder="aeroexammodules"/>
+        <input id="adminPass" type="password" placeholder="Password" autocomplete="new-password" value=""/>
       </div>
     </div>
     <div class="row" style="margin-top:12px;">
       <button class="btn primary" onclick="adminLogin()">Login</button>
     </div>
-    <p class="muted" style="margin-top:10px;">Default: <code>admin</code> / <code>aeroexammodules</code></p>
-  </div>
+    </div>
 
   <!-- ADMIN PANEL -->
   <div id="viewAdmin" class="card hidden">
@@ -200,6 +197,10 @@ function nav(view){
   if(view==="adminLogin"){
     if(isAdminAuthed()) { openAdmin(); return; }
     document.getElementById("viewAdminLogin").classList.remove("hidden");
+    // Clear login fields (avoid exposing saved/autofilled creds)
+    document.getElementById("adminUser").value = "";
+    document.getElementById("adminPass").value = "";
+
   }
   if(view==="admin") document.getElementById("viewAdmin").classList.remove("hidden");
 }
@@ -339,7 +340,7 @@ function renderExam(){
     const qDiv = document.createElement("div");
     qDiv.className = "qcard";
     qDiv.innerHTML = `
-      <div class="qtitle">${idx+1}. ${escapeHtml(q.question)} <span class="pill">${q.difficulty}</span></div>
+      <div class="qtitle">${idx+1}. ${escapeHtml(q.question)} </div>
       <div>
         ${q.options.map((opt,j)=>`
           <div class="opt-row">
@@ -431,7 +432,7 @@ function showReview(){
         const ok = sel===correct;
         return `
           <div class="qcard">
-            <div class="qtitle">${i+1}. ${escapeHtml(a.question)} <span class="pill">${a.difficulty}</span></div>
+            <div class="qtitle">${i+1}. ${escapeHtml(a.question)} </div>
             <div class="muted">Your answer: <b>${escapeHtml(selText)}</b> ${ok ? "✅" : "❌"}</div>
             ${ok ? "" : `<div class="muted">Correct: <b>${escapeHtml(correctText)}</b></div>`}
           </div>
@@ -486,7 +487,7 @@ function renderQuestionList(){
     div.className = "qcard";
     div.innerHTML = `
       <div class="row" style="justify-content:space-between;">
-        <div class="qtitle">${idx+1}. ${escapeHtml(q.question)} <span class="pill">${q.difficulty}</span></div>
+        <div class="qtitle">${idx+1}. ${escapeHtml(q.question)} </div>
         <div class="row">
           <button class="btn" onclick="openQuestionEditor(${idx})">Edit</button>
           <button class="btn danger" onclick="deleteQuestion(${idx})">Delete</button>
@@ -680,7 +681,7 @@ function reviewResult(index){
         const ok = sel===correct;
         return `
           <div class="qcard">
-            <div class="qtitle">${i+1}. ${escapeHtml(a.question)} <span class="pill">${a.difficulty}</span></div>
+            <div class="qtitle">${i+1}. ${escapeHtml(a.question)} </div>
             <div class="muted">Your answer: <b>${escapeHtml(selText)}</b> ${ok ? "✅" : "❌"}</div>
             ${ok ? "" : `<div class="muted">Correct: <b>${escapeHtml(correctText)}</b></div>`}
           </div>
