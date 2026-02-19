@@ -213,9 +213,49 @@ const KEY_ADMIN_USER = "aeroExam_adminUser_v2";
 const KEY_ADMIN_PASS = "aeroExam_adminPass_v2";
 const KEY_ADMIN_SESSION = "aeroExam_adminSession_v2";
 
+const KEY_BUILD = "aeroExam_buildUTC_v2";
 // Build timestamp (UTC)
 const BUILD_TIMESTAMP_UTC = "2026-02-19T03:26:19Z";
 
+
+
+// Default question bank file (served by GitHub Pages)
+const BANK_URL = "./aero_exam_question_bank.json";
+let bankLoadPromise = null;
+
+async function ensureBankLoaded(){
+  if(bankLoadPromise) return bankLoadPromise;
+  bankLoadPromise = (async ()=>{
+    // If this build already initialized the bank on this device, skip
+    const storedBuild = localStorage.getItem(KEY_BUILD);
+    const hasBank = !!localStorage.getItem(KEY_BANK);
+    if(storedBuild === BUILD_TIMESTAMP_UTC && hasBank) return;
+
+    // Try loading the latest bank from the repo (works on GitHub Pages)
+    try{
+      const res = await fetch(BANK_URL + \"?cb=\" + encodeURIComponent(BUILD_TIMESTAMP_UTC), {cache: \"no-store\"});
+      if(res.ok){
+        const obj = await res.json();
+        if(obj && typeof obj === \"object\" && !Array.isArray(obj)){
+          for(const mod of Object.keys(obj)){
+            if(!Array.isArray(obj[mod])) throw new Error(\"Invalid module list: \" + mod);
+          }
+          localStorage.setItem(KEY_BANK, JSON.stringify(normalizeBank(obj)));
+          localStorage.setItem(KEY_BUILD, BUILD_TIMESTAMP_UTC);
+          return;
+        }
+      }
+    }catch(e){
+      // ignore and fall back to embedded seed
+    }
+
+    // Fallback: embedded seed bank
+    const seed = normalizeBank(getSeedBank());
+    localStorage.setItem(KEY_BANK, JSON.stringify(seed));
+    localStorage.setItem(KEY_BUILD, BUILD_TIMESTAMP_UTC);
+  })();
+  return bankLoadPromise;
+}
 /* INIT */
 function getSeedBank(){
   const raw = document.getElementById("seedBank").textContent || "{}";
@@ -243,6 +283,9 @@ function ensureAdminCreds(){
 ensureAdminCreds();
 
 
+
+// Preload the latest bank in the background (if available)
+ensureBankLoaded();
 // Enable Enter-to-login on Admin Login inputs
 function setupAdminLoginEnter(){
   const u = document.getElementById("adminUser");
@@ -260,10 +303,10 @@ function setupAdminLoginEnter(){
 
 
 /* NAV */
-function nav(view){
+async function nav(view){
   hideAllViews();
   if(view==="home") document.getElementById("viewHome").classList.remove("hidden");
-  if(view==="modules") { document.getElementById("viewModules").classList.remove("hidden"); renderModuleButtons(); }
+  if(view==="modules") { document.getElementById("viewModules").classList.remove("hidden"); await ensureBankLoaded(); renderModuleButtons(); }
   if(view==="exam") document.getElementById("viewExam").classList.remove("hidden");
   if(view==="result") document.getElementById("viewResult").classList.remove("hidden");
   if(view==="adminLogin"){
@@ -544,9 +587,10 @@ function adminLogin(){
 }
 function adminLogout(){ localStorage.removeItem(KEY_ADMIN_SESSION); nav("home"); }
 
-function openAdmin(){
+async function openAdmin(){
   if(!isAdminAuthed()){ nav("adminLogin"); return; }
-  nav("admin");
+  await ensureBankLoaded();
+  await nav("admin");
   populateAdminModules();
   renderQuestionList();
   document.getElementById("adminResults").classList.add("hidden");
