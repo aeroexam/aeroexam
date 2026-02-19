@@ -241,6 +241,41 @@ function ensureAdminCreds(){
   if(!localStorage.getItem(KEY_ADMIN_PASS)) localStorage.setItem(KEY_ADMIN_PASS, "aeroexammodules");
 }
 ensureAdminCreds();
+/* OPTIONAL: Sync modules from repo JSON (adds new modules like "Processing" on fresh devices) */
+async function syncBankFromRepo(){
+  try{
+    const res = await fetch("./aero_exam_question_bank.json?ts=" + encodeURIComponent(BUILD_TIMESTAMP_UTC), {cache:"no-store"});
+    if(!res.ok) return;
+    const remote = normalizeBank(await res.json());
+    const localRaw = localStorage.getItem(KEY_BANK);
+    let local = {};
+    if(localRaw){
+      try{ local = normalizeBank(JSON.parse(localRaw)); } catch(e){ local = {}; }
+    } else {
+      local = normalizeBank(getSeedBank());
+    }
+    // Merge: keep local modules, but add any missing modules from remote (e.g., Processing)
+    const merged = {...local};
+    Object.keys(remote).forEach(k=>{
+      if(!merged[k] || !Array.isArray(merged[k]) || merged[k].length===0){
+        merged[k] = remote[k];
+      }
+    });
+    localStorage.setItem(KEY_BANK, JSON.stringify(merged));
+    // If user is currently viewing modules/admin, refresh UI
+    const modulesView = document.getElementById("viewModules");
+    if(modulesView && !modulesView.classList.contains("hidden")){
+      renderModuleButtons();
+    }
+    const adminView = document.getElementById("viewAdmin");
+    if(adminView && !adminView.classList.contains("hidden")){
+      refreshAdminModules();
+    }
+  }catch(e){
+    // silent fail
+  }
+}
+
 
 
 // Enable Enter-to-login on Admin Login inputs
@@ -283,6 +318,8 @@ function hideAllViews(){
   });
 }
 nav("home");
+// Pull latest modules (e.g., Processing) from repo JSON if available
+syncBankFromRepo();
 
 /* MODAL */
 function showModal(title, bodyHtml, buttons){
@@ -542,7 +579,9 @@ function adminLogin(){
     openAdmin();
   } else { alert("Invalid credentials"); }
 }
-function adminLogout(){ localStorage.removeItem(KEY_ADMIN_SESSION); nav("home"); }
+function adminLogout(){ localStorage.removeItem(KEY_ADMIN_SESSION); nav("home");
+// Pull latest modules (e.g., Processing) from repo JSON if available
+syncBankFromRepo(); }
 
 function openAdmin(){
   if(!isAdminAuthed()){ nav("adminLogin"); return; }
@@ -563,6 +602,24 @@ function populateAdminModules(){
     sel.appendChild(opt);
   });
   if(!sel.value && sel.options.length) sel.value = sel.options[0].value;
+}
+
+
+function refreshAdminModules(){
+  const bank = getBank();
+  const sel = document.getElementById("adminModule");
+  if(!sel) return;
+  const current = sel.value;
+  sel.innerHTML = "";
+  Object.keys(bank).sort().forEach(m=>{
+    const opt = document.createElement("option");
+    opt.value = m;
+    opt.textContent = m;
+    sel.appendChild(opt);
+  });
+  if(current && bank[current]) sel.value = current;
+  else if(sel.options.length) sel.value = sel.options[0].value;
+  if(typeof renderQuestionList === "function") renderQuestionList();
 }
 
 function renderQuestionList(){
