@@ -5,7 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Aero Exam Modules</title>
 <style>
-  :root { --border:#d0d7de; --bg:#fff; --muted:#57606a; }
+  
+  *, *::before, *::after { box-sizing: border-box; }
+:root { --border:#d0d7de; --bg:#fff; --muted:#57606a; }
   body { font-family: Arial, sans-serif; margin:0; padding:24px; background:#fafbfc; }
   .container { max-width: 1000px; margin: 0 auto; }
   h1,h2,h3 { margin: 0 0 12px 0; }
@@ -68,6 +70,19 @@
   .opt-table td { padding:6px 0; vertical-align:top; text-align:left; }
   .opt-table .opt-radio { width:28px; }
   .opt-table input[type="radio"] { margin-top:3px; }
+
+
+  /* FORM LAYOUT FIXES */
+  input, select, textarea { max-width: 100%; }
+  .grid { display:grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap:16px; }
+  @media (max-width: 720px){
+    .grid { grid-template-columns: 1fr; }
+  }
+  .row { min-width: 0; }
+  .modal { width:min(560px, 100%); max-width: 100%; }
+  .modal .row { flex-wrap: wrap; }
+  .modal input { width: 100%; }
+  .modal-backdrop { overflow:auto; }
 
 </style>
 </head>
