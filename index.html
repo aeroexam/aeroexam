@@ -209,9 +209,9 @@ function getSeedBank(){
 function getBank(){
   const raw = localStorage.getItem(KEY_BANK);
   if(raw){
-    try { return JSON.parse(raw); } catch(e){}
+    try { return normalizeBank(JSON.parse(raw)); } catch(e){}
   }
-  const seed = getSeedBank();
+  const seed = normalizeBank(getSeedBank());
   localStorage.setItem(KEY_BANK, JSON.stringify(seed));
   return seed;
 }
@@ -671,47 +671,31 @@ function renameModule(){
 }
 
 function renderResults(){
-  const wrap = document.getElementById("adminResults");
-  wrap.classList.remove("hidden");
   const results = getResults();
   if(results.length===0){
-    wrap.innerHTML = `<div class="row" style="justify-content:space-between;">
-        <h3>Results</h3>
-        <button class="btn" onclick="wrapResultsClose()">Close</button>
-      </div>
-      <p class="muted">No attempts recorded yet.</p>`;
+    showModal("Results", `<p class="muted">No attempts recorded yet.</p>`, [{text:"Close"}]);
     return;
   }
-  wrap.innerHTML = `
-    <div class="row" style="justify-content:space-between;">
-      <h3>Results</h3>
-      <div class="row">
-        <button class="btn" onclick="wrapResultsClose()">Close</button>
-        <button class="btn danger" onclick="clearResults()">Clear All</button>
-      </div>
-    </div>
-    <table>
-      <thead><tr><th>Date</th><th>Name</th><th>Module</th><th>Score</th><th>Review</th></tr></thead>
-      <tbody id="resRows"></tbody>
-    </table>
-  `;
-  const rows = document.getElementById("resRows");
-  results.forEach((r, idx)=>{
-    const tr = document.createElement("tr");
-    tr.innerHTML = `
+  const rows = results.map((r, idx)=>`
+    <tr>
       <td>${escapeHtml(r.dateTaken)}</td>
       <td>${escapeHtml(r.name)}</td>
       <td>${escapeHtml(r.module)}</td>
       <td><b>${r.score}/${r.total}</b></td>
       <td><button class="btn" onclick="reviewResult(${idx})">Open</button></td>
-    `;
-    rows.appendChild(tr);
-  });
-}
-function wrapResultsClose(){
-  const wrap = document.getElementById("adminResults");
-  wrap.classList.add("hidden");
-  wrap.innerHTML = "";
+    </tr>
+  `).join("");
+  const body = `
+    <div class="row" style="justify-content:space-between; margin-bottom:10px;">
+      <div class="muted">Saved on this device/browser</div>
+      <button class="btn danger" onclick="clearResults();">Clear All</button>
+    </div>
+    <table>
+      <thead><tr><th>Date</th><th>Name</th><th>Module</th><th>Score</th><th>Review</th></tr></thead>
+      <tbody>${rows}</tbody>
+    </table>
+  `;
+  showModal("Results", body, [{text:"Close"}]);
 }
 
 function clearResults(){
@@ -770,7 +754,7 @@ function importBank(event){
       for(const mod of Object.keys(obj)){
         if(!Array.isArray(obj[mod])) throw new Error("Invalid module list: " + mod);
       }
-      saveBank(obj);
+      saveBank(normalizeBank(obj));
       populateAdminModules();
       renderQuestionList();
       alert("Question bank imported.");
@@ -782,6 +766,28 @@ function importBank(event){
 }
 
 /* UTIL */
+
+function cleanQuestionText(s){
+  let t = String(s ?? "");
+  // Remove leading "In the <something>," prefix
+  t = t.replace(/^In the [^,]+,\s*/i, "");
+  // Remove leading "In the <something> items, " prefix
+  t = t.replace(/^In the [^,]+ items,\s*/i, "");
+  return t;
+}
+function normalizeBank(bank){
+  for(const mod of Object.keys(bank||{})){
+    const arr = bank[mod];
+    if(!Array.isArray(arr)) continue;
+    for(const q of arr){
+      if(q && typeof q.question === "string"){
+        q.question = cleanQuestionText(q.question);
+      }
+    }
+  }
+  return bank;
+}
+
 
 async function updateRepoUpdatedLine(){
   const el = document.getElementById("repoUpdatedLine");
