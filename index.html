@@ -131,11 +131,11 @@
     <div class="grid" style="margin-top:12px;">
       <div>
         <label class="muted">Username</label>
-        <input id="adminUser" placeholder="Username" autocomplete="off" value=""/>
+        <input id="adminUser" placeholder="Username" autocomplete="off" value=""/ onkeydown="if(event.key===\'Enter\'){event.preventDefault();adminLogin();}">
       </div>
       <div>
         <label class="muted">Password</label>
-        <input id="adminPass" type="password" placeholder="Password" autocomplete="new-password" value=""/>
+        <input id="adminPass" type="password" placeholder="Password" autocomplete="new-password" value=""/ onkeydown="if(event.key===\'Enter\'){event.preventDefault();adminLogin();}">
       </div>
     </div>
     <div class="row" style="margin-top:12px;">
@@ -447,8 +447,17 @@ function submitExam(){
     const sel = document.querySelector(`input[name="q${idx}"]:checked`);
     const selected = sel ? parseInt(sel.value,10) : -1;
     const correct = q.answer;
-    if(selected === correct) score++;
-    answers.push({ question:q.question, options:q.options, selected, correct, difficulty:q.difficulty });
+    const selectedText = selected>=0 ? q.options[selected] : "(No answer)";
+    const correctText = q.options[correct];
+    const isCorrect = selected === correct;
+    if(isCorrect) score++;
+    // Store a compact review record (avoids LocalStorage quota issues)
+    answers.push({
+      question: q.question,
+      selectedText,
+      correctText,
+      isCorrect
+    });
   });
 
   const attempt = {
@@ -464,7 +473,13 @@ function submitExam(){
 
   const results = getResults();
   results.unshift(attempt);
-  saveResults(results);
+  try{
+    saveResults(results);
+  }catch(e){
+    // If storage is full or blocked, still show result but warn admin won't see it.
+    console.error("Failed to save results:", e);
+    alert("Your score was computed, but the attempt could not be saved on this device (storage full or blocked).");
+  }
 
   renderResult(attempt);
   nav("result");
@@ -500,14 +515,12 @@ function showReview(){
     <p><b>Score:</b> ${r.score}/${r.total}</p>
     <div style="max-height:55vh; overflow:auto; padding-right:8px;">
       ${r.answers.map((a,i)=>{
-        const sel = a.selected;
-        const correct = a.correct;
-        const selText = sel>=0 ? a.options[sel] : "(No answer)";
-        const correctText = a.options[correct];
-        const ok = sel===correct;
+        const ok = !!a.isCorrect;
+        const selText = a.selectedText ?? "(No answer)";
+        const correctText = a.correctText ?? "";
         return `
           <div class="qcard">
-            <div class="qtitle">${i+1}. ${escapeHtml(a.question)} </div>
+            <div class="qtitle">${i+1}. ${escapeHtml(a.question)}</div>
             <div class="muted">Your answer: <b>${escapeHtml(selText)}</b> ${ok ? "✅" : "❌"}</div>
             ${ok ? "" : `<div class="muted">Correct: <b>${escapeHtml(correctText)}</b></div>`}
           </div>
@@ -746,14 +759,12 @@ function reviewResult(index){
     <p><b>Score:</b> ${r.score}/${r.total}</p>
     <div style="max-height:55vh; overflow:auto; padding-right:8px;">
       ${r.answers.map((a,i)=>{
-        const sel = a.selected;
-        const correct = a.correct;
-        const selText = sel>=0 ? a.options[sel] : "(No answer)";
-        const correctText = a.options[correct];
-        const ok = sel===correct;
+        const ok = !!a.isCorrect;
+        const selText = a.selectedText ?? "(No answer)";
+        const correctText = a.correctText ?? "";
         return `
           <div class="qcard">
-            <div class="qtitle">${i+1}. ${escapeHtml(a.question)} </div>
+            <div class="qtitle">${i+1}. ${escapeHtml(a.question)}</div>
             <div class="muted">Your answer: <b>${escapeHtml(selText)}</b> ${ok ? "✅" : "❌"}</div>
             ${ok ? "" : `<div class="muted">Correct: <b>${escapeHtml(correctText)}</b></div>`}
           </div>
