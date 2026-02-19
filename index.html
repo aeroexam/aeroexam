@@ -62,6 +62,13 @@
     word-break:break-word !important;
   }
 
+
+  /* OPTION LAYOUT (robust): radio + text in table rows (always left aligned) */
+  .opt-table { width:100%; border-collapse:collapse; margin-top:6px; }
+  .opt-table td { padding:6px 0; vertical-align:top; text-align:left; }
+  .opt-table .opt-radio { width:28px; }
+  .opt-table input[type="radio"] { margin-top:3px; }
+
 </style>
 </head>
 <body>
@@ -127,6 +134,7 @@
       <h2>Admin Panel</h2>
       <button class="btn" onclick="adminLogout()">Logout</button>
     </div>
+    <div class="muted" id="repoUpdatedLine" style="margin-top:6px;"></div>
 
     <div class="grid" style="margin-top:12px;">
       <div class="card">
@@ -191,6 +199,9 @@ const KEY_RESULTS = "aeroExam_results_v2";
 const KEY_ADMIN_USER = "aeroExam_adminUser_v2";
 const KEY_ADMIN_PASS = "aeroExam_adminPass_v2";
 const KEY_ADMIN_SESSION = "aeroExam_adminSession_v2";
+
+// Build timestamp (UTC)
+const BUILD_TIMESTAMP_UTC = "2026-02-19T03:26:19Z";
 
 /* INIT */
 function getSeedBank(){
@@ -372,14 +383,16 @@ function renderExam(){
     qDiv.className = "qcard";
     qDiv.innerHTML = `
       <div class="qtitle">${idx+1}. ${escapeHtml(q.question)} </div>
-      <div>
+      <table class="opt-table">
+        <tbody>
         ${q.options.map((opt,j)=>`
-          <label class="opt-row">
-            <input type="radio" name="q${idx}" value="${j}">
-            <span>${escapeHtml(opt)}</span>
-          </label>
+          <tr>
+            <td class="opt-radio"><input type="radio" name="q${idx}" value="${j}"></td>
+            <td class="opt-text">${escapeHtml(opt)}</td>
+          </tr>
         `).join("")}
-      </div>
+        </tbody>
+      </table>
     `;
     qWrap.appendChild(qDiv);
   });
@@ -493,6 +506,7 @@ function openAdmin(){
   populateAdminModules();
   renderQuestionList();
   document.getElementById("adminResults").classList.add("hidden");
+  updateRepoUpdatedLine();
 }
 
 function populateAdminModules(){
@@ -758,6 +772,33 @@ function importBank(event){
 }
 
 /* UTIL */
+
+async function updateRepoUpdatedLine(){
+  const el = document.getElementById("repoUpdatedLine");
+  if(!el) return;
+  el.textContent = "Build: " + BUILD_TIMESTAMP_UTC + " (UTC)";
+  try{
+    // Only works reliably on GitHub Pages: https://<owner>.github.io/<repo>/
+    const host = window.location.hostname || "";
+    const parts = (window.location.pathname || "/").split("/").filter(Boolean);
+    if(host.endsWith(".github.io") && parts.length >= 1){
+      const owner = host.split(".github.io")[0];
+      const repo = parts[0];
+      const url = `https://api.github.com/repos/${owner}/${repo}`;
+      const res = await fetch(url, {headers: {"Accept":"application/vnd.github+json"}});
+      if(res.ok){
+        const data = await res.json();
+        const pushed = data.pushed_at || data.updated_at;
+        if(pushed){
+          el.textContent = "Repo last updated: " + pushed + " • Build: " + BUILD_TIMESTAMP_UTC + " (UTC)";
+        }
+      }
+    }
+  }catch(e){
+    // keep build time
+  }
+}
+
 function shuffle(arr){
   const a = arr.slice();
   for(let i=a.length-1;i>0;i--){
