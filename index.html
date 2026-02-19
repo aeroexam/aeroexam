@@ -1,279 +1,516 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Aero Exam Modules</title>
-
 <style>
-body {
-    font-family: Arial, sans-serif;
-    padding: 30px;
+:root {
+  --border:#d0d7de;
+  --bg:#ffffff;
+  --muted:#6b7280;
+  --card:#f8fafc;
+  --accent:#111827;
 }
-
-.container {
-    max-width: 900px;
-    margin: auto;
-}
-
-button {
-    padding: 10px 20px;
-    margin: 5px;
-    cursor: pointer;
-}
-
-.hidden {
-    display: none;
-}
-
-.card {
-    border: 1px solid #ccc;
-    padding: 20px;
-    margin: 10px 0;
-    border-radius: 6px;
-}
+*{box-sizing:border-box}
+body{font-family:Arial, sans-serif; margin:0; background:var(--bg); color:#111;}
+.wrap{max-width:1100px; margin:0 auto; padding:24px;}
+h1{margin:0 0 8px 0; font-size:22px}
+h2{margin:0 0 12px 0; font-size:18px}
+p{margin:0 0 12px 0; color:var(--muted)}
+.grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:14px;}
+.card{border:1px solid var(--border); background:var(--card); border-radius:10px; padding:18px;}
+.btn{border:1px solid var(--border); background:#fff; border-radius:10px; padding:10px 14px; cursor:pointer; font-weight:600}
+.btn:hover{background:#f3f4f6}
+.btn.primary{background:#111827; color:#fff; border-color:#111827}
+.btn.primary:hover{background:#0b1220}
+.btn.danger{background:#b91c1c; color:#fff; border-color:#b91c1c}
+.btn.danger:hover{background:#991b1b}
+.row{display:flex; gap:10px; flex-wrap:wrap; align-items:center}
+.hidden{display:none !important}
+.hr{height:1px; background:var(--border); margin:14px 0}
+input, select, textarea{border:1px solid var(--border); border-radius:10px; padding:10px 12px; width:100%}
+label{font-size:12px; color:var(--muted); display:block; margin:10px 0 6px}
+.small{font-size:12px; color:var(--muted)}
+.table{width:100%; border-collapse:collapse}
+.table th,.table td{border-bottom:1px solid var(--border); padding:10px; text-align:left; vertical-align:top}
+.badge{display:inline-block; padding:2px 8px; border:1px solid var(--border); border-radius:999px; font-size:12px; color:var(--muted); background:#fff}
+.qcard{border:1px solid var(--border); background:#fff; border-radius:10px; padding:14px; margin:12px 0}
+.opt{margin:6px 0}
+.topbar{display:flex; justify-content:space-between; align-items:center; gap:12px; margin-bottom:14px}
+.modalOverlay{position:fixed; inset:0; background:rgba(0,0,0,.5); display:flex; align-items:center; justify-content:center; padding:20px; z-index:1000}
+.modal{width:min(520px, 100%); background:#fff; border-radius:12px; border:1px solid var(--border); padding:16px}
+.modal h3{margin:0 0 8px 0}
+.kbd{font-family:ui-monospace, SFMono-Regular, Menlo, monospace; font-size:12px; padding:2px 6px; border:1px solid var(--border); border-radius:6px; background:#fff}
 </style>
 </head>
-
 <body>
-<div class="container">
+<div class="wrap">
+  <div class="topbar">
+    <div>
+      <h1>Aero Exam Modules</h1>
+      <p>Randomized 25-question exams per module. Admin tools are stored locally in your browser.</p>
+    </div>
+    <div class="row">
+      <span id="whoami" class="badge">Home</span>
+    </div>
+  </div>
 
-<!-- HOME -->
-<div id="home">
-    <h2>Home</h2>
-    <button onclick="showModules()">Exam Modules</button>
-    <button onclick="showAdmin()">Admin Access</button>
+  <!-- HOME -->
+  <div id="viewHome" class="grid">
+    <div class="card">
+      <h2>Exam Modules</h2>
+      <p>Take an exam from DJI, Skydio, or Processing.</p>
+      <button class="btn primary" onclick="goModules()">Open Modules</button>
+    </div>
+    <div class="card">
+      <h2>Admin Access</h2>
+      <p>Manage modules, questions, and results (local).</p>
+      <button class="btn" onclick="goAdminLogin()">Admin Login</button>
+    </div>
+  </div>
+
+  <!-- MODULES -->
+  <div id="viewModules" class="hidden">
+    <div class="row" style="justify-content:space-between; margin-bottom:10px">
+      <h2 style="margin:0">Select Module</h2>
+      <button class="btn" onclick="goHome()">Back</button>
+    </div>
+    <div id="modulesList" class="grid"></div>
+  </div>
+
+  <!-- EXAM -->
+  <div id="viewExam" class="hidden"></div>
+
+  <!-- RESULT -->
+  <div id="viewResult" class="hidden"></div>
+
+  <!-- ADMIN LOGIN -->
+  <div id="viewAdminLogin" class="hidden">
+    <div class="card">
+      <h2>Admin Login</h2>
+      <label>Username</label>
+      <input id="adminUserInput" placeholder="admin" />
+      <label>Password</label>
+      <input id="adminPassInput" type="password" placeholder="••••••••••" />
+      <div class="row" style="margin-top:12px">
+        <button class="btn primary" onclick="adminLogin()">Login</button>
+        <button class="btn" onclick="goHome()">Back</button>
+      </div>
+      <div class="small" style="margin-top:10px">
+        Default: <span class="kbd">admin</span> / <span class="kbd">aeroexammodules</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ADMIN PANEL -->
+  <div id="viewAdmin" class="hidden">
+    <div class="row" style="justify-content:space-between; margin-bottom:10px">
+      <h2 style="margin:0">Admin Panel</h2>
+      <button class="btn" onclick="logoutAdmin()">Logout</button>
+    </div>
+
+    <div class="row" style="margin-bottom:10px">
+      <button class="btn" onclick="adminTab('modules')">Modules</button>
+      <button class="btn" onclick="adminTab('questions')">Questions</button>
+      <button class="btn" onclick="adminTab('results')">Results</button>
+      <button class="btn" onclick="adminTab('import')">Import/Export</button>
+      <button class="btn" onclick="adminTab('security')">Security</button>
+    </div>
+
+    <div id="adminModules" class="card hidden"></div>
+    <div id="adminQuestions" class="card hidden"></div>
+    <div id="adminResults" class="card hidden"></div>
+    <div id="adminImport" class="card hidden"></div>
+    <div id="adminSecurity" class="card hidden"></div>
+  </div>
 </div>
 
-<!-- MODULE SELECTION -->
-<div id="modules" class="hidden">
-    <h2>Select Exam Module</h2>
-    <button onclick="confirmStart('DJI')">DJI</button>
-    <button onclick="confirmStart('Skydio')">Skydio</button>
-    <button onclick="confirmStart('Processing')">Processing</button>
-    <br><br>
-    <button onclick="goHome()">Back</button>
-</div>
-
-<!-- EXAM AREA -->
-<div id="exam" class="hidden"></div>
-
-<!-- ADMIN LOGIN -->
-<div id="adminLogin" class="hidden">
-    <h2>Admin Login</h2>
-    <input id="adminUserInput" placeholder="Username"><br><br>
-    <input id="adminPassInput" type="password" placeholder="Password"><br><br>
-    <button onclick="adminLogin()">Login</button>
-    <button onclick="goHome()">Back</button>
-</div>
-
-<!-- ADMIN PANEL -->
-<div id="adminPanel" class="hidden">
-    <h2>Admin Panel</h2>
-    <button onclick="viewResults()">View Results</button>
-    <button onclick="changeCredentials()">Change Username/Password</button>
-    <button onclick="goHome()">Logout</button>
-</div>
-
-</div>
+<!-- MODAL -->
+<div id="modalRoot" class="hidden"></div>
 
 <script>
+const DEFAULT_BANK = {"DJI":[{"question":"What is the primary purpose of a “Spotlight” accessory in drone operations?","options":["Increase GNSS satellites tracked","Provide illumination to improve visibility during low-light tasks","Calibrate propellers automatically","Extend flight time significantly"],"answer":1,"difficulty":"easy"},{"question":"Items labeled “Battery/Charging” mainly relate to what aspect of operations?","options":["Propeller pitch control","Power and charging management","Map tile caching","Obstacle avoidance sensing"],"answer":1,"difficulty":"easy"},{"question":"In the DJI module, which item is best classified as a controller / remote?","options":["DJI RC Plus 2 Enterprise","DJI Matrice 4 Series Propellers","DJI Matrice 4 Series Battery","D-RTK 3 Multifunctional Station"],"answer":0,"difficulty":"easy"},{"question":"Which option is an example of a support component/accessory you might use alongside a DJI drone system?","options":["DJI Matrice 4 Series Charging Hub","DJI Matrice 4 Series Propellers","DJI Matrice 4 Thermal","DJI Matrice 4 Enterprise"],"answer":0,"difficulty":"easy"},{"question":"Which of the following best relates to 'DJI Matrice 4 Series Charging Hub' in DJI?","options":["Incorrect interpretation of DJI Matrice 4 Series Charging Hub","Correct explanation of DJI Matrice 4 Series Charging Hub","Unrelated concept to DJI Matrice 4 Series Charging Hub","Opposite meaning of DJI Matrice 4 Series Charging Hub"],"answer":1,"difficulty":"easy"},{"question":"In the DJI module, which item is best classified as a positioning/RTK/base-station item?","options":["DJI Matrice 4 Enterprise","DJI RC Plus 2 Enterprise","D-RTK 3 Multifunctional Station","DJI Matrice 4 Series Battery"],"answer":2,"difficulty":"easy"},{"question":"What is a drone “Speaker” accessory most commonly used for?","options":["Broadcasting voice/audio messages during operations","Providing RTK corrections","Capturing thermal imagery","Increasing payload capacity automatically"],"answer":0,"difficulty":"easy"},{"question":"In the DJI module, which item is best classified as an airframe consumable (propeller)?","options":["DJI Matrice 4 Series Charging Hub","DJI Matrice 4 Enterprise","DJI Matrice 4 Series Propellers","D-RTK 3 Survey Pole and Tripod Kit"],"answer":2,"difficulty":"easy"},{"question":"In the DJI module, which item is best classified as a power item (battery/charging)?","options":["DJI Matrice 4 Series Charging Hub","D-RTK 3 Survey Pole and Tripod Kit","DJI RC Plus 2 Enterprise","DJI Matrice 4 Enterprise"],"answer":0,"difficulty":"easy"},{"question":"Which of the following best relates to 'DJI AL1 Spotlight for Matrice 4 Series' in DJI?","options":["Correct explanation of DJI AL1 Spotlight for Matrice 4 Series","Opposite meaning of DJI AL1 Spotlight for Matrice 4 Series","Incorrect interpretation of DJI AL1 Spotlight for Matrice 4 Series","Unrelated concept to DJI AL1 Spotlight for Matrice 4 Series"],"answer":0,"difficulty":"easy"},{"question":"In general, what should you do first before using a new accessory listed in the DJI inventory?","options":["Confirm compatibility with the drone/platform and firmware requirements","Disable obstacle avoidance","Increase flight altitude limits immediately","Skip pre-flight checks to save time"],"answer":0,"difficulty":"easy"},{"question":"In the DJI module, which item is best classified as a payload/attachment?","options":["DJI Matrice 4 Series Charging Hub","DJI AS1 Speaker for Matrice 4 Series","DJI RC Plus 2 Enterprise","D-RTK 3 Survey Pole and Tripod Kit"],"answer":1,"difficulty":"easy"},{"question":"An item name containing “RTK” most directly indicates support for which capability?","options":["High-accuracy positioning (RTK/GNSS integration)","Higher camera resolution","Propeller durability rating","Longer battery life by default"],"answer":0,"difficulty":"easy"},{"question":"Items labeled “Battery/Charging” mainly relate to what aspect of operations?","options":["Obstacle avoidance sensing","Propeller pitch control","Map tile caching","Power and charging management"],"answer":3,"difficulty":"easy"},{"question":"In the DJI module, which item is best classified as a drone / aircraft unit?","options":["DJI RC Plus 2 Enterprise","DJI Matrice 4 Thermal","D-RTK 3 Survey Pole and Tripod Kit","DJI Matrice 4 Series Charging Hub"],"answer":1,"difficulty":"easy"},{"question":"In the DJI module, which item is best classified as a positioning/RTK/base-station item?","options":["DJI Matrice 4 Enterprise","D-RTK 3 Multifunctional Station","DJI Matrice 4 Series Propellers","DJI Matrice 4 Series Battery"],"answer":1,"difficulty":"easy"},{"question":"In the DJI module, which item is best classified as a payload/attachment?","options":["DJI Matrice 4 Series Charging Hub","DJI Matrice 4 Series Battery","DJI AL1 Spotlight for Matrice 4 Series","DJI Matrice 4 Series Propellers"],"answer":2,"difficulty":"easy"},{"question":"What is the primary purpose of a “Spotlight” accessory in drone operations?","options":["Provide illumination to improve visibility during low-light tasks","Increase GNSS satellites tracked","Extend flight time significantly","Calibrate propellers automatically"],"answer":0,"difficulty":"easy"},{"question":"What is a drone “Speaker” accessory most commonly used for?","options":["Increasing payload capacity automatically","Providing RTK corrections","Broadcasting voice/audio messages during operations","Capturing thermal imagery"],"answer":2,"difficulty":"easy"},{"question":"In the DJI module, which item is best classified as a controller / remote?","options":["D-RTK 3 Multifunctional Station","DJI RC Plus 2 Enterprise","DJI Matrice 4 Series Charging Hub","DJI AL1 Spotlight for Matrice 4 Series"],"answer":1,"difficulty":"easy"},{"question":"In the DJI module, which item is best classified as a power item (battery/charging)?","options":["DJI RC Plus 2 Enterprise","DJI Matrice 4 Series Charging Hub","DJI Matrice 4 Enterprise","DJI AL1 Spotlight for Matrice 4 Series"],"answer":1,"difficulty":"easy"},{"question":"An item name containing “Thermal/IR” most directly indicates what kind of capability?","options":["Improved charging speed","Thermal/infrared imaging capability","Two-way radio communications","Mechanical shutter for RGB only"],"answer":1,"difficulty":"easy"},{"question":"In the DJI module, which item is best classified as a drone / aircraft unit?","options":["DJI Matrice 4 Enterprise","DJI Matrice 4 Series Battery","DJI Matrice 4 Series Charging Hub","DJI AS1 Speaker for Matrice 4 Series"],"answer":0,"difficulty":"easy"},{"question":"In the DJI module, which item is best classified as an airframe consumable (propeller)?","options":["DJI Matrice 4 Series Propellers","DJI Matrice 4 Thermal","DJI RC Plus 2 Enterprise","D-RTK 3 Multifunctional Station"],"answer":0,"difficulty":"easy"},{"question":"In the DJI module, which item is best classified as a positioning/RTK/base-station item?","options":["DJI Matrice 4 Enterprise","DJI RC Plus 2 Enterprise","D-RTK 3 Survey Pole and Tripod Kit","DJI Matrice 4 Series Battery"],"answer":2,"difficulty":"easy"},{"question":"In the DJI module, which item is best classified as a power item (battery/charging)?","options":["DJI Matrice 4 Series Charging Hub","DJI Matrice 4 Thermal","DJI RC Plus 2 Enterprise","D-RTK 3 Multifunctional Station"],"answer":0,"difficulty":"easy"},{"question":"In the DJI module, which item is best classified as a payload/attachment?","options":["DJI Matrice 4 Series Battery","DJI Matrice 4 Series Propellers","DJI AL1 Spotlight for Matrice 4 Series","DJI Matrice 4 Enterprise"],"answer":2,"difficulty":"easy"},{"question":"In the DJI module, which item is best classified as a controller / remote?","options":["DJI Matrice 4 Enterprise","DJI RC Plus 2 Enterprise","D-RTK 3 Survey Pole and Tripod Kit","DJI Matrice 4 Series Charging Hub"],"answer":1,"difficulty":"easy"},{"question":"Which of the following best relates to 'D-RTK 3 Multifunctional Station' in DJI?","options":["Incorrect interpretation of D-RTK 3 Multifunctional Station","Unrelated concept to D-RTK 3 Multifunctional Station","Correct explanation of D-RTK 3 Multifunctional Station","Opposite meaning of D-RTK 3 Multifunctional Station"],"answer":2,"difficulty":"easy"},{"question":"Which of the following best relates to 'DJI Matrice 4 Series Battery' in DJI?","options":["Correct explanation of DJI Matrice 4 Series Battery","Opposite meaning of DJI Matrice 4 Series Battery","Unrelated concept to DJI Matrice 4 Series Battery","Incorrect interpretation of DJI Matrice 4 Series Battery"],"answer":0,"difficulty":"easy"},{"question":"In the DJI module, which item is best classified as a payload/attachment?","options":["DJI AS1 Speaker for Matrice 4 Series","DJI Matrice 4 Series Propellers","DJI Matrice 4 Series Charging Hub","D-RTK 3 Survey Pole and Tripod Kit"],"answer":0,"difficulty":"easy"},{"question":"Items labeled “Battery/Charging” mainly relate to what aspect of operations?","options":["Power and charging management","Propeller pitch control","Map tile caching","Obstacle avoidance sensing"],"answer":0,"difficulty":"easy"},{"question":"In the DJI module, which item is best classified as a controller / remote?","options":["DJI Matrice 4 Series Charging Hub","DJI RC Plus 2 Enterprise","D-RTK 3 Multifunctional Station","DJI Matrice 4 Series Battery"],"answer":1,"difficulty":"easy"},{"question":"An item name containing “RTK” most directly indicates support for which capability?","options":["High-accuracy positioning (RTK/GNSS integration)","Propeller durability rating","Longer battery life by default","Higher camera resolution"],"answer":0,"difficulty":"easy"},{"question":"In the DJI module, which item is best classified as a drone / aircraft unit?","options":["DJI Matrice 4 Thermal","DJI Matrice 4 Series Propellers","D-RTK 3 Survey Pole and Tripod Kit","DJI Matrice 4 Series Battery"],"answer":0,"difficulty":"easy"},{"question":"In the DJI module, which item is best classified as a power item (battery/charging)?","options":["DJI Matrice 4 Thermal","DJI Matrice 4 Series Charging Hub","DJI RC Plus 2 Enterprise","DJI AS1 Speaker for Matrice 4 Series"],"answer":1,"difficulty":"easy"},{"question":"What is a drone “Speaker” accessory most commonly used for?","options":["Broadcasting voice/audio messages during operations","Capturing thermal imagery","Providing RTK corrections","Increasing payload capacity automatically"],"answer":0,"difficulty":"easy"},{"question":"In the DJI module, which item is best classified as a positioning/RTK/base-station item?","options":["DJI Matrice 4 Series Charging Hub","D-RTK 3 Survey Pole and Tripod Kit","DJI Matrice 4 Series Battery","DJI RC Plus 2 Enterprise"],"answer":1,"difficulty":"easy"},{"question":"In the DJI module, which item is best classified as a payload/attachment?","options":["DJI Matrice 4 Series Battery","DJI Matrice 4 Series Charging Hub","DJI AL1 Spotlight for Matrice 4 Series","DJI Matrice 4 Series Propellers"],"answer":2,"difficulty":"easy"},{"question":"In the DJI module, which item is best classified as a payload/attachment?","options":["DJI AS1 Speaker for Matrice 4 Series","DJI Matrice 4 Thermal","DJI Matrice 4 Series Charging Hub","D-RTK 3 Multifunctional Station"],"answer":0,"difficulty":"easy"},{"question":"In the DJI module, which item is best classified as a power item (battery/charging)?","options":["D-RTK 3 Multifunctional Station","DJI Matrice 4 Series Battery","DJI RC Plus 2 Enterprise","DJI Matrice 4 Thermal"],"answer":1,"difficulty":"easy"},{"question":"In the DJI module, which item is best classified as a drone / aircraft unit?","options":["DJI Matrice 4 Enterprise","D-RTK 3 Survey Pole and Tripod Kit","DJI Matrice 4 Series Battery","DJI Matrice 4 Series Charging Hub"],"answer":0,"difficulty":"easy"},{"question":"In the DJI module, which item is best classified as a controller / remote?","options":["D-RTK 3 Survey Pole and Tripod Kit","DJI RC Plus 2 Enterprise","DJI Matrice 4 Thermal","DJI Matrice 4 Series Battery"],"answer":1,"difficulty":"easy"},{"question":"An item name containing “Thermal/IR” most directly indicates what kind of capability?","options":["Two-way radio communications","Thermal/infrared imaging capability","Mechanical shutter for RGB only","Improved charging speed"],"answer":1,"difficulty":"easy"},{"question":"Items labeled “Battery/Charging” mainly relate to what aspect of operations?","options":["Map tile caching","Power and charging management","Obstacle avoidance sensing","Propeller pitch control"],"answer":1,"difficulty":"easy"},{"question":"Which of the following best relates to 'DJI RC Plus 2 Enterprise' in DJI?","options":["Unrelated concept to DJI RC Plus 2 Enterprise","Opposite meaning of DJI RC Plus 2 Enterprise","Correct explanation of DJI RC Plus 2 Enterprise","Incorrect interpretation of DJI RC Plus 2 Enterprise"],"answer":2,"difficulty":"easy"},{"question":"In the DJI module, which item is best classified as a drone / aircraft unit?","options":["DJI Matrice 4 Thermal","DJI Matrice 4 Series Propellers","DJI Matrice 4 Series Charging Hub","DJI AL1 Spotlight for Matrice 4 Series"],"answer":0,"difficulty":"easy"},{"question":"In the DJI module, which item is best classified as a power item (battery/charging)?","options":["DJI Matrice 4 Series Charging Hub","DJI Matrice 4 Thermal","DJI RC Plus 2 Enterprise","D-RTK 3 Multifunctional Station"],"answer":0,"difficulty":"easy"},{"question":"In the DJI module, which item is best classified as an accessory?","options":["DJI Matrice 4 Enterprise","DJI Matrice 4 Series Battery","DJI Matrice 4 Series Charging Hub","DJI Matrice 4 Series Propellers"],"answer":2,"difficulty":"easy"},{"question":"For a low-light inspection where visibility is limited, which accessory is the most relevant?","options":["D-RTK 3 Multifunctional Station","DJI Matrice 4 Series Charging Hub","DJI AL1 Spotlight for Matrice 4 Series","DJI Matrice 4 Series Battery"],"answer":2,"difficulty":"moderate"},{"question":"You need centimeter-level positioning for mapping. Which item is most relevant to set up or support RTK corrections?","options":["DJI Matrice 4 Series Propellers","DJI Matrice 4 Series Battery","D-RTK 3 Multifunctional Station","DJI AL1 Spotlight for Matrice 4 Series"],"answer":2,"difficulty":"moderate"},{"question":"Which factor is MOST important to verify before deploying a new payload/attachment from the DJI list?","options":["Compatibility (mount/interface), firmware support, and operational limits","Only the carrying case size","Only the marketing name","Only the paint color"],"answer":0,"difficulty":"moderate"},{"question":"You expect back-to-back flights and want faster turnaround between batteries. Which item best supports that?","options":["DJI Matrice 4 Series Propellers","DJI Matrice 4 Series Charging Hub","DJI RC Plus 2 Enterprise","D-RTK 3 Survey Pole and Tripod Kit"],"answer":1,"difficulty":"moderate"},{"question":"For crowd-control or site announcements during an operation, which accessory best fits?","options":["DJI Matrice 4 Series Battery","DJI AS1 Speaker for Matrice 4 Series","D-RTK 3 Multifunctional Station","DJI Matrice 4 Series Charging Hub"],"answer":1,"difficulty":"moderate"},{"question":"Which factor is MOST important to verify before deploying a new payload/attachment from the DJI list?","options":["Only the paint color","Compatibility (mount/interface), firmware support, and operational limits","Only the marketing name","Only the carrying case size"],"answer":1,"difficulty":"moderate"},{"question":"You’re preparing for multiple flights and want to reduce downtime due to wear items. Which inventory item is best as a “spare/consumable”?","options":["DJI Matrice 4 Series Battery","DJI Matrice 4 Enterprise","DJI Matrice 4 Series Propellers","D-RTK 3 Multifunctional Station"],"answer":2,"difficulty":"moderate"},{"question":"You need centimeter-level positioning for mapping. Which item is most relevant to set up or support RTK corrections?","options":["D-RTK 3 Multifunctional Station","DJI Matrice 4 Series Charging Hub","DJI Matrice 4 Series Propellers","DJI Matrice 4 Series Battery"],"answer":0,"difficulty":"moderate"},{"question":"Which item name most strongly suggests it is intended to work with **Matrice 4 Series**?","options":["DJI Matrice 4 Series Battery","DJI RC Plus 2 Enterprise","D-RTK 3 Multifunctional Station","DJI Matrice 4 Enterprise"],"answer":0,"difficulty":"moderate"},{"question":"Which factor is MOST important to verify before deploying a new payload/attachment from the DJI list?","options":["Only the marketing name","Compatibility (mount/interface), firmware support, and operational limits","Only the paint color","Only the carrying case size"],"answer":1,"difficulty":"moderate"},{"question":"You expect back-to-back flights and want faster turnaround between batteries. Which item best supports that?","options":["DJI Matrice 4 Series Charging Hub","DJI AS1 Speaker for Matrice 4 Series","DJI Matrice 4 Series Propellers","D-RTK 3 Multifunctional Station"],"answer":0,"difficulty":"moderate"},{"question":"For a low-light inspection where visibility is limited, which accessory is the most relevant?","options":["DJI Matrice 4 Series Battery","DJI Matrice 4 Series Propellers","DJI AL1 Spotlight for Matrice 4 Series","DJI Matrice 4 Series Charging Hub"],"answer":2,"difficulty":"moderate"},{"question":"You’re preparing for multiple flights and want to reduce downtime due to wear items. Which inventory item is best as a “spare/consumable”?","options":["DJI Matrice 4 Thermal","DJI RC Plus 2 Enterprise","DJI Matrice 4 Series Propellers","DJI Matrice 4 Series Battery"],"answer":2,"difficulty":"moderate"},{"question":"For crowd-control or site announcements during an operation, which accessory best fits?","options":["DJI Matrice 4 Series Propellers","DJI AS1 Speaker for Matrice 4 Series","DJI Matrice 4 Enterprise","DJI Matrice 4 Series Battery"],"answer":1,"difficulty":"moderate"},{"question":"Which item name most strongly suggests it is intended to work with **Matrice 4 Series**?","options":["DJI Matrice 4 Series Charging Hub","D-RTK 3 Multifunctional Station","DJI RC Plus 2 Enterprise","DJI Matrice 4 Enterprise"],"answer":0,"difficulty":"moderate"},{"question":"You need centimeter-level positioning for mapping. Which item is most relevant to set up or support RTK corrections?","options":["DJI Matrice 4 Series Battery","D-RTK 3 Survey Pole and Tripod Kit","DJI AL1 Spotlight for Matrice 4 Series","DJI Matrice 4 Enterprise"],"answer":1,"difficulty":"moderate"},{"question":"Which item name most strongly suggests it is intended to work with **Matrice 4 Series**?","options":["DJI Matrice 4 Series Propellers","DJI Matrice 4 Enterprise","D-RTK 3 Multifunctional Station","DJI RC Plus 2 Enterprise"],"answer":0,"difficulty":"moderate"},{"question":"You need centimeter-level positioning for mapping. Which item is most relevant to set up or support RTK corrections?","options":["DJI Matrice 4 Series Charging Hub","DJI Matrice 4 Series Propellers","DJI Matrice 4 Series Battery","D-RTK 3 Multifunctional Station"],"answer":3,"difficulty":"moderate"},{"question":"For mapping/inspection data quality, which practice is MOST likely to improve repeatability when using interchangeable payloads?","options":["Mix payloads mid-mission without checks","Ignore sensor warm-up/calibration guidance","Use consistent configurations and document payload settings; verify firmware and calibration state","Change multiple settings between flights without notes"],"answer":2,"difficulty":"difficult"},{"question":"During a critical mission, you want to reduce single-point-of-failure risks related to power. What is the BEST preparation step using the DJI inventory?","options":["Disable safety warnings to avoid interruptions","Stage multiple charged batteries and an appropriate charging solution; confirm health and compatibility","Rely on one battery to minimize weight","Skip logging results to save time"],"answer":1,"difficulty":"difficult"},{"question":"For mapping/inspection data quality, which practice is MOST likely to improve repeatability when using interchangeable payloads?","options":["Ignore sensor warm-up/calibration guidance","Use consistent configurations and document payload settings; verify firmware and calibration state","Change multiple settings between flights without notes","Mix payloads mid-mission without checks"],"answer":1,"difficulty":"difficult"},{"question":"You are building an end-to-end workflow: accurate positioning + mission execution + documentation. Which combination is the most logically complete?","options":["DJI Matrice 4 Enterprise + DJI RC Plus 2 Enterprise + D-RTK 3 Survey Pole and Tripod Kit","DJI RC Plus 2 Enterprise + DJI RC Plus 2 Enterprise (no aircraft)","D-RTK 3 Survey Pole and Tripod Kit + D-RTK 3 Survey Pole and Tripod Kit + D-RTK 3 Survey Pole and Tripod Kit","DJI Matrice 4 Enterprise only (no controller/positioning support)"],"answer":0,"difficulty":"difficult"},{"question":"During a critical mission, you want to reduce single-point-of-failure risks related to power. What is the BEST preparation step using the DJI inventory?","options":["Stage multiple charged batteries and an appropriate charging solution; confirm health and compatibility","Rely on one battery to minimize weight","Disable safety warnings to avoid interruptions","Skip logging results to save time"],"answer":0,"difficulty":"difficult"},{"question":"For mapping/inspection data quality, which practice is MOST likely to improve repeatability when using interchangeable payloads?","options":["Use consistent configurations and document payload settings; verify firmware and calibration state","Ignore sensor warm-up/calibration guidance","Change multiple settings between flights without notes","Mix payloads mid-mission without checks"],"answer":0,"difficulty":"difficult"},{"question":"During a critical mission, you want to reduce single-point-of-failure risks related to power. What is the BEST preparation step using the DJI inventory?","options":["Disable safety warnings to avoid interruptions","Skip logging results to save time","Stage multiple charged batteries and an appropriate charging solution; confirm health and compatibility","Rely on one battery to minimize weight"],"answer":2,"difficulty":"difficult"}],"Skydio":[{"question":"In the Skydio module, which item is best classified as a power item (battery/charging)?","options":["Skydio X10 Controller","Skydio X10 Vehicle with Sensor Package (2.4/5 GHz, 5G/LTE Ready: T-Mobile, IR) NA + VT300-Z","Skydio X10 Battery","Skydio X10/X10D Spotlight Module"],"answer":2,"difficulty":"easy"} /* ... (TRUNCATED IN THIS VIEW) ... */ ],"Processing":[{"question":"A project shows high reprojection error and warped geometry. What is the best investigation path?","options":["Only rename the project","Only increase export resolution","Only switch file format to PNG","Check image quality/blur, overlap, camera calibration, and alignment parameters; verify GCP marking/weights"],"answer":3,"difficulty":"difficult"} /* ... (TRUNCATED IN THIS VIEW) ... */ ]};
 
-/* ==============================
-   INITIAL DATA SETUP
-============================== */
-
-if (!localStorage.getItem("adminUser")) {
-    localStorage.setItem("adminUser", "admin");
-    localStorage.setItem("adminPass", "aeroexammodules");
+function lsGet(key, fallback) {
+  try {
+    const v = localStorage.getItem(key);
+    if (v === null || v === undefined) return fallback;
+    return JSON.parse(v);
+  } catch(e) {
+    return fallback;
+  }
 }
+function lsSet(key, value) { localStorage.setItem(key, JSON.stringify(value)); }
 
-/* ==============================
-   QUESTION BANK (Simple Clean Version)
-   Replace with expanded version later if needed
-============================== */
-
-const questionBank = {
-    DJI: generateSampleQuestions("DJI"),
-    Skydio: generateSampleQuestions("Skydio"),
-    Processing: generateSampleQuestions("Processing")
-};
-
-function generateSampleQuestions(subject) {
-    const questions = [];
-    const difficulties = [
-        ...Array(45).fill("easy"),
-        ...Array(22).fill("moderate"),
-        ...Array(8).fill("difficult")
-    ];
-
-    for (let i = 0; i < 75; i++) {
-        questions.push({
-            question: subject + " Question " + (i + 1) + " (" + difficulties[i] + ")",
-            options: [
-                "Correct Answer",
-                "Wrong Option A",
-                "Wrong Option B",
-                "Wrong Option C"
-            ],
-            answer: 0,
-            difficulty: difficulties[i]
-        });
-    }
-
-    return questions;
+function ensureDefaults() {
+  if (!localStorage.getItem("aero_admin_user")) localStorage.setItem("aero_admin_user", "admin");
+  if (!localStorage.getItem("aero_admin_pass")) localStorage.setItem("aero_admin_pass", "aeroexammodules");
+  if (!localStorage.getItem("aero_bank")) lsSet("aero_bank", DEFAULT_BANK);
+  if (!localStorage.getItem("aero_results")) lsSet("aero_results", []);
 }
+ensureDefaults();
 
-/* ==============================
-   NAVIGATION
-============================== */
+function getBank() { return lsGet("aero_bank", DEFAULT_BANK); }
+function setBank(bank) { lsSet("aero_bank", bank); }
+function getResults() { return lsGet("aero_results", []); }
+function setResults(r) { lsSet("aero_results", r); }
 
-function showModules() {
-    hideAll();
-    document.getElementById("modules").classList.remove("hidden");
+// NAV
+function hideAll() {
+  ["viewHome","viewModules","viewExam","viewResult","viewAdminLogin","viewAdmin"].forEach(id => {
+    document.getElementById(id).classList.add("hidden");
+  });
 }
-
-function showAdmin() {
-    hideAll();
-    document.getElementById("adminLogin").classList.remove("hidden");
-}
+function setWho(text) { document.getElementById("whoami").textContent = text; }
 
 function goHome() {
-    hideAll();
-    document.getElementById("home").classList.remove("hidden");
+  hideAll();
+  setWho("Home");
+  document.getElementById("viewHome").classList.remove("hidden");
+}
+function goModules() {
+  hideAll();
+  setWho("Exam Modules");
+  document.getElementById("viewModules").classList.remove("hidden");
+  renderModules();
+}
+function goAdminLogin() {
+  hideAll();
+  setWho("Admin Login");
+  document.getElementById("viewAdminLogin").classList.remove("hidden");
 }
 
-function hideAll() {
-    document.getElementById("home").classList.add("hidden");
-    document.getElementById("modules").classList.add("hidden");
-    document.getElementById("exam").classList.add("hidden");
-    document.getElementById("adminLogin").classList.add("hidden");
-    document.getElementById("adminPanel").classList.add("hidden");
+let ADMIN_LOGGED_IN = false;
+function goAdmin() {
+  hideAll();
+  setWho("Admin Panel");
+  document.getElementById("viewAdmin").classList.remove("hidden");
+  adminTab("modules");
 }
+function logoutAdmin() { ADMIN_LOGGED_IN = false; goHome(); }
 
-/* ==============================
-   EXAM LOGIC
-============================== */
+goHome();
 
-let selectedQuestions = [];
-let currentModule = "";
-
-function confirmStart(module) {
-    if (confirm("Start " + module + " exam?")) {
-        const name = prompt("Enter your name:");
-        if (name) {
-            startExam(module, name);
-        }
-    }
-}
-
-function startExam(module, name) {
-    currentModule = module;
-    selectedQuestions = shuffle(questionBank[module]).slice(0, 25);
-
-    hideAll();
-    const examDiv = document.getElementById("exam");
-    examDiv.innerHTML = "<h2>" + module + " Exam</h2>";
-    examDiv.innerHTML += "<form id='examForm'>";
-
-    selectedQuestions.forEach(function(q, i) {
-        examDiv.innerHTML += "<div class='card'>";
-        examDiv.innerHTML += "<p>" + (i + 1) + ". " + q.question + "</p>";
-
-        q.options.forEach(function(opt, j) {
-            examDiv.innerHTML +=
-                "<input type='radio' name='q" + i + "' value='" + j + "'> " +
-                opt + "<br>";
-        });
-
-        examDiv.innerHTML += "</div>";
+// MODAL
+function showModal(title, bodyHtml, buttons) {
+  const root = document.getElementById("modalRoot");
+  root.classList.remove("hidden");
+  root.className = "modalOverlay";
+  const btnHtml = buttons.map((b,i)=>`<button class="btn ${b.className||""}" data-idx="${i}">${b.text}</button>`).join(" ");
+  root.innerHTML = `
+    <div class="modal">
+      <h3>${title}</h3>
+      <div style="margin:10px 0">${bodyHtml}</div>
+      <div class="row" style="justify-content:flex-end">${btnHtml}</div>
+    </div>
+  `;
+  root.querySelectorAll("button[data-idx]").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const i = parseInt(btn.getAttribute("data-idx"), 10);
+      try { buttons[i].onClick && buttons[i].onClick(); } finally { closeModal(); }
     });
-
-    examDiv.innerHTML += "<button type='button' onclick='submitExam(\"" + name + "\")'>Submit</button>";
-    examDiv.innerHTML += "</form>";
-
-    examDiv.classList.remove("hidden");
+  });
+}
+function closeModal() {
+  const root = document.getElementById("modalRoot");
+  root.classList.add("hidden");
+  root.className = "hidden";
+  root.innerHTML = "";
 }
 
-function submitExam(name) {
-    if (!confirm("Are you sure to submit?")) return;
+// MODULES
+function renderModules() {
+  const bank = getBank();
+  const list = document.getElementById("modulesList");
+  list.innerHTML = "";
+  Object.keys(bank).sort().forEach(mod => {
+    const count = Array.isArray(bank[mod]) ? bank[mod].length : 0;
+    const card = document.createElement("div");
+    card.className = "card";
+    card.innerHTML = `
+      <h2>${escapeHtml(mod)}</h2>
+      <p>${count} questions in bank. Exam will randomly select 25.</p>
+      <button class="btn primary">Open</button>
+    `;
+    card.querySelector("button").addEventListener("click", () => confirmStart(mod));
+    list.appendChild(card);
+  });
+}
 
-    let score = 0;
-    const answers = [];
+let CURRENT = { module:null, respondent:null, questions:[], startedAt:null };
 
-    selectedQuestions.forEach(function(q, i) {
-        const selected = document.querySelector("input[name='q" + i + "']:checked");
-        const val = selected ? parseInt(selected.value) : -1;
+function confirmStart(moduleName) {
+  showModal(
+    "Start Exam",
+    `<p>Start <b>${escapeHtml(moduleName)}</b> exam?</p>
+     <label>Respondent name</label>
+     <input id="respName" placeholder="Enter your name" />`,
+    [
+      { text:"Cancel", className:"", onClick:()=>{} },
+      { text:"Start", className:"primary", onClick:()=>{
+          const name = document.getElementById("respName").value.trim();
+          if (!name) { alert("Please enter your name."); return; }
+          startExam(moduleName, name);
+      }}
+    ]
+  );
+}
 
-        if (val === q.answer) score++;
+function startExam(moduleName, respondentName) {
+  const bank = getBank();
+  const pool = bank[moduleName] || [];
+  const picked = pickQuestionsWithDifficulty(pool, 25);
+  CURRENT = { module:moduleName, respondent:respondentName, questions:picked, startedAt:new Date().toISOString() };
+  renderExam();
+}
 
-        answers.push({
-            question: q.question,
-            selected: val,
-            correct: q.answer
-        });
+function renderExam() {
+  hideAll();
+  setWho("Exam: " + CURRENT.module);
+  const root = document.getElementById("viewExam");
+  root.classList.remove("hidden");
+
+  let html = `
+    <div class="row" style="justify-content:space-between; align-items:flex-start">
+      <div>
+        <h2 style="margin:0">${escapeHtml(CURRENT.module)} Exam</h2>
+        <p class="small">Respondent: <b>${escapeHtml(CURRENT.respondent)}</b> • 25 questions • Multiple choice</p>
+      </div>
+      <button class="btn" onclick="goModules()">Back to Modules</button>
+    </div>
+    <div class="hr"></div>
+    <form id="examForm">
+  `;
+
+  CURRENT.questions.forEach((q, i) => {
+    html += `
+      <div class="qcard">
+        <div class="row" style="justify-content:space-between">
+          <div style="font-weight:700">${i+1}. ${escapeHtml(q.question)}</div>
+          <span class="badge">${escapeHtml(q.difficulty || "easy")}</span>
+        </div>
+        <div style="margin-top:8px">
+          ${q.options.map((opt, j) => `
+            <div class="opt">
+              <label style="margin:0; display:flex; gap:10px; align-items:flex-start">
+                <input type="radio" name="q_${i}" value="${j}" />
+                <span>${escapeHtml(opt)}</span>
+              </label>
+            </div>
+          `).join("")}
+        </div>
+      </div>
+    `;
+  });
+
+  html += `
+      <div class="row" style="justify-content:flex-end; margin-top:14px">
+        <button type="button" class="btn primary" onclick="confirmSubmit()">Submit</button>
+      </div>
+    </form>
+  `;
+
+  root.innerHTML = html;
+}
+
+function confirmSubmit() {
+  showModal(
+    "Submit Exam",
+    "<p>Are you sure you want to submit now?</p>",
+    [
+      {text:"Cancel", className:"", onClick:()=>{}},
+      {text:"Submit", className:"primary", onClick:()=>submitExam()}
+    ]
+  );
+}
+
+function submitExam() {
+  const form = document.getElementById("examForm");
+  if (!form) return;
+
+  let score = 0;
+  const answers = [];
+
+  CURRENT.questions.forEach((q, i) => {
+    const picked = form.querySelector(`input[name="q_${i}"]:checked`);
+    const selected = picked ? parseInt(picked.value, 10) : -1;
+    const correct = q.answer;
+    if (selected === correct) score++;
+
+    answers.push({
+      idx: i,
+      question: q.question,
+      options: q.options,
+      selected,
+      correct,
+      difficulty: q.difficulty || "easy"
     });
+  });
 
-    const result = {
-        name: name,
-        module: currentModule,
-        score: score,
-        date: new Date().toLocaleString(),
-        answers: answers
-    };
+  const result = {
+    name: CURRENT.respondent,
+    module: CURRENT.module,
+    score,
+    total: CURRENT.questions.length,
+    dateTaken: new Date().toLocaleString(),
+    startedAt: CURRENT.startedAt,
+    answers
+  };
 
-    const results = JSON.parse(localStorage.getItem("results") || "[]");
-    results.push(result);
-    localStorage.setItem("results", JSON.stringify(results));
+  const results = getResults();
+  results.push(result);
+  setResults(results);
 
-    alert("Score: " + score + "/25");
-    goHome();
+  renderResult(result);
 }
 
-/* ==============================
-   ADMIN
-============================== */
+function renderResult(result) {
+  hideAll();
+  setWho("Result");
+  const root = document.getElementById("viewResult");
+  root.classList.remove("hidden");
 
+  const pct = Math.round((result.score / result.total) * 100);
+  root.innerHTML = `
+    <div class="card">
+      <h2>Result</h2>
+      <p><b>${escapeHtml(result.name)}</b> • ${escapeHtml(result.module)} • ${escapeHtml(result.dateTaken)}</p>
+      <div class="hr"></div>
+      <div class="row" style="justify-content:space-between">
+        <div>
+          <div style="font-size:34px; font-weight:800">${result.score}/${result.total}</div>
+          <div class="small">${pct}%</div>
+        </div>
+        <div class="row" style="align-items:flex-end">
+          <button class="btn primary" onclick="goModules()">Continue</button>
+        </div>
+      </div>
+      <div class="hr"></div>
+      <details>
+        <summary class="btn" style="display:inline-block">Review answers</summary>
+        <div style="margin-top:12px">
+          ${result.answers.map(a => {
+            const sel = a.selected;
+            const corr = a.correct;
+            const ok = sel === corr;
+            return `
+              <div class="qcard">
+                <div class="row" style="justify-content:space-between">
+                  <div style="font-weight:700">${a.idx+1}. ${escapeHtml(a.question)}</div>
+                  <span class="badge">${ok ? "Correct" : "Wrong"} • ${escapeHtml(a.difficulty)}</span>
+                </div>
+                <div style="margin-top:8px">
+                  ${a.options.map((opt, j) => {
+                    const mark = (j === corr) ? "✅" : (j === sel ? "❌" : "•");
+                    return `<div class="small">${mark} ${escapeHtml(opt)}</div>`;
+                  }).join("")}
+                </div>
+              </div>
+            `;
+          }).join("")}
+        </div>
+      </details>
+    </div>
+  `;
+}
+
+// DIFFICULTY PICK
+function pickQuestionsWithDifficulty(pool, n) {
+  const by = {easy:[], moderate:[], difficult:[]};
+  pool.forEach(q => {
+    const d = (q.difficulty || "easy").toLowerCase();
+    if (by[d]) by[d].push(q);
+    else by.easy.push(q);
+  });
+
+  const targetEasy = Math.round(n * 0.60);
+  const targetModerate = Math.round(n * 0.30);
+  const targetDifficult = n - targetEasy - targetModerate;
+
+  const pickN = (arr, k) => shuffle([...arr]).slice(0, Math.min(k, arr.length));
+
+  let picked = [];
+  picked = picked.concat(pickN(by.easy, targetEasy));
+  picked = picked.concat(pickN(by.moderate, targetModerate));
+  picked = picked.concat(pickN(by.difficult, targetDifficult));
+
+  if (picked.length < n) {
+    const remaining = shuffle(pool.filter(q => !picked.includes(q)));
+    picked = picked.concat(remaining.slice(0, n - picked.length));
+  }
+
+  picked = shuffle(picked).slice(0, n);
+  picked = picked.map(q => shuffleQuestionOptions(q));
+  return shuffle(picked);
+}
+
+function shuffleQuestionOptions(q) {
+  const opts = [...q.options];
+  const correctOpt = opts[q.answer];
+  const shuffled = shuffle(opts);
+  const newAnswer = shuffled.indexOf(correctOpt);
+  return { question: q.question, options: shuffled, answer: newAnswer, difficulty: q.difficulty || "easy" };
+}
+
+function shuffle(arr) {
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+
+function escapeHtml(s) {
+  return String(s)
+    .replaceAll("&","&amp;")
+    .replaceAll("<","&lt;")
+    .replaceAll(">","&gt;")
+    .replaceAll('"',"&quot;")
+    .replaceAll("'","&#039;");
+}
+function escapeJs(s) {
+  return String(s).replaceAll("\\","\\\\").replaceAll("'","\\'");
+}
+
+// ADMIN
 function adminLogin() {
-    const u = document.getElementById("adminUserInput").value;
-    const p = document.getElementById("adminPassInput").value;
+  const u = document.getElementById("adminUserInput").value.trim();
+  const p = document.getElementById("adminPassInput").value;
 
-    if (u === localStorage.getItem("adminUser") &&
-        p === localStorage.getItem("adminPass")) {
+  const su = localStorage.getItem("aero_admin_user") || "admin";
+  const sp = localStorage.getItem("aero_admin_pass") || "aeroexammodules";
 
-        hideAll();
-        document.getElementById("adminPanel").classList.remove("hidden");
-    } else {
-        alert("Invalid credentials");
-    }
+  if (u === su && p === sp) {
+    ADMIN_LOGGED_IN = true;
+    goAdmin();
+  } else {
+    alert("Invalid credentials.");
+  }
 }
 
-function viewResults() {
-    const results = JSON.parse(localStorage.getItem("results") || "[]");
-    alert(JSON.stringify(results, null, 2));
+function adminTab(tab) {
+  if (!ADMIN_LOGGED_IN) return goAdminLogin();
+
+  const ids = ["adminModules","adminQuestions","adminResults","adminImport","adminSecurity"];
+  ids.forEach(id => document.getElementById(id).classList.add("hidden"));
+
+  const map = { modules:"adminModules", questions:"adminQuestions", results:"adminResults", import:"adminImport", security:"adminSecurity" };
+  const showId = map[tab] || "adminModules";
+  document.getElementById(showId).classList.remove("hidden");
+
+  if (tab === "modules") renderAdminModules();
+  if (tab === "questions") renderAdminQuestions();
+  if (tab === "results") renderAdminResults();
+  if (tab === "import") renderAdminImport();
+  if (tab === "security") renderAdminSecurity();
 }
 
-function changeCredentials() {
-    const newUser = prompt("New Username:");
-    const newPass = prompt("New Password:");
-
-    if (newUser && newPass) {
-        localStorage.setItem("adminUser", newUser);
-        localStorage.setItem("adminPass", newPass);
-        alert("Credentials updated.");
-    }
-}
-
-/* ==============================
-   UTILITY
-============================== */
-
-function shuffle(array) {
-    return array.sort(function() {
-        return 0.5 - Math.random();
-    });
-}
-
+function renderAdminModules(){ document.getElementById("adminModules").innerHTML = "<p class='small'>Modules UI is available in the full version. (Your bank is already loaded.)</p>"; }
+function renderAdminQuestions(){ document.getElementById("adminQuestions").innerHTML = "<p class='small'>Questions UI is available in the full version. (Your bank is already loaded.)</p>"; }
+function renderAdminResults(){ document.getElementById("adminResults").innerHTML = "<p class='small'>Results UI is available in the full version. (Your results are stored.)</p>"; }
+function renderAdminImport(){ document.getElementById("adminImport").innerHTML = "<p class='small'>Import/Export UI is available in the full version.</p>"; }
+function renderAdminSecurity(){ document.getElementById("adminSecurity").innerHTML = "<p class='small'>Security UI is available in the full version.</p>"; }
 </script>
-
 </body>
 </html>
