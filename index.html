@@ -161,8 +161,6 @@
           </label>
         </div>
       </div>
-      <p class="muted">Edit/add/delete questions. (DOCX/PDF upload parsing is not included for GitHub Pages static mode; use JSON import/export.)</p>
-
       <div class="grid" style="margin-top:10px;">
         <div>
           <label class="muted">Module</label>
@@ -677,13 +675,20 @@ function renderResults(){
   wrap.classList.remove("hidden");
   const results = getResults();
   if(results.length===0){
-    wrap.innerHTML = `<h3>Results</h3><p class="muted">No attempts recorded yet.</p>`;
+    wrap.innerHTML = `<div class="row" style="justify-content:space-between;">
+        <h3>Results</h3>
+        <button class="btn" onclick="wrapResultsClose()">Close</button>
+      </div>
+      <p class="muted">No attempts recorded yet.</p>`;
     return;
   }
   wrap.innerHTML = `
     <div class="row" style="justify-content:space-between;">
       <h3>Results</h3>
-      <div class="row"><button class="btn danger" onclick="clearResults()">Clear All</button></div>
+      <div class="row">
+        <button class="btn" onclick="wrapResultsClose()">Close</button>
+        <button class="btn danger" onclick="clearResults()">Clear All</button>
+      </div>
     </div>
     <table>
       <thead><tr><th>Date</th><th>Name</th><th>Module</th><th>Score</th><th>Review</th></tr></thead>
@@ -702,6 +707,11 @@ function renderResults(){
     `;
     rows.appendChild(tr);
   });
+}
+function wrapResultsClose(){
+  const wrap = document.getElementById("adminResults");
+  wrap.classList.add("hidden");
+  wrap.innerHTML = "";
 }
 
 function clearResults(){
