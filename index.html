@@ -1,922 +1,400 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Aero Exam Modules</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Aero Exam</title>
+
 <style>
-  
-  *, *::before, *::after { box-sizing: border-box; }
-:root { --border:#d0d7de; --bg:#fff; --muted:#57606a; }
-  body { font-family: Arial, sans-serif; margin:0; padding:24px; background:#fafbfc; }
-  .container { max-width: 1000px; margin: 0 auto; }
-  h1,h2,h3 { margin: 0 0 12px 0; }
-  .grid { display:grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap:16px; }
-  .card { background:var(--bg); border:1px solid var(--border); border-radius:10px; padding:16px; }
-  .btn { padding:10px 14px; border:1px solid var(--border); border-radius:8px; background:#fff; cursor:pointer; font-weight:600; }
-  .btn.primary { background:#0969da; color:#fff; border-color:#0969da; }
-  .btn.danger { background:#d1242f; color:#fff; border-color:#d1242f; }
-  .btn:disabled { opacity:.6; cursor:not-allowed; }
-  .row { display:flex; gap:10px; align-items:center; flex-wrap:wrap; }
-  .muted { color:var(--muted); }
-  .hidden { display:none; }
-  input, select, textarea { width:100%; padding:10px; border:1px solid var(--border); border-radius:8px; }
-  textarea { min-height: 90px; }
-  .qcard { border:1px solid var(--border); border-radius:10px; padding:14px; margin:10px 0; background:#fff; }
-  .qtitle { font-weight:bold; margin-bottom:10px; }
-  .pill { display:inline-block; padding:3px 8px; border:1px solid var(--border); border-radius:999px; font-size:12px; margin-left:6px; }
-  .opt-row { display:flex; gap:10px; align-items:flex-start; margin:6px 0; }
-  .opt-row input { margin-top: 3px; }
-  .modal-backdrop { position:fixed; inset:0; background:rgba(0,0,0,.35); display:flex; align-items:center; justify-content:center; padding:20px; z-index:9999; }
-  .modal { width:min(560px, 100%); background:#fff; border-radius:12px; border:1px solid var(--border); padding:16px; }
-  table { width:100%; border-collapse:collapse; }
-  th, td { border-bottom:1px solid var(--border); padding:10px; text-align:left; vertical-align:top; }
-  th { background:#f6f8fa; }
-  code { background:#f6f8fa; padding:2px 6px; border-radius:6px; }
 
-  /* FORCE LEFT ALIGNMENT FOR ALL EXAM OPTION TEXT */
-  #viewExam, #examQuestions, .qcard, .qtitle { text-align: left !important; }
-  .opt-row { display:flex !important; justify-content:flex-start !important; align-items:flex-start !important; gap:10px !important; margin:6px 0 !important; }
-  .opt-row input { margin-top:3px !important; flex:0 0 auto !important; }
-  .opt-row > div { flex:1 1 auto !important; text-align:left !important; }
+body{
+    font-family: Arial, sans-serif;
+    background:#f4f4f4;
+    padding:20px;
+}
 
+.container{
+    max-width:800px;
+    margin:auto;
+    background:white;
+    padding:20px;
+    border-radius:10px;
+}
 
-  /* OPTION LAYOUT: radio immediately followed by text (left aligned) */
-  .opt-row { 
-    display:flex !important; 
-    flex-direction:row !important;
-    justify-content:flex-start !important; 
-    align-items:flex-start !important; 
-    gap:10px !important; 
-    margin:6px 0 !important; 
-    width:100% !important;
-    text-align:left !important;
-  }
-  .opt-row input { 
-    margin: 3px 0 0 0 !important; 
-    flex:0 0 auto !important; 
-  }
-  .opt-row span {
-    display:block !important;
-    flex:1 1 auto !important;
-    text-align:left !important;
-    white-space:normal !important;
-    word-break:break-word !important;
-  }
+h1{
+    text-align:center;
+}
 
+input, select, button{
+    width:100%;
+    padding:12px;
+    margin-top:10px;
+    box-sizing:border-box;
+}
 
-  /* OPTION LAYOUT (robust): radio + text in table rows (always left aligned) */
-  .opt-table { width:100%; border-collapse:collapse; margin-top:6px; }
-  .opt-table td { padding:6px 0; vertical-align:top; text-align:left; }
-  .opt-table .opt-radio { width:28px; }
-  .opt-table input[type="radio"] { margin-top:3px; }
+.question{
+    border:1px solid #ddd;
+    padding:15px;
+    border-radius:8px;
+    margin-top:20px;
+}
 
+button{
+    background:#007bff;
+    color:white;
+    border:none;
+    cursor:pointer;
+}
 
-  /* FORM LAYOUT FIXES */
-  input, select, textarea { max-width: 100%; }
-  .grid { display:grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap:16px; }
-  @media (max-width: 720px){
-    .grid { grid-template-columns: 1fr; }
-  }
-  .row { min-width: 0; }
-  .modal { width:min(560px, 100%); max-width: 100%; }
-  .modal .row { flex-wrap: wrap; }
-  .modal input { width: 100%; }
-  .modal-backdrop { overflow:auto; }
+button:hover{
+    background:#0056b3;
+}
+
+.hidden{
+    display:none;
+}
 
 </style>
-</head>
-<body>
-<div class="container">
-  <h1>Aero Exam Modules</h1>
-  <!-- HOME -->
-  <div id="viewHome" class="card">
-    <h2>Home</h2>
-    <div class="grid" style="margin-top:12px;">
-      <div class="card">
-        <h3>Exam Modules</h3>
-        <p class="muted">Take an exam (25 random MCQs).</p>
-        <button class="btn primary" onclick="nav('modules')">Open</button>
-      </div>
-      <div class="card">
-        <h3>Admin Access</h3>
-        <p class="muted">Manage question bank and view results.</p>
-        <button class="btn" onclick="nav('adminLogin')">Open</button>
-      </div>
-    </div>
-  </div>
 
-  <!-- MODULES -->
-  <div id="viewModules" class="card hidden">
-    <div class="row" style="justify-content:space-between;">
-      <h2>Exam Modules</h2>
-      <button class="btn" onclick="nav('home')">Back</button>
-    </div>
-    <p class="muted">Choose a module. You will be asked to confirm and enter your name.</p>
-    <div class="row" id="moduleButtons"></div>
-  </div>
-
-  <!-- EXAM -->
-  <div id="viewExam" class="card hidden"></div>
-
-  <!-- RESULT -->
-  <div id="viewResult" class="card hidden"></div>
-
-  <!-- ADMIN LOGIN -->
-  <div id="viewAdminLogin" class="card hidden">
-    <div class="row" style="justify-content:space-between;">
-      <h2>Admin Login</h2>
-      <button class="btn" onclick="nav('home')">Back</button>
-    </div>
-    <div class="grid" style="margin-top:12px;">
-      <div>
-        <label class="muted">Username</label>
-        <input id="adminUser" placeholder="Username" autocomplete="off" value=""/ onkeydown="if(event.key===\'Enter\'){event.preventDefault();adminLogin();}">
-      </div>
-      <div>
-        <label class="muted">Password</label>
-        <input id="adminPass" type="password" placeholder="Password" autocomplete="new-password" value=""/ onkeydown="if(event.key===\'Enter\'){event.preventDefault();adminLogin();}">
-      </div>
-    </div>
-    <div class="row" style="margin-top:12px;">
-      <button class="btn primary" onclick="adminLogin()">Login</button>
-    </div>
-    </div>
-
-  <!-- ADMIN PANEL -->
-  <div id="viewAdmin" class="card hidden">
-    <div class="row" style="justify-content:space-between;">
-      <h2>Admin Panel</h2>
-      <button class="btn" onclick="adminLogout()">Logout</button>
-    </div>
-    <div class="muted" id="repoUpdatedLine" style="margin-top:6px;"></div>
-
-    <div class="grid" style="margin-top:12px;">
-      <div class="card">
-        <h3>Results</h3>
-        <p class="muted">View attempts (name, module, score, date) and review answers.</p>
-        <button class="btn primary" onclick="renderResults()">Open Results</button>
-      </div>
-
-      <div class="card">
-        <h3>Security</h3>
-        <p class="muted">Change admin username/password for this device.</p>
-        <button class="btn" onclick="changeCredentials()">Change Credentials</button>
-      </div>
-    </div>
-
-    <div class="card" style="margin-top:16px;">
-      <div class="row" style="justify-content:space-between;">
-        <h3>Question Bank</h3>
-        <div class="row">
-          <button class="btn" onclick="exportBank()">Export (.json)</button>
-          <label class="btn" style="display:inline-flex; align-items:center; gap:8px;">
-            Import (.json)
-            <input id="importFile" type="file" accept=".json" style="display:none" onchange="importBank(event)">
-          </label>
-        </div>
-      </div>
-      <div class="grid" style="margin-top:10px;">
-        <div>
-          <label class="muted">Module</label>
-          <select id="adminModule" onchange="renderQuestionList()"></select>
-        </div>
-        <div>
-          <label class="muted">Rename module</label>
-          <div class="row">
-            <input id="renameModuleInput" placeholder="New module name"/>
-            <button class="btn" onclick="renameModule()">Rename</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="row" style="margin-top:10px;">
-        <button class="btn primary" onclick="openQuestionEditor()">Add Question</button>
-        <button class="btn danger" onclick="deleteModule()">Delete Module</button>
-        <button class="btn" onclick="addModule()">Add Module</button>
-      </div>
-
-      <div id="adminQuestions" style="margin-top:12px;"></div>
-    </div>
-
-    <div id="adminResults" class="card hidden" style="margin-top:16px;"></div>
-  </div>
-</div>
-
-<script type="application/json" id="seedBank">{"DJI": [{"question": "In the DJI module, 'DJI Matrice 4 Enterprise Flagship Intelligent Multi-Sensor Compact Drone Introducing the…' is best classified as which type of component?", "options": ["Controller / remote", "Payload / attachment", "Power / charging", "Drone / aircraft platform"], "answer": 3, "difficulty": "easy"}, {"question": "In the DJI module, 'DJI Matrice 4 Thermal Flagship Intelligent Multi-Sensor Compact Drone Introducing the DJI…' is best classified as which type of component?", "options": ["Drone / aircraft platform", "Controller / remote", "Power / charging", "Payload / attachment"], "answer": 0, "difficulty": "easy"}, {"question": "In the DJI module, 'DJI RC Plus 2 Enterprise DJI RC Plus 2 Enterprise is equiped with a new high-bright…' is best classified as which type of component?", "options": ["Drone / aircraft platform", "Payload / attachment", "Controller / remote", "Power / charging"], "answer": 2, "difficulty": "easy"}, {"question": "In the DJI module, 'DJI Matrice 4 Series Battery The 99Wh high-capacity battery provides up to 49 minutes of…' is best classified as which type of component?", "options": ["Power / charging", "Drone / aircraft platform", "Payload / attachment", "Controller / remote"], "answer": 1, "difficulty": "easy"}, {"question": "In the DJI module, 'DJI Matrice 4 Series Charging Hub (100W) DJI Matrice 4 Series Charging Hub is designed…' is best classified as which type of component?", "options": ["Payload / attachment", "Power / charging", "Controller / remote", "Drone / aircraft platform"], "answer": 3, "difficulty": "easy"}, {"question": "In the DJI module, 'DJI Matrice 4 Series Propellers' is best classified as which type of component?", "options": ["Controller / remote", "Drone / aircraft platform", "Power / charging", "Payload / attachment"], "answer": 1, "difficulty": "easy"}, {"question": "In the DJI module, 'DJI AS1 Speaker for Matrice 4 Series The DJI AS1 Speaker offers impressive sound power…' is best classified as which type of component?", "options": ["Drone / aircraft platform", "Power / charging", "Controller / remote", "Payload / attachment"], "answer": 3, "difficulty": "easy"}, {"question": "In the DJI module, 'DJI AL1 Spotlight for Matrice 4 Series. The DJI AL1 SpotLight can illuminate subjects up…' is best classified as which type of component?", "options": ["Power / charging", "Drone / aircraft platform", "Controller / remote", "Payload / attachment"], "answer": 3, "difficulty": "easy"}, {"question": "In the DJI module, 'D-RTK 3 Multifunctional Station The new D-RTK 3 Multifunctional Station integrates…' is best classified as which type of component?", "options": ["Controller / remote", "Payload / attachment", "Power / charging", "Drone / aircraft platform"], "answer": 3, "difficulty": "easy"}, {"question": "In the DJI module, 'D-RTK 3 Survey Pole and Tripod Kit Overview The new D-RTK 3 Survey Pole and Tripod Kit…' is best classified as which type of component?", "options": ["Drone / aircraft platform", "Controller / remote", "Payload / attachment", "Power / charging"], "answer": 0, "difficulty": "easy"}, {"question": "In the DJI module, 'DJI Matrice 4 Enterprise' is best classified as which type of component?", "options": ["Payload / attachment", "Controller / remote", "Drone / aircraft platform", "Power / charging"], "answer": 2, "difficulty": "easy"}, {"question": "In the DJI module, 'DJI Matrice 4 Thermal' is best classified as which type of component?", "options": ["Payload / attachment", "Power / charging", "Controller / remote", "Drone / aircraft platform"], "answer": 3, "difficulty": "easy"}, {"question": "In the DJI module, 'DJI RC Plus 2 Enterprise' is best classified as which type of component?", "options": ["Payload / attachment", "Power / charging", "Drone / aircraft platform", "Controller / remote"], "answer": 3, "difficulty": "easy"}, {"question": "In the DJI module, 'DJI Matrice 4 Series Battery' is best classified as which type of component?", "options": ["Controller / remote", "Drone / aircraft platform", "Power / charging", "Payload / attachment"], "answer": 1, "difficulty": "easy"}, {"question": "In the DJI module, 'DJI Matrice 4 Series Charging Hub' is best classified as which type of component?", "options": ["Power / charging", "Controller / remote", "Drone / aircraft platform", "Payload / attachment"], "answer": 2, "difficulty": "easy"}, {"question": "In the DJI module, 'DJI AS1 Speaker for Matrice 4 Series' is best classified as which type of component?", "options": ["Payload / attachment", "Controller / remote", "Drone / aircraft platform", "Power / charging"], "answer": 0, "difficulty": "easy"}, {"question": "In the DJI module, 'DJI AL1 Spotlight for Matrice 4 Series' is best classified as which type of component?", "options": ["Power / charging", "Payload / attachment", "Drone / aircraft platform", "Controller / remote"], "answer": 1, "difficulty": "easy"}, {"question": "In the DJI module, 'D-RTK 3 Multifunctional Station' is best classified as which type of component?", "options": ["Power / charging", "Controller / remote", "Drone / aircraft platform", "Positioning / RTK / base-station"], "answer": 3, "difficulty": "easy"}, {"question": "In the DJI module, 'D-RTK 3 Survey Pole and Tripod Kit' is best classified as which type of component?", "options": ["Positioning / RTK / base-station", "Controller / remote", "Power / charging", "Drone / aircraft platform"], "answer": 0, "difficulty": "easy"}, {"question": "In the DJI module, '(For Mapping / Surveying / Volumetrics) DJI Mavic 3 Enterprise ● Centimeter-level…' is best classified as which type of component?", "options": ["Payload / attachment", "Controller / remote", "Drone / aircraft platform", "Power / charging"], "answer": 2, "difficulty": "easy"}, {"question": "In the DJI module, 'DJI Mavic 3 Thermal Advanced Basic Combo Wide Camera Equivalent Focal Length: 24 mm, 48…' is best classified as which type of component?", "options": ["Payload / attachment", "Controller / remote", "Drone / aircraft platform", "Power / charging"], "answer": 2, "difficulty": "easy"}, {"question": "In the DJI module, '(For Mapping / Agriculture / Volumetrics) DJI Mavic 3 Multispectral Key Features: • 20MP…' is best classified as which type of component?", "options": ["Drone / aircraft platform", "Power / charging", "Payload / attachment", "Controller / remote"], "answer": 0, "difficulty": "easy"}, {"question": "In the DJI module, 'DJI Mavic 3 Enterprise Series RTK Module Compatible with DJI Mavic 3 Enterprise Series…' is best classified as which type of component?", "options": ["Drone / aircraft platform", "Payload / attachment", "Controller / remote", "Power / charging"], "answer": 0, "difficulty": "easy"}, {"question": "In the DJI module, 'DJI Mavic 3 Intelligent Flight Battery Key Features: • For DJI Mavic 3 • LiPo 4S Battery…' is best classified as which type of component?", "options": ["Drone / aircraft platform", "Payload / attachment", "Controller / remote", "Power / charging"], "answer": 3, "difficulty": "easy"}, {"question": "In the DJI module, 'DJI Mavic 3 Enterprise Series Battery Kit Inclusions: • 3 x DJI Intelligent Flight…' is best classified as which type of component?", "options": ["Controller / remote", "Drone / aircraft platform", "Payload / attachment", "Power / charging"], "answer": 3, "difficulty": "easy"}, {"question": "In the DJI module, 'DJI ENTERPRISE D-RTK 2 High Precision GNSS Mobile Station Padded Carrying Bags…' is best classified as which type of component?", "options": ["Drone / aircraft platform", "Positioning / RTK / base-station", "Controller / remote", "Power / charging"], "answer": 1, "difficulty": "easy"}, {"question": "In the DJI module, 'Mavic 3 Enterprise Series: SPOTLIGHT + BLINKER GL-10 Overview: The all-new GL10 features…' is best classified as which type of component?", "options": ["Payload / attachment", "Drone / aircraft platform", "Controller / remote", "Power / charging"], "answer": 0, "difficulty": "easy"}, {"question": "In the DJI module, 'DJI Speaker for Mavic 3 Enterprise With the DJI Speaker for Mavic 3 Enterprise attached…' is best classified as which type of component?", "options": ["Controller / remote", "Power / charging", "Drone / aircraft platform", "Payload / attachment"], "answer": 2, "difficulty": "easy"}, {"question": "In the DJI module, 'Mavic 3 Enterprise Series: Propellers Overview: Each propeller blade has been put through…' is best classified as which type of component?", "options": ["Power / charging", "Drone / aircraft platform", "Propulsion / propellers", "Controller / remote"], "answer": 2, "difficulty": "easy"}, {"question": "In the DJI module, 'DJI Mavic 3 Enterprise' is best classified as which type of component?", "options": ["Accessory / support item", "Controller / remote", "Power / charging", "Drone / aircraft platform"], "answer": 0, "difficulty": "easy"}, {"question": "In the DJI module, 'DJI Mavic 3 Thermal Basic Combo' is best classified as which type of component?", "options": ["Accessory / support item", "Drone / aircraft platform", "Controller / remote", "Power / charging"], "answer": 0, "difficulty": "easy"}, {"question": "In the DJI module, 'DJI Mavic 3 Multispectral' is best classified as which type of component?", "options": ["Accessory / support item", "Drone / aircraft platform", "Controller / remote", "Power / charging"], "answer": 0, "difficulty": "easy"}, {"question": "In the DJI module, 'DJI Mavic 3 Enterprise Series RTK Module' is best classified as which type of component?", "options": ["Positioning / RTK / base-station", "Drone / aircraft platform", "Power / charging", "Controller / remote"], "answer": 0, "difficulty": "easy"}, {"question": "In the DJI module, 'DJI Mavic 3 Intelligent Flight Battery' is best classified as which type of component?", "options": ["Power / charging", "Payload / attachment", "Drone / aircraft platform", "Controller / remote"], "answer": 0, "difficulty": "easy"}, {"question": "In the DJI module, 'DJI Mavic 3 Enterprise Series Battery Kit' is best classified as which type of component?", "options": ["Payload / attachment", "Controller / remote", "Power / charging", "Drone / aircraft platform"], "answer": 2, "difficulty": "easy"}, {"question": "In the DJI module, 'DJI Enterprise D-RTK 2 High Precision GNSS Mobile Station Padded Carrying Bags' is best classified as which type of component?", "options": ["Drone / aircraft platform", "Power / charging", "Positioning / RTK / base-station", "Controller / remote"], "answer": 2, "difficulty": "easy"}, {"question": "In the DJI module, 'Mavic 3 Enterprise Series: SPOTLIGHT + BLINKER GL-10' is best classified as which type of component?", "options": ["Controller / remote", "Power / charging", "Payload / attachment", "Drone / aircraft platform"], "answer": 2, "difficulty": "easy"}, {"question": "In the DJI module, 'DJI Speaker for Mavic 3 Enterprise' is best classified as which type of component?", "options": ["Payload / attachment", "Drone / aircraft platform", "Power / charging", "Controller / remote"], "answer": 0, "difficulty": "easy"}, {"question": "In the DJI module, 'Mavic 3 Enterprise Series: Propellers' is best classified as which type of component?", "options": ["Controller / remote", "Drone / aircraft platform", "Power / charging", "Propulsion / propellers"], "answer": 3, "difficulty": "easy"}, {"question": "'DJI RC Plus 2 Enterprise DJI RC Plus 2 Enterprise is equiped with a new high-bright…' lists an environmental protection rating. What is it?", "options": ["IP56", "IP54", "IP65", "IP55"], "answer": 1, "difficulty": "easy"}, {"question": "According to the DJI material, what is the stated maximum flight time (approx.)?", "options": ["39 minutes", "54 minutes", "49 minutes", "44 minutes"], "answer": 2, "difficulty": "moderate"}, {"question": "The DJI battery description includes its energy rating. What is it?", "options": ["89 Wh", "119 Wh", "99 Wh", "109 Wh"], "answer": 2, "difficulty": "easy"}, {"question": "The DJI speaker spec mentions maximum loudness. What is the stated level (at 1 m)?", "options": ["104 dB", "114 dB", "119 dB", "109 dB"], "answer": 1, "difficulty": "moderate"}, {"question": "The DJI accessory range spec indicates an effective distance of about:", "options": ["200 m", "250 m", "300 m", "350 m"], "answer": 2, "difficulty": "moderate"}, {"question": "'D-RTK 3 Multifunctional Station The new D-RTK 3 Multifunctional Station integrates…' lists an environmental protection rating. What is it?", "options": ["IP67", "IP56", "IP54", "IP55"], "answer": 0, "difficulty": "easy"}, {"question": "You need thermal imaging (640×512-class) for emergency response. Which platform is the best match?", "options": ["DJI Matrice 4 Series Charging Hub (100W)", "DJI RC Plus 2 Enterprise", "DJI Matrice 4 Enterprise (Matrice 4E)", "DJI Matrice 4 Thermal (Matrice 4T)"], "answer": 3, "difficulty": "moderate"}, {"question": "For geospatial surveying/mapping where a mechanical shutter is explicitly listed, which platform best fits?", "options": ["DJI AS1 Speaker for Matrice 4 Series", "DJI Matrice 4 Thermal (Matrice 4T)", "DJI AL1 Spotlight for Matrice 4 Series", "DJI Matrice 4 Enterprise (Matrice 4E)"], "answer": 3, "difficulty": "moderate"}, {"question": "For centimeter-level positioning to support mapping missions, which item provides base-station/RTK capability?", "options": ["DJI Matrice 4 Series Propellers", "DJI Matrice 4 Series Battery", "D-RTK 3 Multifunctional Station", "DJI Matrice 4 Series Charging Hub (100W)"], "answer": 2, "difficulty": "moderate"}, {"question": "To improve repeatability and auditability for enterprise missions using interchangeable accessories, which practice is BEST?", "options": ["Disable warnings to avoid interruptions", "Change settings every flight without notes", "Standardize configurations, verify compatibility/firmware, and document settings per flight", "Swap accessories mid-mission without checks"], "answer": 2, "difficulty": "difficult"}, {"question": "In the DJI module, 'DJI Matrice 4 Enterprise Flagship Intelligent Multi-Sensor Compact Drone Introducing the…' mentions Mechanical shutter (useful for mapping). What does that most strongly indicate?", "options": ["Propeller material grade", "Only carrying case style", "Battery chemistry type", "Mechanical shutter (useful for mapping)"], "answer": 3, "difficulty": "moderate"}, {"question": "In the DJI module, 'DJI Matrice 4 Enterprise Flagship Intelligent Multi-Sensor Compact Drone Introducing the…' mentions Laser range finder / measurement. What does that most strongly indicate?", "options": ["Propeller material grade", "Laser range finder / measurement", "Only carrying case style", "Battery chemistry type"], "answer": 1, "difficulty": "moderate"}, {"question": "In the DJI module, 'DJI Matrice 4 Thermal Flagship Intelligent Multi-Sensor Compact Drone Introducing the DJI…' mentions Thermal/IR imaging capability. What does that most strongly indicate?", "options": ["Thermal/IR imaging capability", "Only carrying case style", "Propeller material grade", "Battery chemistry type"], "answer": 0, "difficulty": "moderate"}, {"question": "In the DJI module, 'DJI Matrice 4 Thermal Flagship Intelligent Multi-Sensor Compact Drone Introducing the DJI…' mentions Laser range finder / measurement. What does that most strongly indicate?", "options": ["Laser range finder / measurement", "Propeller material grade", "Battery chemistry type", "Only carrying case style"], "answer": 0, "difficulty": "moderate"}, {"question": "In the DJI module, 'DJI RC Plus 2 Enterprise DJI RC Plus 2 Enterprise is equiped with a new high-bright…' mentions O4 Enterprise video transmission. What does that most strongly indicate?", "options": ["Propeller material grade", "O4 Enterprise video transmission", "Battery chemistry type", "Only carrying case style"], "answer": 1, "difficulty": "moderate"}, {"question": "In the DJI module, 'DJI RC Plus 2 Enterprise DJI RC Plus 2 Enterprise is equiped with a new high-bright…' mentions IP54 protection. What does that most strongly indicate?", "options": ["Propeller material grade", "Only carrying case style", "Battery chemistry type", "IP54 protection"], "answer": 3, "difficulty": "moderate"}, {"question": "In the DJI module, 'DJI AS1 Speaker for Matrice 4 Series The DJI AS1 Speaker offers impressive sound power…' mentions Text-to-speech support. What does that most strongly indicate?", "options": ["Propeller material grade", "Text-to-speech support", "Battery chemistry type", "Only carrying case style"], "answer": 1, "difficulty": "moderate"}, {"question": "In the DJI module, 'D-RTK 3 Multifunctional Station The new D-RTK 3 Multifunctional Station integrates…' mentions Relay station mode. What does that most strongly indicate?", "options": ["Battery chemistry type", "Only carrying case style", "Relay station mode", "Propeller material grade"], "answer": 2, "difficulty": "moderate"}, {"question": "In the DJI module, 'D-RTK 3 Multifunctional Station The new D-RTK 3 Multifunctional Station integrates…' mentions IP67 protection. What does that most strongly indicate?", "options": ["Propeller material grade", "Only carrying case style", "Battery chemistry type", "IP67 protection"], "answer": 3, "difficulty": "moderate"}, {"question": "In the DJI module, 'DJI Matrice 4 Thermal' mentions Thermal/IR imaging capability. What does that most strongly indicate?", "options": ["Thermal/IR imaging capability", "Only carrying case style", "Propeller material grade", "Battery chemistry type"], "answer": 0, "difficulty": "moderate"}, {"question": "In the DJI module, 'DJI Mavic 3 Thermal Advanced Basic Combo Wide Camera Equivalent Focal Length: 24 mm, 48…' mentions Thermal/IR imaging capability. What does that most strongly indicate?", "options": ["Propeller material grade", "Battery chemistry type", "Thermal/IR imaging capability", "Only carrying case style"], "answer": 2, "difficulty": "moderate"}, {"question": "In the DJI module, 'DJI Mavic 3 Thermal Basic Combo' mentions Thermal/IR imaging capability. What does that most strongly indicate?", "options": ["Thermal/IR imaging capability", "Propeller material grade", "Battery chemistry type", "Only carrying case style"], "answer": 0, "difficulty": "moderate"}, {"question": "Which option best describes the role of 'DJI Mavic 3 Enterprise' in a DJI system?", "options": ["It automatically changes coordinate systems without user input", "It is primarily used to increase satellite count by itself", "It is only decorative and not operationally relevant", "It is a support accessory (case, storage, tools, etc.)"], "answer": 3, "difficulty": "moderate"}, {"question": "Which option best describes the role of 'DJI AL1 Spotlight for Matrice 4 Series' in a DJI system?", "options": ["It is only decorative and not operationally relevant", "It adds a mission capability (payload/attachment like sensors/speaker/spotlight)", "It is primarily used to increase satellite count by itself", "It automatically changes coordinate systems without user input"], "answer": 1, "difficulty": "difficult"}, {"question": "Which option best describes the role of 'DJI Mavic 3 Enterprise Series Battery Kit' in a DJI system?", "options": ["It is primarily used to increase satellite count by itself", "It supports power/charging (battery, charger, or charging hub)", "It is only decorative and not operationally relevant", "It automatically changes coordinate systems without user input"], "answer": 1, "difficulty": "easy"}, {"question": "Which option best describes the role of 'D-RTK 3 Multifunctional Station' in a DJI system?", "options": ["It is primarily used to increase satellite count by itself", "It is only decorative and not operationally relevant", "It supports positioning/RTK/base-station setup", "It automatically changes coordinate systems without user input"], "answer": 2, "difficulty": "difficult"}, {"question": "Which option best describes the role of 'DJI Matrice 4 Enterprise' in a DJI system?", "options": ["It is the core aircraft/drone platform used for missions", "It automatically changes coordinate systems without user input", "It is primarily used to increase satellite count by itself", "It is only decorative and not operationally relevant"], "answer": 0, "difficulty": "easy"}, {"question": "Which option best describes the role of 'Mavic 3 Enterprise Series: Propellers Overview: Each propeller blade has been put through…' in a DJI system?", "options": ["It is primarily used to increase satellite count by itself", "It is only decorative and not operationally relevant", "It automatically changes coordinate systems without user input", "It supports propulsion (propellers or related spares)"], "answer": 3, "difficulty": "difficult"}, {"question": "Which option best describes the role of 'DJI ENTERPRISE D-RTK 2 High Precision GNSS Mobile Station Padded Carrying Bags…' in a DJI system?", "options": ["It supports positioning/RTK/base-station setup", "It automatically changes coordinate systems without user input", "It is primarily used to increase satellite count by itself", "It is only decorative and not operationally relevant"], "answer": 0, "difficulty": "difficult"}, {"question": "Which option best describes the role of 'Mavic 3 Enterprise Series: Propellers Overview: Each propeller blade has been put through…' in a DJI system?", "options": ["It automatically changes coordinate systems without user input", "It is primarily used to increase satellite count by itself", "It is only decorative and not operationally relevant", "It supports propulsion (propellers or related spares)"], "answer": 3, "difficulty": "difficult"}, {"question": "Which option best describes the role of 'DJI Speaker for Mavic 3 Enterprise With the DJI Speaker for Mavic 3 Enterprise attached…' in a DJI system?", "options": ["It is the core aircraft/drone platform used for missions", "It automatically changes coordinate systems without user input", "It is primarily used to increase satellite count by itself", "It is only decorative and not operationally relevant"], "answer": 0, "difficulty": "easy"}, {"question": "Which option best describes the role of 'DJI Matrice 4 Thermal Flagship Intelligent Multi-Sensor Compact Drone Introducing the DJI…' in a DJI system?", "options": ["It automatically changes coordinate systems without user input", "It is only decorative and not operationally relevant", "It is primarily used to increase satellite count by itself", "It is the core aircraft/drone platform used for missions"], "answer": 3, "difficulty": "moderate"}, {"question": "Which option best describes the role of 'D-RTK 3 Multifunctional Station' in a DJI system?", "options": ["It is only decorative and not operationally relevant", "It automatically changes coordinate systems without user input", "It is primarily used to increase satellite count by itself", "It supports positioning/RTK/base-station setup"], "answer": 3, "difficulty": "difficult"}, {"question": "Which option best describes the role of 'DJI Mavic 3 Intelligent Flight Battery' in a DJI system?", "options": ["It is only decorative and not operationally relevant", "It supports power/charging (battery, charger, or charging hub)", "It automatically changes coordinate systems without user input", "It is primarily used to increase satellite count by itself"], "answer": 1, "difficulty": "moderate"}, {"question": "Which option best describes the role of 'DJI Speaker for Mavic 3 Enterprise' in a DJI system?", "options": ["It adds a mission capability (payload/attachment like sensors/speaker/spotlight)", "It automatically changes coordinate systems without user input", "It is only decorative and not operationally relevant", "It is primarily used to increase satellite count by itself"], "answer": 0, "difficulty": "difficult"}, {"question": "Which option best describes the role of 'DJI Matrice 4 Series Propellers' in a DJI system?", "options": ["It is the core aircraft/drone platform used for missions", "It is only decorative and not operationally relevant", "It automatically changes coordinate systems without user input", "It is primarily used to increase satellite count by itself"], "answer": 0, "difficulty": "moderate"}], "Skydio": [{"question": "In the Skydio module, '(For Defense-Grade Mapping / Inspection / Public Safety) Skydio X10D Starter Solution…' is best classified as which type of component?", "options": ["Payload / attachment", "Drone / aircraft platform", "Controller / remote", "Power / charging"], "answer": 1, "difficulty": "easy"}, {"question": "In the Skydio module, '(For Enterprise Mapping / Inspection / Public Safety) Skydio X10 Starter Kit (2.4/5 GHz,…' is best classified as which type of component?", "options": ["Drone / aircraft platform", "Power / charging", "Controller / remote", "Payload / attachment"], "answer": 0, "difficulty": "easy"}, {"question": "In the Skydio module, '(For Inspection / Real-Time ISR / Public Safety Operations) Skydio X10 Starter Kit (2.4/5…' is best classified as which type of component?", "options": ["Drone / aircraft platform", "Payload / attachment", "Controller / remote", "Power / charging"], "answer": 0, "difficulty": "easy"}, {"question": "In the Skydio module, '(For Tactical ISR / Inspection / Public Safety Deployments) Skydio X10 Vehicle with…' is best classified as which type of component?", "options": ["Power / charging", "Payload / attachment", "Controller / remote", "Drone / aircraft platform"], "answer": 3, "difficulty": "easy"}, {"question": "In the Skydio module, '(For Enterprise Mapping / Inspection / Public Safety) Skydio X10 Vehicle with Sensor…' is best classified as which type of component?", "options": ["Power / charging", "Drone / aircraft platform", "Controller / remote", "Payload / attachment"], "answer": 1, "difficulty": "easy"}, {"question": "In the Skydio module, '(For Tactical ISR / Inspection / Public Safety) Skydio X10 Vehicle with Sensor Package…' is best classified as which type of component?", "options": ["Drone / aircraft platform", "Payload / attachment", "Power / charging", "Controller / remote"], "answer": 0, "difficulty": "easy"}, {"question": "In the Skydio module, '(For Long-Range Visual Inspection / Asset Monitoring) Skydio VT300-Z Sensor Package ●…' is best classified as which type of component?", "options": ["Drone / aircraft platform", "Controller / remote", "Power / charging", "Payload / attachment"], "answer": 0, "difficulty": "easy"}, {"question": "In the Skydio module, 'Skydio X10 Intelligent Flight Battery ● Recommended to carry 3–4 batteries for…' is best classified as which type of component?", "options": ["Power / charging", "Controller / remote", "Payload / attachment", "Drone / aircraft platform"], "answer": 3, "difficulty": "easy"}, {"question": "In the Skydio module, 'Skydio X10/X10D Speaker & Microphone Attachment ● Ideal for crowd control, public…' is best classified as which type of component?", "options": ["Drone / aircraft platform", "Power / charging", "Payload / attachment", "Controller / remote"], "answer": 0, "difficulty": "easy"}, {"question": "In the Skydio module, '(For Low-Light Operations / Search & Rescue / Inspections) Skydio X10/X10D Spotlight…' is best classified as which type of component?", "options": ["Controller / remote", "Power / charging", "Drone / aircraft platform", "Payload / attachment"], "answer": 2, "difficulty": "easy"}, {"question": "In the Skydio module, '(For Surveying / Mapping / Precision Geospatial Applications) Skydio X10/X10D RTK/PPK…' is best classified as which type of component?", "options": ["Payload / attachment", "Drone / aircraft platform", "Power / charging", "Controller / remote"], "answer": 1, "difficulty": "easy"}, {"question": "In the Skydio module, '(For Night Operations / Low-Light Navigation / Emergency Response) Skydio X10/X10D…' is best classified as which type of component?", "options": ["Controller / remote", "Drone / aircraft platform", "Payload / attachment", "Power / charging"], "answer": 1, "difficulty": "easy"}, {"question": "In the Skydio module, '(For Field Deployment / Tactical Storage / Mobility) Skydio X10/X10D MOLLE Pouch Set ●…' is best classified as which type of component?", "options": ["Controller / remote", "Power / charging", "Drone / aircraft platform", "Payload / attachment"], "answer": 2, "difficulty": "easy"}, {"question": "In the Skydio module, 'Skydio X10D Starter Solution (Multi-Band, IR) + VT300-Z' is best classified as which type of component?", "options": ["Power / charging", "Payload / attachment", "Controller / remote", "Drone / aircraft platform"], "answer": 3, "difficulty": "easy"}, {"question": "In the Skydio module, 'Skydio X10 Starter Kit (2.4/5 GHz, 5G/LTE Ready: T-Mobile, IR) NA + VT300-L' is best classified as which type of component?", "options": ["Drone / aircraft platform", "Power / charging", "Payload / attachment", "Controller / remote"], "answer": 0, "difficulty": "easy"}, {"question": "In the Skydio module, 'Skydio X10 Starter Kit (2.4/5 GHz, 5G/LTE Ready: T-Mobile, IR) NA + V100-L' is best classified as which type of component?", "options": ["Drone / aircraft platform", "Payload / attachment", "Controller / remote", "Power / charging"], "answer": 0, "difficulty": "easy"}, {"question": "In the Skydio module, 'Skydio X10 Vehicle with Sensor Package (2.4/5 GHz, 5G/LTE Ready: T-Mobile, IR) NA +…' is best classified as which type of component?", "options": ["Power / charging", "Controller / remote", "Drone / aircraft platform", "Payload / attachment"], "answer": 2, "difficulty": "easy"}, {"question": "In the Skydio module, 'Skydio X10/X10D Speaker & Microphone Attachment' is best classified as which type of component?", "options": ["Power / charging", "Payload / attachment", "Drone / aircraft platform", "Controller / remote"], "answer": 2, "difficulty": "easy"}, {"question": "In the Skydio module, 'Skydio X10/X10D Spotlight Module' is best classified as which type of component?", "options": ["Drone / aircraft platform", "Power / charging", "Controller / remote", "Payload / attachment"], "answer": 0, "difficulty": "easy"}, {"question": "In the Skydio module, 'Skydio RTK Module for X10' is best classified as which type of component?", "options": ["Power / charging", "Controller / remote", "Drone / aircraft platform", "Positioning / RTK / base-station"], "answer": 3, "difficulty": "easy"}, {"question": "In the Skydio module, 'Skydio Molle Pouch Set for X10' is best classified as which type of component?", "options": ["Controller / remote", "Drone / aircraft platform", "Accessory / support item", "Power / charging"], "answer": 2, "difficulty": "easy"}, {"question": "In the Skydio module, '(For Geospatial Mapping / Inspection / Public Safety) Skydio X10 (Vehicle Only) ● Broader…' is best classified as which type of component?", "options": ["Drone / aircraft platform", "Power / charging", "Controller / remote", "Payload / attachment"], "answer": 0, "difficulty": "easy"}, {"question": "In the Skydio module, '(For Enterprise Flight Control / Mission Operations) Skydio X10 Controller Only (2.4/5…' is best classified as which type of component?", "options": ["Drone / aircraft platform", "Power / charging", "Controller / remote", "Payload / attachment"], "answer": 0, "difficulty": "easy"}, {"question": "In the Skydio module, '(For Surveying / Spatial Analysis / 3D Modeling) Skydio VT300-L Sensor Package ●…' is best classified as which type of component?", "options": ["Payload / attachment", "Drone / aircraft platform", "Power / charging", "Controller / remote"], "answer": 1, "difficulty": "easy"}, {"question": "In the Skydio module, '(For Emergency Safety / UAV Risk Mitigation) Skydio Parachute for X10 ● Safety attachment…' is best classified as which type of component?", "options": ["Power / charging", "Controller / remote", "Drone / aircraft platform", "Payload / attachment"], "answer": 2, "difficulty": "easy"}, {"question": "In the Skydio module, '(For Flight Maintenance / Replacement Parts) Skydio Spare Propellers for X10 ●…' is best classified as which type of component?", "options": ["Payload / attachment", "Power / charging", "Controller / remote", "Drone / aircraft platform"], "answer": 3, "difficulty": "easy"}, {"question": "In the Skydio module, '(For Battery Management / Efficient Charging) Skydio Dual Charger for X10 ● Dual battery…' is best classified as which type of component?", "options": ["Power / charging", "Drone / aircraft platform", "Controller / remote", "Payload / attachment"], "answer": 1, "difficulty": "easy"}, {"question": "In the Skydio module, '(For Power Supply / Battery & Controller Charging) Skydio 100W Wall Adapter, NA ● Wall…' is best classified as which type of component?", "options": ["Controller / remote", "Power / charging", "Drone / aircraft platform", "Payload / attachment"], "answer": 2, "difficulty": "easy"}, {"question": "In the Skydio module, '(For High-Power Battery Charging / Enterprise Operations) Skydio 230W Wall Adapter, NA ●…' is best classified as which type of component?", "options": ["Payload / attachment", "Controller / remote", "Drone / aircraft platform", "Power / charging"], "answer": 2, "difficulty": "easy"}, {"question": "In the Skydio module, '(For Efficient Battery Charging / Enterprise Operations) Skydio Dual Charger for X10 with…' is best classified as which type of component?", "options": ["Payload / attachment", "Controller / remote", "Power / charging", "Drone / aircraft platform"], "answer": 3, "difficulty": "easy"}, {"question": "In the Skydio module, '(For Rapid Deployment / Mission-Ready Operations) Skydio Ready Case ● Designed for fast…' is best classified as which type of component?", "options": ["Controller / remote", "Payload / attachment", "Power / charging", "Drone / aircraft platform"], "answer": 3, "difficulty": "easy"}, {"question": "In the Skydio module, '(For Drone Protection / Custom Fit Storage) Ready Case Foam Insert ● Custom foam insert…' is best classified as which type of component?", "options": ["Controller / remote", "Drone / aircraft platform", "Power / charging", "Payload / attachment"], "answer": 1, "difficulty": "easy"}, {"question": "In the Skydio module, '(For Rugged Transport / Field Deployment) Skydio Pro Case (Hard-Shell) for X10 ●…' is best classified as which type of component?", "options": ["Payload / attachment", "Power / charging", "Controller / remote", "Drone / aircraft platform"], "answer": 3, "difficulty": "easy"}, {"question": "In the Skydio module, '(For Sensor Protection / Field Transport) Skydio Sensor Package Case for X10 ● Ruggedized…' is best classified as which type of component?", "options": ["Drone / aircraft platform", "Controller / remote", "Payload / attachment", "Power / charging"], "answer": 0, "difficulty": "easy"}, {"question": "In the Skydio module, '(For Portable Carry / Field Operations) Skydio X10 Molle Pouch, Black ● Compact and…' is best classified as which type of component?", "options": ["Payload / attachment", "Power / charging", "Controller / remote", "Drone / aircraft platform"], "answer": 3, "difficulty": "easy"}, {"question": "In the Skydio module, '(For Portable Carry / Field Operations) Skydio X10 Controller Molle Pouch, Black ●…' is best classified as which type of component?", "options": ["Drone / aircraft platform", "Controller / remote", "Payload / attachment", "Power / charging"], "answer": 0, "difficulty": "easy"}, {"question": "In the Skydio module, '(For Portable Carry / Field Operations) Skydio X10 Battery Molle Pouch, Black ● Compact…' is best classified as which type of component?", "options": ["Controller / remote", "Payload / attachment", "Power / charging", "Drone / aircraft platform"], "answer": 3, "difficulty": "easy"}, {"question": "In the Skydio module, '(For Portable Carry / Field Operations) Skydio X10 Molle Pouch, Camo ● Compact and rugged…' is best classified as which type of component?", "options": ["Drone / aircraft platform", "Payload / attachment", "Power / charging", "Controller / remote"], "answer": 0, "difficulty": "easy"}, {"question": "In the Skydio module, '(For Portable Carry / Field Operations) Skydio X10 Controller Molle Pouch, Camo ● Compact…' is best classified as which type of component?", "options": ["Payload / attachment", "Drone / aircraft platform", "Power / charging", "Controller / remote"], "answer": 1, "difficulty": "easy"}, {"question": "In the Skydio module, '(For Portable Carry / Field Operations) Skydio X10 Battery Molle Pouch, Camo ● Compact…' is best classified as which type of component?", "options": ["Controller / remote", "Power / charging", "Drone / aircraft platform", "Payload / attachment"], "answer": 2, "difficulty": "easy"}, {"question": "In the Skydio module, '(For 3D Mapping / Structural Inspections) Skydio 3D Scan for X10 ● Advanced digital scan…' is best classified as which type of component?", "options": ["Power / charging", "Controller / remote", "Drone / aircraft platform", "Payload / attachment"], "answer": 2, "difficulty": "easy"}, {"question": "In the Skydio module, '(For 3D Mapping / Structural Inspections) Skydio 3D Scan for X10 Add-On (Perpetual) ●…' is best classified as which type of component?", "options": ["Power / charging", "Controller / remote", "Payload / attachment", "Drone / aircraft platform"], "answer": 3, "difficulty": "easy"}, {"question": "In the Skydio module, '(For Long-Range Tracking / Autonomous Flight) Skydio Scout for X10 ● Term license for…' is best classified as which type of component?", "options": ["Power / charging", "Controller / remote", "Drone / aircraft platform", "Accessory / support item"], "answer": 3, "difficulty": "easy"}, {"question": "In the Skydio module, '(For Geolocation / Precision Mapping) Skydio Crosshair Coordinates for X10 ● Term license…' is best classified as which type of component?", "options": ["Payload / attachment", "Drone / aircraft platform", "Controller / remote", "Power / charging"], "answer": 1, "difficulty": "easy"}, {"question": "In the Skydio module, '(For Cloud Storage / Enterprise Data Management) Skydio Data Storage for X10 ●…' is best classified as which type of component?", "options": ["Drone / aircraft platform", "Payload / attachment", "Power / charging", "Controller / remote"], "answer": 0, "difficulty": "easy"}, {"question": "In the Skydio module, '(For Fleet Management / Enterprise Operations) Skydio Fleet Manager for X10 ●…' is best classified as which type of component?", "options": ["Payload / attachment", "Power / charging", "Drone / aircraft platform", "Controller / remote"], "answer": 2, "difficulty": "moderate"}, {"question": "In the Skydio module, '(For Media Upload / Enterprise Data Management) Skydio Media Sync for X10 ●…' is best classified as which type of component?", "options": ["Payload / attachment", "Controller / remote", "Power / charging", "Drone / aircraft platform"], "answer": 3, "difficulty": "moderate"}, {"question": "In the Skydio module, '(For Remote Flight Operations / Enterprise Control) Skydio Remote Flight Deck for X10 ●…' is best classified as which type of component?", "options": ["Power / charging", "Drone / aircraft platform", "Payload / attachment", "Controller / remote"], "answer": 1, "difficulty": "moderate"}, {"question": "In the Skydio module, 'Skydio X10 (Vehicle Only)' is best classified as which type of component?", "options": ["Drone / aircraft platform", "Power / charging", "Payload / attachment", "Controller / remote"], "answer": 0, "difficulty": "moderate"}, {"question": "In the Skydio module, 'Skydio X10 Intelligent Flight Battery' is best classified as which type of component?", "options": ["Power / charging", "Drone / aircraft platform", "Controller / remote", "Payload / attachment"], "answer": 1, "difficulty": "moderate"}, {"question": "In the Skydio module, 'Skydio Parachute for X10' is best classified as which type of component?", "options": ["Controller / remote", "Accessory / support item", "Drone / aircraft platform", "Power / charging"], "answer": 1, "difficulty": "moderate"}, {"question": "In the Skydio module, 'Skydio Spare Propellers for X10' is best classified as which type of component?", "options": ["Power / charging", "Controller / remote", "Drone / aircraft platform", "Propulsion / propellers"], "answer": 3, "difficulty": "moderate"}, {"question": "In the Skydio module, 'Skydio Dual Charger for X10' is best classified as which type of component?", "options": ["Power / charging", "Drone / aircraft platform", "Payload / attachment", "Controller / remote"], "answer": 0, "difficulty": "moderate"}, {"question": "In the Skydio module, 'Skydio Dual Charger for X10 with 230W Wall Adapter Assembly, NA' is best classified as which type of component?", "options": ["Power / charging", "Payload / attachment", "Drone / aircraft platform", "Controller / remote"], "answer": 0, "difficulty": "moderate"}, {"question": "In the Skydio module, 'Skydio Pro Case (hard-shell) for X10' is best classified as which type of component?", "options": ["Accessory / support item", "Controller / remote", "Power / charging", "Drone / aircraft platform"], "answer": 0, "difficulty": "moderate"}, {"question": "In the Skydio module, 'Skydio X10 Molle Pouch, Black' is best classified as which type of component?", "options": ["Power / charging", "Controller / remote", "Payload / attachment", "Drone / aircraft platform"], "answer": 3, "difficulty": "moderate"}, {"question": "In the Skydio module, 'Skydio X10 Controller Molle Pouch,' is best classified as which type of component?", "options": ["Drone / aircraft platform", "Controller / remote", "Payload / attachment", "Power / charging"], "answer": 0, "difficulty": "moderate"}, {"question": "In the Skydio module, 'Skydio X10 Battery Molle Pouch, Black' is best classified as which type of component?", "options": ["Payload / attachment", "Controller / remote", "Drone / aircraft platform", "Power / charging"], "answer": 2, "difficulty": "moderate"}, {"question": "In the Skydio module, 'Skydio X10 Molle Pouch' is best classified as which type of component?", "options": ["Controller / remote", "Payload / attachment", "Drone / aircraft platform", "Power / charging"], "answer": 2, "difficulty": "moderate"}, {"question": "In the Skydio module, 'Skydio X10 Controller Molle Pouch' is best classified as which type of component?", "options": ["Power / charging", "Drone / aircraft platform", "Controller / remote", "Payload / attachment"], "answer": 1, "difficulty": "moderate"}, {"question": "In the Skydio module, 'Skydio X10 Battery Molle Pouch' is best classified as which type of component?", "options": ["Controller / remote", "Payload / attachment", "Drone / aircraft platform", "Power / charging"], "answer": 2, "difficulty": "moderate"}, {"question": "In the Skydio module, 'Skydio 3D Scan for X10' is best classified as which type of component?", "options": ["Drone / aircraft platform", "Accessory / support item", "Power / charging", "Controller / remote"], "answer": 1, "difficulty": "moderate"}, {"question": "In the Skydio module, 'Skydio 3D Scan for X10 Add-On (Perpetual)' is best classified as which type of component?", "options": ["Drone / aircraft platform", "Power / charging", "Controller / remote", "Accessory / support item"], "answer": 3, "difficulty": "moderate"}, {"question": "In the Skydio module, 'Skydio Scout for X10' is best classified as which type of component?", "options": ["Power / charging", "Accessory / support item", "Drone / aircraft platform", "Controller / remote"], "answer": 1, "difficulty": "moderate"}, {"question": "In the Skydio module, 'Skydio Crosshair Coordinates for X10' is best classified as which type of component?", "options": ["Drone / aircraft platform", "Accessory / support item", "Power / charging", "Controller / remote"], "answer": 1, "difficulty": "moderate"}, {"question": "In the Skydio module, 'Skydio Data Storage for X10' is best classified as which type of component?", "options": ["Power / charging", "Controller / remote", "Drone / aircraft platform", "Accessory / support item"], "answer": 3, "difficulty": "moderate"}, {"question": "In the Skydio module, 'Skydio Fleet Manager for X10' is best classified as which type of component?", "options": ["Drone / aircraft platform", "Controller / remote", "Accessory / support item", "Power / charging"], "answer": 2, "difficulty": "moderate"}, {"question": "In the Skydio module, 'Skydio Media Sync for X10' is best classified as which type of component?", "options": ["Accessory / support item", "Power / charging", "Controller / remote", "Drone / aircraft platform"], "answer": 0, "difficulty": "moderate"}, {"question": "In the Skydio module, 'Skydio Remote Flight Deck for X10' is best classified as which type of component?", "options": ["Power / charging", "Drone / aircraft platform", "Accessory / support item", "Controller / remote"], "answer": 2, "difficulty": "moderate"}, {"question": "According to the Skydio material, what is the stated maximum flight time (approx.)?", "options": ["40 minutes", "35 minutes", "30 minutes", "45 minutes"], "answer": 0, "difficulty": "difficult"}, {"question": "The Skydio X10/X10D Intelligent Flight Battery capacity is listed as:", "options": ["8,919 mAh", "7,419 mAh", "7,919 mAh", "8,419 mAh"], "answer": 3, "difficulty": "difficult"}, {"question": "The Skydio X10/X10D Intelligent Flight Battery nominal voltage is closest to:", "options": ["19.55 V", "16.55 V", "18.55 V", "17.55 V"], "answer": 2, "difficulty": "difficult"}, {"question": "Which Skydio variant is described as defense-optimized and available with multi-band communications for contested environments?", "options": ["Skydio Pro Case", "Skydio X10 (2.4/5 GHz, 5G/LTE Ready)", "Skydio X10D (Multi-Band)", "Skydio VT300-L Sensor Package"], "answer": 2, "difficulty": "difficult"}, {"question": "For long-range detailed inspection with telephoto + radiometric thermal called out in one module, which sensor package is most relevant?", "options": ["V100-L Sensor Package", "Skydio Dual Charger", "VT300-L Sensor Package", "VT300-Z Sensor Package"], "answer": 3, "difficulty": "difficult"}, {"question": "Cold-weather operations down to around −20°C are supported by which battery feature?", "options": ["Self-heating / automatic pre-warming", "Strobe spotlight mode", "Mechanical shutter", "Higher microSD write speed"], "answer": 0, "difficulty": "difficult"}]}
-</script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
 <script>
-/* STORAGE KEYS */
-const KEY_BANK = "aeroExam_questionBank_v4";
-let BANK_MEM = null; // in-memory cache of latest bank
-const KEY_RESULTS = "aeroExam_results_v2";
-const KEY_ADMIN_USER = "aeroExam_adminUser_v2";
-const KEY_ADMIN_PASS = "aeroExam_adminPass_v2";
-const KEY_ADMIN_SESSION = "aeroExam_adminSession_v2";
 
-// Build timestamp (UTC)
-const BUILD_TIMESTAMP_UTC = "2026-02-19T03:26:19Z";
+/////////////////////////////////////////////////////
+// EDIT THIS
+/////////////////////////////////////////////////////
 
-/* INIT */
-function getSeedBank(){
-  const raw = document.getElementById("seedBank").textContent || "{}";
-  return JSON.parse(raw);
+emailjs.init("ReMwXyZtoAR_Y_ogN");
+
+/////////////////////////////////////////////////////
+
+</script>
+
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Aero Exam</h1>
+
+    <div id="setupScreen">
+
+        <input
+            type="text"
+            id="candidateName"
+            placeholder="Full Name"
+        >
+
+        <input
+            type="email"
+            id="extraEmail"
+            placeholder="Additional Email Recipient (Optional)"
+        >
+
+        <select id="subjectSelect">
+
+            <option value="DJI">DJI</option>
+            <option value="Skydio">Skydio</option>
+            <option value="Data Processing">Data Processing</option>
+
+        </select>
+
+        <button onclick="startExam()">
+            Start Exam
+        </button>
+
+    </div>
+
+    <div id="quizScreen" class="hidden">
+
+        <div id="questionsContainer"></div>
+
+        <button onclick="submitExam()">
+            Submit Exam
+        </button>
+
+    </div>
+
+    <div id="resultScreen" class="hidden">
+
+        <h2 id="scoreText"></h2>
+
+    </div>
+
+</div>
+
+<script>
+
+/////////////////////////////////////////////////////
+// QUESTION BANK FILE
+/////////////////////////////////////////////////////
+
+fetch("aero_exam_question_bank.json")
+.then(response => response.json())
+.then(data => {
+
+    questionBank = data;
+
+})
+.catch(error => {
+    console.error(error);
+    alert("Failed to load question bank.");
+});
+
+/////////////////////////////////////////////////////
+
+let questionBank = {};
+
+let questions = [];
+
+let currentSubject = "";
+
+/////////////////////////////////////////////////////
+// RANDOMIZER
+/////////////////////////////////////////////////////
+
+function shuffleArray(array){
+
+    return [...array].sort(() => Math.random() - 0.5);
+
 }
-function getBank(){
-  // Prefer in-memory bank (freshly fetched) if available
-  if(BANK_MEM) return BANK_MEM;
 
-  // Next, try localStorage
-  const raw = localStorage.getItem(KEY_BANK);
-  if(raw){
-    try {
-      BANK_MEM = normalizeBank(JSON.parse(raw));
-      return BANK_MEM;
-    } catch(e){}
-  }
+/////////////////////////////////////////////////////
+// START EXAM
+/////////////////////////////////////////////////////
 
-  // Fallback to embedded seed
-  const seed = normalizeBank(getSeedBank());
-  BANK_MEM = seed;
-  localStorage.setItem(KEY_BANK, JSON.stringify(seed));
-  return seed;
-}
-function saveBank(bank){ localStorage.setItem(KEY_BANK, JSON.stringify(bank)); }
-async function refreshBankFromRepo(){
-  try{
-    const res = await fetch("./aero_exam_question_bank.json", { cache: "no-store" });
-    if(!res.ok) return;
-    const obj = await res.json();
-    const bank = normalizeBank(obj);
-    BANK_MEM = bank;
-    saveBank(bank);
+function startExam(){
 
-    // Update UI if user is already on relevant views
-    const modulesView = document.getElementById("viewModules");
-    if(modulesView && !modulesView.classList.contains("hidden")) renderModuleButtons();
+    const candidateName =
+        document.getElementById("candidateName").value;
 
-    const adminView = document.getElementById("viewAdmin");
-    if(adminView && !adminView.classList.contains("hidden")){
-      populateAdminModules();
-      renderQuestionList();
+    if(!candidateName){
+
+        alert("Please enter your name.");
+
+        return;
     }
-  }catch(e){
-    // silent: keep existing bank
-  }
+
+    currentSubject =
+        document.getElementById("subjectSelect").value;
+
+    /////////////////////////////////////////////////////
+    // RANDOM 10 QUESTIONS
+    /////////////////////////////////////////////////////
+
+    questions =
+        shuffleArray(questionBank[currentSubject]).slice(0,10);
+
+    /////////////////////////////////////////////////////
+
+    renderQuestions();
+
+    document
+        .getElementById("setupScreen")
+        .classList.add("hidden");
+
+    document
+        .getElementById("quizScreen")
+        .classList.remove("hidden");
 }
 
-function getResults(){
-  const raw = localStorage.getItem(KEY_RESULTS) || "[]";
-  try { return JSON.parse(raw); } catch(e){ return []; }
-}
-function saveResults(results){ localStorage.setItem(KEY_RESULTS, JSON.stringify(results)); }
-function ensureAdminCreds(){
-  if(!localStorage.getItem(KEY_ADMIN_USER)) localStorage.setItem(KEY_ADMIN_USER, "admin");
-  if(!localStorage.getItem(KEY_ADMIN_PASS)) localStorage.setItem(KEY_ADMIN_PASS, "aeroexammodules");
-}
-ensureAdminCreds();
+/////////////////////////////////////////////////////
+// RENDER QUESTIONS
+/////////////////////////////////////////////////////
 
+function renderQuestions(){
 
-// Enable Enter-to-login on Admin Login inputs
-function setupAdminLoginEnter(){
-  const u = document.getElementById("adminUser");
-  const p = document.getElementById("adminPass");
-  if(!u || !p) return;
-  const handler = (ev)=>{
-    if(ev.key === "Enter"){
-      ev.preventDefault();
-      adminLogin();
-    }
-  };
-  u.addEventListener("keydown", handler);
-  p.addEventListener("keydown", handler);
-}
+    const container =
+        document.getElementById("questionsContainer");
 
+    container.innerHTML = "";
 
-/* NAV */
-function nav(view){
-  hideAllViews();
-  if(view==="home") document.getElementById("viewHome").classList.remove("hidden");
-  if(view==="modules") { document.getElementById("viewModules").classList.remove("hidden"); renderModuleButtons(); }
-  if(view==="exam") document.getElementById("viewExam").classList.remove("hidden");
-  if(view==="result") document.getElementById("viewResult").classList.remove("hidden");
-  if(view==="adminLogin"){
-    if(isAdminAuthed()) { openAdmin(); return; }
-    document.getElementById("viewAdminLogin").classList.remove("hidden");
-    // Clear login fields (avoid exposing saved/autofilled creds)
-    document.getElementById("adminUser").value = "";
-    document.getElementById("adminPass").value = "";
-    setupAdminLoginEnter();
+    questions.forEach((question, index) => {
 
-  }
-  if(view==="admin") document.getElementById("viewAdmin").classList.remove("hidden");
-}
-function hideAllViews(){
-  ["viewHome","viewModules","viewExam","viewResult","viewAdminLogin","viewAdmin"].forEach(id=>{
-    document.getElementById(id).classList.add("hidden");
-  });
-}
-nav("home");
+        const div = document.createElement("div");
 
-/* MODAL */
-function showModal(title, bodyHtml, buttons){
-  const backdrop = document.createElement("div");
-  backdrop.className = "modal-backdrop";
-  backdrop.innerHTML = `
-    <div class="modal">
-      <h3>${escapeHtml(title)}</h3>
-      <div style="margin-top:10px;">${bodyHtml}</div>
-      <div class="row" style="margin-top:14px; justify-content:flex-end;" id="modalBtns"></div>
-    </div>
-  `;
-  document.body.appendChild(backdrop);
-  const btnWrap = backdrop.querySelector("#modalBtns");
-  buttons.forEach(b=>{
-    const btn = document.createElement("button");
-    btn.className = "btn " + (b.primary ? "primary" : "");
-    if(b.danger) btn.className = "btn danger";
-    btn.textContent = b.text;
-    btn.onclick = ()=>{
-      if(b.onClick) b.onClick(()=>document.body.removeChild(backdrop));
-      else document.body.removeChild(backdrop);
-    };
-    btnWrap.appendChild(btn);
-  });
+        div.className = "question";
+
+        let choicesHTML = "";
+
+        question.choices.forEach(choice => {
+
+            choicesHTML += `
+                <label>
+                    <input
+                        type="radio"
+                        name="question${index}"
+                        value="${choice}"
+                    >
+                    ${choice}
+                </label>
+                <br>
+            `;
+        });
+
+        div.innerHTML = `
+            <h3>
+                ${index + 1}. ${question.question}
+            </h3>
+
+            ${choicesHTML}
+        `;
+
+        container.appendChild(div);
+
+    });
 }
 
-/* MODULE BUTTONS */
-function renderModuleButtons(){
-  const bank = getBank();
-  const wrap = document.getElementById("moduleButtons");
-  wrap.innerHTML = "";
-  Object.keys(bank).sort().forEach(m=>{
-    const btn = document.createElement("button");
-    btn.className = "btn primary";
-    btn.textContent = m;
-    btn.onclick = ()=>confirmStart(m);
-    wrap.appendChild(btn);
-  });
-}
-
-/* EXAM FLOW */
-let currentModule = null;
-let currentName = null;
-let currentQuestions = [];
-let currentStartISO = null;
-
-function confirmStart(moduleName){
-  showModal(
-    `Start ${moduleName} exam?`,
-    `<p class="muted">This will generate 25 random multiple-choice questions.</p>
-     <label class="muted">Your name</label>
-     <input id="respondentName" placeholder="Enter your name" />`,
-    [
-      {text:"Cancel", onClick:(close)=>close()},
-      {text:"Start", primary:true, onClick:(close)=>{
-        const name = document.getElementById("respondentName").value.trim();
-        if(!name){ alert("Please enter your name."); return; }
-        close();
-        startExam(moduleName, name);
-      }}
-    ]
-  );
-}
-
-function startExam(moduleName, name){
-  const bank = getBank();
-  if(!bank[moduleName] || bank[moduleName].length < 25){
-    alert("This module does not have enough questions (need at least 25).");
-    return;
-  }
-  currentModule = moduleName;
-  currentName = name;
-  currentStartISO = new Date().toISOString();
-
-  const pool = bank[moduleName].slice();
-  const easy = pool.filter(q=>q.difficulty==="easy");
-  const mod = pool.filter(q=>q.difficulty==="moderate");
-  const diff = pool.filter(q=>q.difficulty==="difficult");
-
-  const targetEasy = 15, targetMod = 8, targetDiff = 2; // ~60/30/10
-  const pick = [];
-  pick.push(...sample(easy, targetEasy));
-  pick.push(...sample(mod, targetMod));
-  pick.push(...sample(diff, targetDiff));
-
-  const remaining = 25 - pick.length;
-  if(remaining > 0){
-    const rest = pool.filter(q=>!pick.includes(q));
-    pick.push(...sample(rest, remaining));
-  }
-
-  currentQuestions = shuffle(pick).map(q=>{
-    const opts = q.options.slice();
-    const correctText = opts[q.answer];
-    const shuffled = shuffle(opts);
-    const newAnswer = shuffled.indexOf(correctText);
-    return {
-      question: q.question,
-      options: shuffled,
-      answer: newAnswer,
-      difficulty: q.difficulty
-    };
-  });
-
-  renderExam();
-  nav("exam");
-}
-
-function renderExam(){
-  const root = document.getElementById("viewExam");
-  root.innerHTML = `
-    <div class="row" style="justify-content:space-between;">
-      <div>
-        <h2>${escapeHtml(currentModule)} Exam</h2>
-        <div class="muted">Respondent: <b>${escapeHtml(currentName)}</b> • 25 questions</div>
-      </div>
-      <button class="btn" onclick="nav('modules')">Back to Modules</button>
-    </div>
-    <div id="examQuestions" style="margin-top:12px;"></div>
-    <div class="row" style="justify-content:flex-end; margin-top:14px;">
-      <button class="btn primary" onclick="confirmSubmit()">Submit</button>
-    </div>
-  `;
-
-  const qWrap = document.getElementById("examQuestions");
-  currentQuestions.forEach((q, idx)=>{
-    const qDiv = document.createElement("div");
-    qDiv.className = "qcard";
-    qDiv.innerHTML = `
-      <div class="qtitle">${idx+1}. ${escapeHtml(q.question)} </div>
-      <table class="opt-table">
-        <tbody>
-        ${q.options.map((opt,j)=>`
-          <tr>
-            <td class="opt-radio"><input type="radio" name="q${idx}" value="${j}"></td>
-            <td class="opt-text">${escapeHtml(opt)}</td>
-          </tr>
-        `).join("")}
-        </tbody>
-      </table>
-    `;
-    qWrap.appendChild(qDiv);
-  });
-}
-
-function confirmSubmit(){
-  showModal(
-    "Submit exam?",
-    `<p class="muted">Are you sure you want to submit? You won't be able to change answers after submitting.</p>`,
-    [
-      {text:"Cancel", onClick:(close)=>close()},
-      {text:"Submit", primary:true, onClick:(close)=>{ close(); submitExam(); }}
-    ]
-  );
-}
+/////////////////////////////////////////////////////
+// SUBMIT EXAM
+/////////////////////////////////////////////////////
 
 function submitExam(){
-  let score = 0;
-  const answers = [];
-  currentQuestions.forEach((q, idx)=>{
-    const sel = document.querySelector(`input[name="q${idx}"]:checked`);
-    const selected = sel ? parseInt(sel.value,10) : -1;
-    const correct = q.answer;
-    const selectedText = selected>=0 ? q.options[selected] : "(No answer)";
-    const correctText = q.options[correct];
-    const isCorrect = selected === correct;
-    if(isCorrect) score++;
-    // Store a compact review record (avoids LocalStorage quota issues)
-    answers.push({
-      question: q.question,
-      selectedText,
-      correctText,
-      isCorrect
-    });
-  });
 
-  const attempt = {
-    name: currentName,
-    module: currentModule,
-    score,
-    total: 25,
-    dateTaken: new Date().toLocaleString(),
-    startISO: currentStartISO,
-    endISO: new Date().toISOString(),
-    answers
-  };
+    let score = 0;
 
-  const results = getResults();
-  results.unshift(attempt);
-  try{
-    saveResults(results);
-  }catch(e){
-    // If storage is full or blocked, still show result but warn admin won't see it.
-    console.error("Failed to save results:", e);
-    alert("Your score was computed, but the attempt could not be saved on this device (storage full or blocked).");
-  }
+    const userAnswers = [];
 
-  renderResult(attempt);
-  nav("result");
-}
+    questions.forEach((question, index) => {
 
-function renderResult(attempt){
-  const root = document.getElementById("viewResult");
-  root.innerHTML = `
-    <div class="row" style="justify-content:space-between;">
-      <div>
-        <h2>Result</h2>
-        <div class="muted"><b>${escapeHtml(attempt.name)}</b> • ${escapeHtml(attempt.module)} • ${escapeHtml(attempt.dateTaken)}</div>
-      </div>
-      <button class="btn" onclick="nav('home')">Home</button>
-    </div>
+        const selected =
+            document.querySelector(
+                `input[name="question${index}"]:checked`
+            );
 
-    <div class="card" style="margin-top:12px;">
-      <h3>Score: ${attempt.score}/${attempt.total}</h3>
-      <p class="muted">Your answers have been recorded.</p>
-      <button class="btn primary" onclick="nav('home')">Continue</button>
-      <button class="btn" style="margin-left:8px;" onclick="showReview(${0})">Review Answers</button>
-    </div>
-  `;
-  // store latest attempt index 0 for review convenience
-  window.__latestAttempt = attempt;
-}
+        const selectedAnswer =
+            selected
+            ? selected.value
+            : "No Answer";
 
-function showReview(){
-  const r = window.__latestAttempt;
-  if(!r) return;
-  const body = `
-    <p class="muted"><b>${escapeHtml(r.name)}</b> • ${escapeHtml(r.module)} • ${escapeHtml(r.dateTaken)}</p>
-    <p><b>Score:</b> ${r.score}/${r.total}</p>
-    <div style="max-height:55vh; overflow:auto; padding-right:8px;">
-      ${r.answers.map((a,i)=>{
-        const ok = !!a.isCorrect;
-        const selText = a.selectedText ?? "(No answer)";
-        const correctText = a.correctText ?? "";
-        return `
-          <div class="qcard">
-            <div class="qtitle">${i+1}. ${escapeHtml(a.question)}</div>
-            <div class="muted">Your answer: <b>${escapeHtml(selText)}</b> ${ok ? "✅" : "❌"}</div>
-            ${ok ? "" : `<div class="muted">Correct: <b>${escapeHtml(correctText)}</b></div>`}
-          </div>
-        `;
-      }).join("")}
-    </div>
-  `;
-  showModal("Answer Review", body, [{text:"Close"}]);
-}
+        /////////////////////////////////////////////////////
+        // IMPORTANT
+        //
+        // IF YOUR JSON USES:
+        // question.answer
+        //
+        // CHANGE BELOW
+        /////////////////////////////////////////////////////
 
-/* ADMIN */
-function isAdminAuthed(){ return localStorage.getItem(KEY_ADMIN_SESSION)==="true"; }
+        const correctAnswer = question.correctAnswer;
 
-function adminLogin(){
-  const u = document.getElementById("adminUser").value.trim();
-  const p = document.getElementById("adminPass").value;
-  if(u === localStorage.getItem(KEY_ADMIN_USER) && p === localStorage.getItem(KEY_ADMIN_PASS)){
-    localStorage.setItem(KEY_ADMIN_SESSION, "true");
-    openAdmin();
-  } else { alert("Invalid credentials"); }
-}
-function adminLogout(){ localStorage.removeItem(KEY_ADMIN_SESSION); nav("home"); }
+        /////////////////////////////////////////////////////
 
-function openAdmin(){
-  if(!isAdminAuthed()){ nav("adminLogin"); return; }
-  nav("admin");
-  populateAdminModules();
-  renderQuestionList();
-  document.getElementById("adminResults").classList.add("hidden");
-  updateRepoUpdatedLine();
-}
+        if(selectedAnswer === correctAnswer){
 
-function populateAdminModules(){
-  const bank = getBank();
-  const sel = document.getElementById("adminModule");
-  sel.innerHTML = "";
-  Object.keys(bank).sort().forEach(m=>{
-    const opt = document.createElement("option");
-    opt.value = m; opt.textContent = m;
-    sel.appendChild(opt);
-  });
-  if(!sel.value && sel.options.length) sel.value = sel.options[0].value;
-}
-
-function renderQuestionList(){
-  const bank = getBank();
-  const moduleName = document.getElementById("adminModule").value;
-  const list = bank[moduleName] || [];
-  const root = document.getElementById("adminQuestions");
-  root.innerHTML = `<div class="muted">Total questions: <b>${list.length}</b></div>`;
-  list.forEach((q, idx)=>{
-    const div = document.createElement("div");
-    div.className = "qcard";
-    div.innerHTML = `
-      <div class="row" style="justify-content:space-between;">
-        <div class="qtitle">${idx+1}. ${escapeHtml(q.question)} </div>
-        <div class="row">
-          <button class="btn" onclick="openQuestionEditor(${idx})">Edit</button>
-          <button class="btn danger" onclick="deleteQuestion(${idx})">Delete</button>
-        </div>
-      </div>
-      <div class="muted" style="margin-top:6px;">Correct: <b>${escapeHtml(q.options[q.answer] ?? "")}</b></div>
-    `;
-    root.appendChild(div);
-  });
-}
-
-function changeCredentials(){
-  showModal(
-    "Change Admin Credentials",
-    `<label class="muted">New username</label>
-     <input id="newAdminUser" placeholder="e.g., admin" />
-     <div style="height:10px;"></div>
-     <label class="muted">New password</label>
-     <input id="newAdminPass" type="password" placeholder="New password" />`,
-    [
-      {text:"Cancel"},
-      {text:"Save", primary:true, onClick:(close)=>{
-        const nu = document.getElementById("newAdminUser").value.trim();
-        const np = document.getElementById("newAdminPass").value;
-        if(!nu || !np){ alert("Please fill both fields."); return; }
-        localStorage.setItem(KEY_ADMIN_USER, nu);
-        localStorage.setItem(KEY_ADMIN_PASS, np);
-        alert("Credentials updated for this device/browser.");
-        close();
-      }}
-    ]
-  );
-}
-
-function openQuestionEditor(index=null){
-  const bank = getBank();
-  const moduleName = document.getElementById("adminModule").value;
-  const isEdit = index !== null;
-  const q = isEdit ? bank[moduleName][index] : {question:"", options:["","","",""], answer:0, difficulty:"easy"};
-
-  showModal(
-    isEdit ? "Edit Question" : "Add Question",
-    `<label class="muted">Question</label>
-     <textarea id="qe_question">${escapeHtml(q.question)}</textarea>
-     <div style="height:10px;"></div>
-     <div class="grid">
-       <div><label class="muted">Option A</label><input id="qe_o0" value="${escapeHtml(q.options[0]||"")}"/></div>
-       <div><label class="muted">Option B</label><input id="qe_o1" value="${escapeHtml(q.options[1]||"")}"/></div>
-       <div><label class="muted">Option C</label><input id="qe_o2" value="${escapeHtml(q.options[2]||"")}"/></div>
-       <div><label class="muted">Option D</label><input id="qe_o3" value="${escapeHtml(q.options[3]||"")}"/></div>
-     </div>
-     <div style="height:10px;"></div>
-     <div class="grid">
-       <div>
-         <label class="muted">Correct answer</label>
-         <select id="qe_answer">
-           <option value="0">A</option><option value="1">B</option><option value="2">C</option><option value="3">D</option>
-         </select>
-       </div>
-       <div>
-         <label class="muted">Difficulty</label>
-         <select id="qe_diff">
-           <option value="easy">easy</option>
-           <option value="moderate">moderate</option>
-           <option value="difficult">difficult</option>
-         </select>
-       </div>
-     </div>`,
-    [
-      {text:"Cancel"},
-      {text:"Save", primary:true, onClick:(close)=>{
-        const nq = document.getElementById("qe_question").value.trim();
-        const opts = [0,1,2,3].map(i=>document.getElementById("qe_o"+i).value.trim());
-        const ans = parseInt(document.getElementById("qe_answer").value,10);
-        const diff = document.getElementById("qe_diff").value;
-        if(!nq){ alert("Question is required."); return; }
-        if(opts.some(o=>!o)){ alert("All 4 options are required."); return; }
-        const newObj = { question:nq, options:opts, answer:ans, difficulty:diff };
-        if(isEdit) bank[moduleName][index] = newObj;
-        else bank[moduleName].push(newObj);
-        saveBank(bank);
-        renderQuestionList();
-        close();
-      }}
-    ]
-  );
-  setTimeout(()=>{
-    document.getElementById("qe_answer").value = String(q.answer ?? 0);
-    document.getElementById("qe_diff").value = q.difficulty ?? "easy";
-  },0);
-}
-
-function deleteQuestion(index){
-  if(!confirm("Delete this question?")) return;
-  const bank = getBank();
-  const moduleName = document.getElementById("adminModule").value;
-  bank[moduleName].splice(index,1);
-  saveBank(bank);
-  renderQuestionList();
-}
-
-function addModule(){
-  const name = prompt("New module name:");
-  if(!name) return;
-  const bank = getBank();
-  if(bank[name]){ alert("Module already exists."); return; }
-  bank[name] = [];
-  saveBank(bank);
-  populateAdminModules();
-  document.getElementById("adminModule").value = name;
-  renderQuestionList();
-}
-
-function deleteModule(){
-  const moduleName = document.getElementById("adminModule").value;
-  if(!moduleName) return;
-  if(!confirm(`Delete module "${moduleName}"? This cannot be undone.`)) return;
-  const bank = getBank();
-  delete bank[moduleName];
-  saveBank(bank);
-  populateAdminModules();
-  renderQuestionList();
-}
-
-function renameModule(){
-  const moduleName = document.getElementById("adminModule").value;
-  const newName = document.getElementById("renameModuleInput").value.trim();
-  if(!moduleName || !newName) { alert("Select a module and enter a new name."); return; }
-  const bank = getBank();
-  if(bank[newName]) { alert("That name already exists."); return; }
-  bank[newName] = bank[moduleName];
-  delete bank[moduleName];
-  saveBank(bank);
-  populateAdminModules();
-  document.getElementById("adminModule").value = newName;
-  document.getElementById("renameModuleInput").value = "";
-  renderQuestionList();
-}
-
-function renderResults(){
-  const results = getResults();
-  if(results.length===0){
-    showModal("Results", `<p class="muted">No attempts recorded yet.</p>`, [{text:"Close"}]);
-    return;
-  }
-  const rows = results.map((r, idx)=>`
-    <tr>
-      <td>${escapeHtml(r.dateTaken)}</td>
-      <td>${escapeHtml(r.name)}</td>
-      <td>${escapeHtml(r.module)}</td>
-      <td><b>${r.score}/${r.total}</b></td>
-      <td><button class="btn" onclick="reviewResult(${idx})">Open</button></td>
-    </tr>
-  `).join("");
-  const body = `
-    <div class="row" style="justify-content:space-between; margin-bottom:10px;">
-      <div class="muted">Saved on this device/browser</div>
-      <button class="btn danger" onclick="clearResults();">Clear All</button>
-    </div>
-    <table>
-      <thead><tr><th>Date</th><th>Name</th><th>Module</th><th>Score</th><th>Review</th></tr></thead>
-      <tbody>${rows}</tbody>
-    </table>
-  `;
-  showModal("Results", body, [{text:"Close"}]);
-}
-
-function clearResults(){
-  if(!confirm("Clear all saved results on this device/browser?")) return;
-  saveResults([]);
-  renderResults();
-}
-
-function reviewResult(index){
-  const results = getResults();
-  const r = results[index];
-  if(!r) return;
-  const body = `
-    <p class="muted"><b>${escapeHtml(r.name)}</b> • ${escapeHtml(r.module)} • ${escapeHtml(r.dateTaken)}</p>
-    <p><b>Score:</b> ${r.score}/${r.total}</p>
-    <div style="max-height:55vh; overflow:auto; padding-right:8px;">
-      ${r.answers.map((a,i)=>{
-        const ok = !!a.isCorrect;
-        const selText = a.selectedText ?? "(No answer)";
-        const correctText = a.correctText ?? "";
-        return `
-          <div class="qcard">
-            <div class="qtitle">${i+1}. ${escapeHtml(a.question)}</div>
-            <div class="muted">Your answer: <b>${escapeHtml(selText)}</b> ${ok ? "✅" : "❌"}</div>
-            ${ok ? "" : `<div class="muted">Correct: <b>${escapeHtml(correctText)}</b></div>`}
-          </div>
-        `;
-      }).join("")}
-    </div>
-  `;
-  showModal("Answer Review", body, [{text:"Close"}]);
-}
-
-function exportBank(){
-  const bank = getBank();
-  const blob = new Blob([JSON.stringify(bank, null, 2)], {type:"application/json"});
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement("a");
-  a.href = url;
-  a.download = "aero_exam_question_bank.json";
-  a.click();
-  URL.revokeObjectURL(url);
-}
-
-function importBank(event){
-  const file = event.target.files && event.target.files[0];
-  event.target.value = "";
-  if(!file) return;
-  const reader = new FileReader();
-  reader.onload = ()=>{
-    try{
-      const obj = JSON.parse(String(reader.result || "{}"));
-      if(typeof obj !== "object" || Array.isArray(obj)) throw new Error("Invalid JSON");
-      for(const mod of Object.keys(obj)){
-        if(!Array.isArray(obj[mod])) throw new Error("Invalid module list: " + mod);
-      }
-      saveBank(normalizeBank(obj));
-      populateAdminModules();
-      renderQuestionList();
-      alert("Question bank imported.");
-    }catch(e){
-      alert("Import failed: " + e.message);
-    }
-  };
-  reader.readAsText(file);
-}
-
-/* UTIL */
-
-function cleanQuestionText(s){
-  let t = String(s ?? "");
-  // Remove leading "In the <something>," prefix
-  t = t.replace(/^In the [^,]+,\s*/i, "");
-  // Remove leading "In the <something> items, " prefix
-  t = t.replace(/^In the [^,]+ items,\s*/i, "");
-  return t;
-}
-function normalizeBank(bank){
-  for(const mod of Object.keys(bank||{})){
-    const arr = bank[mod];
-    if(!Array.isArray(arr)) continue;
-    for(const q of arr){
-      if(q && typeof q.question === "string"){
-        q.question = cleanQuestionText(q.question);
-      }
-    }
-  }
-  return bank;
-}
-
-
-async function updateRepoUpdatedLine(){
-  const el = document.getElementById("repoUpdatedLine");
-  if(!el) return;
-  el.textContent = "Build: " + BUILD_TIMESTAMP_UTC + " (UTC)";
-  try{
-    // Only works reliably on GitHub Pages: https://<owner>.github.io/<repo>/
-    const host = window.location.hostname || "";
-    const parts = (window.location.pathname || "/").split("/").filter(Boolean);
-    if(host.endsWith(".github.io") && parts.length >= 1){
-      const owner = host.split(".github.io")[0];
-      const repo = parts[0];
-      const url = `https://api.github.com/repos/${owner}/${repo}`;
-      const res = await fetch(url, {headers: {"Accept":"application/vnd.github+json"}});
-      if(res.ok){
-        const data = await res.json();
-        const pushed = data.pushed_at || data.updated_at;
-        if(pushed){
-          el.textContent = "Repo last updated: " + pushed + " • Build: " + BUILD_TIMESTAMP_UTC + " (UTC)";
+            score++;
         }
-      }
-    }
-  }catch(e){
-    // keep build time
-  }
+
+        userAnswers.push({
+
+            question: question.question,
+
+            selected: selectedAnswer,
+
+            correct: correctAnswer
+        });
+
+    });
+
+    document
+        .getElementById("quizScreen")
+        .classList.add("hidden");
+
+    document
+        .getElementById("resultScreen")
+        .classList.remove("hidden");
+
+    document
+        .getElementById("scoreText")
+        .innerText = `Score: ${score}/10`;
+
+    sendResultsEmail(score, userAnswers);
 }
 
-function shuffle(arr){
-  const a = arr.slice();
-  for(let i=a.length-1;i>0;i--){
-    const j = Math.floor(Math.random()*(i+1));
-    [a[i],a[j]]=[a[j],a[i]];
-  }
-  return a;
-}
-function sample(arr, n){
-  if(!arr || arr.length===0) return [];
-  return shuffle(arr).slice(0, Math.min(n, arr.length));
-}
-function escapeHtml(s){
-  return String(s ?? "")
-    .replaceAll("&","&amp;")
-    .replaceAll("<","&lt;")
-    .replaceAll(">","&gt;")
-    .replaceAll('"',"&quot;")
-    .replaceAll("'","&#39;");
+/////////////////////////////////////////////////////
+// SEND EMAIL
+/////////////////////////////////////////////////////
+
+function sendResultsEmail(score, userAnswers){
+
+    const candidateName =
+        document.getElementById("candidateName").value;
+
+    const extraEmail =
+        document.getElementById("extraEmail").value;
+
+    let detailedResults = "";
+
+    userAnswers.forEach((item, index) => {
+
+        detailedResults += `
+
+Question ${index + 1}
+
+Question:
+${item.question}
+
+Selected Answer:
+${item.selected}
+
+Correct Answer:
+${item.correct}
+
+====================================
+
+`;
+    });
+
+    /////////////////////////////////////////////////////
+    // SEND EMAIL
+    /////////////////////////////////////////////////////
+
+    emailjs.send(
+
+        /////////////////////////////////////////////////////
+        // EDIT THIS
+        /////////////////////////////////////////////////////
+
+        "service_1x7oudi",
+
+        "template_ei2kna4",
+
+        /////////////////////////////////////////////////////
+
+        {
+
+            candidate_name: candidateName,
+
+            subject_name: currentSubject,
+
+            score: `${score}/10`,
+
+            detailed_results: detailedResults,
+
+            to_email: "cvargas@enable.ph",
+
+            cc_email: extraEmail
+        }
+
+    )
+    .then(() => {
+
+        alert("Results sent successfully!");
+
+    })
+    .catch((error) => {
+
+        console.error(error);
+
+        alert("Failed to send email.");
+
+    });
 }
 
-// Fetch the latest bank from the repo (source of truth)
-refreshBankFromRepo();
 </script>
+
 </body>
 </html>
+```
